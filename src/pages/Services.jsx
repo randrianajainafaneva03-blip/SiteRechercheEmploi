@@ -167,13 +167,13 @@ const FeaturedServicesCarousel = ({ services, onServiceClick, isScrolled }) => {
   const visibleServices = getVisibleServices();
 
   return (
-    <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold rounded-3xl p-4 md:p-8 relative overflow-hidden sticky top-24 z-10 shadow-2xl mt-8">
+    <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold rounded-3xl p-4 md:p-8 relative overflow-hidden sticky top-24 z-10 shadow-2xl mt-8">
       <div className="absolute inset-0 bg-black/10"></div>
       
       <div className="relative z-10">
         <div className="text-center mb-6">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 flex items-center justify-center">
-            <Crown className="h-8 w-8 mr-3 text-yellow-300" />
+            <Crown className="h-8 w-8 mr-3 text-job-gold" />
             Services Premium
           </h2>
           <p className="text-white/90 text-lg">
@@ -198,14 +198,14 @@ const FeaturedServicesCarousel = ({ services, onServiceClick, isScrolled }) => {
                       className="w-full h-full object-cover"
                     />
                   ) : (
-                    <div className="w-full h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center">
+                    <div className="w-full h-full bg-gradient-to-r from-job-navy to-slate-500 rounded-full flex items-center justify-center">
                       <Package className="h-7 w-7 text-white" />
                     </div>
                   )}
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="font-bold text-purple-600 text-lg line-clamp-1 hover:text-pink-500 transition-colors">
+                  <h3 className="font-bold text-job-navy text-lg line-clamp-1 hover:text-slate-500 transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 text-sm font-medium">{service.creator?.full_name}</p>
@@ -214,8 +214,8 @@ const FeaturedServicesCarousel = ({ services, onServiceClick, isScrolled }) => {
               
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-center">
-                  <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mr-2">
-                    <MapPin className="h-3 w-3 text-purple-600" />
+                  <div className="w-5 h-5 bg-slate-100 rounded-full flex items-center justify-center mr-2">
+                    <MapPin className="h-3 w-3 text-job-navy" />
                   </div>
                   <span className="font-medium">{service.creator?.location}</span>
                 </div>
@@ -227,8 +227,8 @@ const FeaturedServicesCarousel = ({ services, onServiceClick, isScrolled }) => {
                 </div>
                 {service.price_range && (
                   <div className="flex items-center">
-                    <div className="w-5 h-5 bg-yellow-100 rounded-full flex items-center justify-center mr-2">
-                      <DollarSign className="h-3 w-3 text-yellow-600" />
+                    <div className="w-5 h-5 bg-job-light-gold rounded-full flex items-center justify-center mr-2">
+                      <DollarSign className="h-3 w-3 text-job-dark-gold" />
                     </div>
                     <span className="font-bold text-green-600">{service.price_range}</span>
                   </div>
@@ -238,7 +238,7 @@ const FeaturedServicesCarousel = ({ services, onServiceClick, isScrolled }) => {
               <div className="mt-4 pt-3 border-t border-gray-200">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500">Voir le service</span>
-                  <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center">
+                  <div className="w-6 h-6 bg-gradient-to-r from-job-navy to-slate-500 rounded-full flex items-center justify-center">
                     <ArrowRight className="h-3 w-3 text-white" />
                   </div>
                 </div>
@@ -339,8 +339,8 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
   }
 
   return (
-    <div className="relative bg-white rounded-2xl shadow-xl border-2 border-purple-600 overflow-hidden">
-      <div className="bg-gradient-to-r from-purple-600 to-pink-500 p-4 flex items-center justify-between">
+    <div className="relative bg-white rounded-2xl shadow-xl border-2 border-job-navy overflow-hidden">
+      <div className="bg-gradient-to-r from-job-navy to-slate-500 p-4 flex items-center justify-between">
         <h3 className="font-bold text-white text-lg flex items-center">
           <Sparkles className="h-5 w-5 mr-2" />
           Nouveaux Services
@@ -361,7 +361,7 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
               onClick={() => onServiceClick(service)}
               className="h-full block cursor-pointer transform transition-all duration-300 hover:scale-105"
             >
-              <div className="h-full p-6 flex flex-col justify-between bg-gradient-to-br from-white via-purple-50 to-pink-50 hover:from-pink-50 hover:via-purple-50 hover:to-white border-b border-purple-600/20">
+              <div className="h-full p-6 flex flex-col justify-between bg-gradient-to-br from-white via-slate-50 to-slate-50 hover:from-slate-50 hover:via-slate-50 hover:to-white border-b border-job-navy/20">
                 <div>
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center mr-4 shadow-lg border-2 border-gray-100 bg-white overflow-hidden">
@@ -372,14 +372,14 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
                           className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center">
+                        <div className="w-full h-full bg-gradient-to-r from-job-navy to-slate-500 rounded-full flex items-center justify-center">
                           <Package className="h-6 w-6 text-white" />
                         </div>
                       )}
                     </div>
                     
                     <div className="flex-1">
-                      <h4 className="font-bold text-purple-600 text-sm line-clamp-1 hover:text-pink-500 transition-colors">
+                      <h4 className="font-bold text-job-navy text-sm line-clamp-1 hover:text-slate-500 transition-colors">
                         {service.title}
                       </h4>
                       <p className="text-gray-600 text-xs font-medium">{service.creator?.full_name}</p>
@@ -388,8 +388,8 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
                   
                   <div className="space-y-2 text-xs text-gray-600">
                     <div className="flex items-center">
-                      <div className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mr-2">
-                        <MapPin className="h-3 w-3 text-purple-600" />
+                      <div className="w-5 h-5 bg-slate-100 rounded-full flex items-center justify-center mr-2">
+                        <MapPin className="h-3 w-3 text-job-navy" />
                       </div>
                       <span className="font-medium">{service.creator?.location}</span>
                     </div>
@@ -401,8 +401,8 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
                     </div>
                     {service.price_range && (
                       <div className="flex items-center">
-                        <div className="w-5 h-5 bg-yellow-100 rounded-full flex items-center justify-center mr-2">
-                          <DollarSign className="h-3 w-3 text-yellow-600" />
+                        <div className="w-5 h-5 bg-job-light-gold rounded-full flex items-center justify-center mr-2">
+                          <DollarSign className="h-3 w-3 text-job-dark-gold" />
                         </div>
                         <span className="font-bold text-green-600">{service.price_range}</span>
                       </div>
@@ -410,10 +410,10 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
                   </div>
                 </div>
                 
-                <div className="mt-4 pt-3 border-t border-purple-600/20">
+                <div className="mt-4 pt-3 border-t border-job-navy/20">
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500">Voir le service</span>
-                    <div className="w-6 h-6 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center">
+                    <div className="w-6 h-6 bg-gradient-to-r from-job-navy to-slate-500 rounded-full flex items-center justify-center">
                       <ArrowRight className="h-3 w-3 text-white" />
                     </div>
                   </div>
@@ -427,13 +427,13 @@ const RecentServicesWidget = ({ services, onServiceClick }) => {
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             <button
               onClick={goToPrev}
-              className="p-2 bg-gradient-to-br from-purple-600 to-pink-500 hover:bg-white rounded-full shadow-lg transition-all"
+              className="p-2 bg-gradient-to-br from-job-navy to-slate-500 hover:bg-white rounded-full shadow-lg transition-all"
             >
               <ChevronUp className="h-3 w-3 text-white" />
             </button>
             <button
               onClick={goToNext}
-              className="p-2 bg-gradient-to-br from-purple-600 to-pink-500 hover:bg-white rounded-full shadow-lg transition-all"
+              className="p-2 bg-gradient-to-br from-job-navy to-slate-500 hover:bg-white rounded-full shadow-lg transition-all"
             >
               <ChevronDown className="h-3 w-3 text-white" />
             </button>
@@ -1024,15 +1024,7 @@ const handleSendMessage = async () => {
  }
 
  return (
-   <div style={{ 
-     minHeight: '100vh', 
-     backgroundColor: '#f8fafc',
-     textAlign: 'left', 
-     maxWidth: 'none',
-     width: '100%',
-     margin: 0,
-     padding: 0
-   }}>
+   <div className="min-h-screen w-full bg-slate-50 text-left">
      <Navbar 
   featuredServices={premiumServices}  // ← Passer les services premium
   showMiniCarousel={isScrolled}
@@ -1041,14 +1033,10 @@ const handleSendMessage = async () => {
 />
      
      {/* Header avec recherche */}
-     <section style={{
-       paddingTop: '120px',
-       paddingBottom: '32px',
-       background: 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #3B82F6 100%)',
-       color: 'white',
-       width: '100%',
-       textAlign: 'left'
-     }}>
+     <section
+       className="w-full text-left text-white pt-28 sm:pt-32 pb-8"
+       style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #3D6491 50%, #122438 100%)' }}
+     >
        <div style={{ 
          maxWidth: '1280px', 
          margin: '0 auto', 
@@ -1064,7 +1052,7 @@ const handleSendMessage = async () => {
            </p>
                  
            {/* Barre de recherche */}
-           <div className="none bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl mb-8">
+           <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl mb-8">
              <div className="flex flex-col md:flex-row gap-4 items-end">
                <div className="flex-1 relative">
                  <input
@@ -1072,14 +1060,14 @@ const handleSendMessage = async () => {
                    placeholder="Rechercher un service, une compétence..."
                    value={filters.search}
                    onChange={(e) => handleFilterChange('search', e.target.value)}
-                   className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-900 font-medium"
+                   className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500 text-gray-900 font-medium"
                  />
                </div>
                <div className="relative min-w-[200px]">
                  <select
                    value={filters.location}
                    onChange={(e) => handleFilterChange('location', e.target.value)}
-                   className="w-full pl-12 pr-8 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-900 appearance-none bg-white font-medium"
+                   className="w-full pl-12 pr-8 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500 text-gray-900 appearance-none bg-white font-medium"
                  >
                    <option value="">Toute localisation</option>
                    {PROVINCES_MADAGASCAR.map(province => (
@@ -1091,8 +1079,8 @@ const handleSendMessage = async () => {
                  onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                  className={`px-6 py-4 rounded-xl flex items-center space-x-2 transition-all font-bold border-2 whitespace-nowrap ${
                    showAdvancedFilters 
-                     ? 'bg-purple-600 text-white border-purple-600' 
-                     : 'bg-white text-purple-600 border-purple-600 hover:bg-gray-100'
+                     ? 'bg-job-navy text-white border-job-navy' 
+                     : 'bg-white text-job-navy border-job-navy hover:bg-gray-100'
                  }`}
                >
                  <Filter className="h-5 w-5" />
@@ -1104,9 +1092,9 @@ const handleSendMessage = async () => {
 
            {/* Filtres avancés */}
            {showAdvancedFilters && (
-             <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-purple-600">
-               <h3 className="text-lg font-bold text-purple-600 mb-4 flex items-center">
-                 <Filter className="h-5 w-5 mr-2 text-purple-600" />
+             <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-job-navy">
+               <h3 className="text-lg font-bold text-job-navy mb-4 flex items-center">
+                 <Filter className="h-5 w-5 mr-2 text-job-navy" />
                  Filtres avancés
                </h3>
                
@@ -1116,7 +1104,7 @@ const handleSendMessage = async () => {
                    <select
                      value={filters.category}
                      onChange={(e) => handleFilterChange('category', e.target.value)}
-                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500"
                    >
                      <option value="">Toutes les catégories</option>
                      {SERVICE_CATEGORIES.map(category => (
@@ -1132,7 +1120,7 @@ const handleSendMessage = async () => {
                    <select
                      value={filters.price_range}
                      onChange={(e) => handleFilterChange('price_range', e.target.value)}
-                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500"
                    >
                      <option value="">Tous les budgets</option>
                      <option value="0-100000">Moins de 100.000 Ar</option>
@@ -1147,7 +1135,7 @@ const handleSendMessage = async () => {
                    <select
                      value={filters.delivery_time}
                      onChange={(e) => handleFilterChange('delivery_time', e.target.value)}
-                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500"
+                     className="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500"
                    >
                      <option value="">Tous délais</option>
                      <option value="24h">24 heures</option>
@@ -1161,7 +1149,7 @@ const handleSendMessage = async () => {
                  <div className="flex items-end">
                    <button 
                      onClick={clearFilters}
-                     className="w-full p-3 text-purple-600 hover:text-purple-800 font-medium transition-colors flex items-center justify-center"
+                     className="w-full p-3 text-job-navy hover:text-job-navy-dark font-medium transition-colors flex items-center justify-center"
                    >
                      <X className="h-4 w-4 mr-2" />
                      Effacer
@@ -1172,7 +1160,7 @@ const handleSendMessage = async () => {
                <div className="flex justify-between items-center mt-6">
                  <button 
                    onClick={clearFilters}
-                   className="text-purple-600 hover:text-purple-800 font-medium transition-colors flex items-center"
+                   className="text-job-navy hover:text-job-navy-dark font-medium transition-colors flex items-center"
                  >
                    <X className="h-4 w-4 mr-2" />
                    Effacer tous les filtres
@@ -1202,7 +1190,7 @@ const handleSendMessage = async () => {
          width: '100%'
        }}>
          {servicesLoading ? (
-           <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold rounded-3xl p-8 text-center">
+           <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold rounded-3xl p-8 text-center">
              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
              <p className="text-white">Chargement des services premium...</p>
            </div>
@@ -1213,37 +1201,16 @@ const handleSendMessage = async () => {
      </div>
 
      {/* Contenu principal - 3 colonnes */}
-     <div style={{ 
-       width: '100%', 
-       padding: '0 16px 32px 16px',
-       margin: 0,
-       textAlign: 'left'
-     }}>
-       <div style={{ 
-         maxWidth: '100%', 
-         margin: '20px auto',
-         paddingLeft:'50px',
-         paddingRight:'50px', 
-         width: '100%',
-         
-       }}>
+     <div className="w-full px-4 sm:px-6 lg:px-12 pb-8 text-left">
+       <div className="max-w-[1600px] mx-auto w-full mt-5">
 
-         <div style={{ 
-           display: 'flex', 
-           gap: '4px', 
-           minHeight: '800px',
-           width: '100%'
-         }}>
-           
+         <div className="lg:grid lg:grid-cols-[280px_minmax(0,1fr)_280px] lg:gap-6 lg:items-start">
+
            {/* Colonne gauche - Widgets et filtres */}
-           <div style={{ 
-             width: '25%', 
-             minHeight: '600px',
-             padding: '16px'
-           }}>
+           <div className="hidden lg:block">
              <div className="sticky top-24 space-y-6">
                {/* Widget Proposer un service pour candidats */}
-               <div className="bg-gradient-to-br from-job-purple to-job-pink rounded-3xl p-6 text-white shadow-2xl transform hover:scale-105 transition-transform">
+               <div className="bg-gradient-to-br from-job-navy to-job-navy-dark rounded-3xl p-6 text-white shadow-2xl transform hover:scale-105 transition-transform">
                  <div className="flex items-center justify-between mb-4">
                    <Plus className="h-12 w-12 text-white" />
                    <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold">
@@ -1278,7 +1245,7 @@ const handleSendMessage = async () => {
                  </ul>
                  <button 
                    onClick={handleCreateService}
-                   className="w-full bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 shadow-lg rounded-xl transition-all"
+                   className="w-full bg-white text-job-navy hover:bg-gray-100 font-bold py-3 shadow-lg rounded-xl transition-all"
                  >
                    Créer mon service
                  </button>
@@ -1287,13 +1254,13 @@ const handleSendMessage = async () => {
                {/* Filtres rapides */}
                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                  <div className="flex items-center justify-between mb-4">
-                   <h3 className="font-bold text-purple-600 flex items-center">
-                     <Filter className="h-5 w-5 mr-2 text-purple-600" />
+                   <h3 className="font-bold text-job-navy flex items-center">
+                     <Filter className="h-5 w-5 mr-2 text-job-navy" />
                      Filtres rapides
                    </h3>
                    <button 
                      onClick={clearFilters}
-                     className="text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors"
+                     className="text-job-navy hover:text-job-navy-dark text-sm font-medium transition-colors"
                    >
                      Effacer
                    </button>
@@ -1305,7 +1272,7 @@ const handleSendMessage = async () => {
                      <select
                        value={filters.category}
                        onChange={(e) => handleFilterChange('category', e.target.value)}
-                       className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                       className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500"
                      >
                        <option value="">Toutes</option>
                        {SERVICE_CATEGORIES.slice(0, 5).map(category => (
@@ -1321,7 +1288,7 @@ const handleSendMessage = async () => {
                      <select
                        value={filters.price_range}
                        onChange={(e) => handleFilterChange('price_range', e.target.value)}
-                       className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                       className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500"
                      >
                        <option value="">Tous budgets</option>
                        <option value="0-100000">Moins de 100K Ar</option>
@@ -1334,26 +1301,26 @@ const handleSendMessage = async () => {
                </div>
 
                {/* Widget Conseils */}
-               <div className=" none bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
+               <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                  <div className="flex items-center mb-4">
-                   <Lightbulb className="h-6 w-6 text-purple-600 mr-3" />
-                   <h3 className="font-bold text-purple-600">Conseils Services</h3>
+                   <Lightbulb className="h-6 w-6 text-job-navy mr-3" />
+                   <h3 className="font-bold text-job-navy">Conseils Services</h3>
                  </div>
                  <ul className="space-y-3 text-sm text-gray-600">
                    <li className="flex items-start">
-                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                     <div className="w-2 h-2 bg-job-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
                      <span>Détaillez bien votre offre</span>
                    </li>
                    <li className="flex items-start">
-                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                     <div className="w-2 h-2 bg-job-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
                      <span>Fixez des délais réalistes</span>
                    </li>
                    <li className="flex items-start">
-                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                     <div className="w-2 h-2 bg-job-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
                      <span>Ajoutez des exemples</span>
                    </li>
                    <li className="flex items-start">
-                     <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                     <div className="w-2 h-2 bg-job-navy rounded-full mt-2 mr-3 flex-shrink-0"></div>
                      <span>Communiquez rapidement</span>
                    </li>
                  </ul>
@@ -1362,23 +1329,12 @@ const handleSendMessage = async () => {
            </div>
 
            {/* Colonne centrale - Liste des services */}
-            <div style={{ 
-              width: '70%', 
-              backgroundColor: 'transparent', 
-              padding: '0',
-              display: 'flex',
-              flexDirection: 'column',
-              height: 'calc(100vh - 96px)',
-              position: 'sticky',
-              top: '96px',
-              marginTop: '20px'
-              
-            }}>
+            <div className="min-w-0 bg-transparent lg:flex lg:flex-col lg:h-[calc(100vh-6rem)] lg:sticky lg:top-24">
               {/* Header avec stats - STICKY TOP */}
-              <div className="top1 bg-white rounded-2xl shadow-xl border-2 border-purple-600 p-6 flex-shrink-0">
+              <div className="top1 bg-white rounded-2xl shadow-xl border-2 border-job-navy p-6 flex-shrink-0">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
                   <div>
-                    <h2 className="text-2xl font-bold text-purple-600 mb-2">
+                    <h2 className="text-2xl font-bold text-job-navy mb-2">
                       {servicesLoading ? '⏳ Chargement...' : `💼 ${totalServices} services disponibles`}
                     </h2>
                     <p className="text-gray-600">
@@ -1389,7 +1345,7 @@ const handleSendMessage = async () => {
                   {isCandidate && (
                     <Button
                       onClick={handleCreateService}
-                      className="mt-4 sm:mt-0 bg-gradient-to-r from-purple-600 to-pink-500 text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
+                      className="mt-4 sm:mt-0 bg-gradient-to-r from-job-navy to-slate-500 text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
                     >
                       <Plus className="h-5 w-5" />
                       <span>Proposer un service</span>
@@ -1399,9 +1355,9 @@ const handleSendMessage = async () => {
               </div>
 
               {/* Zone scrollable - LISTE DES SERVICES */}
-              <div className="flex-1 overflow-y-auto my-6" style={{ 
+              <div className="lg:flex-1 lg:overflow-y-auto my-6 job-sidebar-scroll" style={{
                 scrollbarWidth: 'thin',
-                scrollbarColor: '#8B5CF6 #f3f4f6',
+                scrollbarColor: '#1E3A5F #f3f4f6',
                 minHeight: 0
               }}>
 
@@ -1432,13 +1388,13 @@ const handleSendMessage = async () => {
                      Essayez de modifier vos critères de recherche ou soyez le premier à proposer un service !
                    </p>
                    <div className="flex gap-4 justify-center">
-                     <Button onClick={clearFilters} variant="outline" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50">
+                     <Button onClick={clearFilters} variant="outline" className="border-2 border-job-navy text-job-navy hover:bg-slate-50">
                        Réinitialiser les filtres
                      </Button>
                      {isCandidate && (
                        <Button 
                          onClick={handleCreateService}
-                         className="bg-gradient-to-r from-purple-600 to-pink-500 text-white"
+                         className="bg-gradient-to-r from-job-navy to-slate-500 text-white"
                        >
                          Proposer un service
                        </Button>
@@ -1451,7 +1407,7 @@ const handleSendMessage = async () => {
                      <div 
                        key={service.id} 
                        onClick={() => handleServiceClick(service)}
-                       className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-purple-600 cursor-pointer group"
+                       className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-job-navy cursor-pointer group"
                      >
                        <div className="flex items-start flex-col md:flex-row md:space-x-6 gap-4 md:gap-0">
                          {/* Photo de profil */}
@@ -1463,7 +1419,7 @@ const handleSendMessage = async () => {
                                className="w-full h-full object-cover"
                              />
                            ) : (
-                             <div className="w-full h-full bg-gradient-to-r from-purple-600 to-pink-500 rounded-full flex items-center justify-center">
+                             <div className="w-full h-full bg-gradient-to-r from-job-navy to-slate-500 rounded-full flex items-center justify-center">
                                <Package className="h-8 w-8 text-white" />
                              </div>
                            )}
@@ -1474,11 +1430,11 @@ const handleSendMessage = async () => {
                            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                              <div className="flex-1">
                                <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
-                                 <h3 className="text-lg md:text-xl font-bold text-purple-600 group-hover:text-pink-500 transition-colors line-clamp-1">
+                                 <h3 className="text-lg md:text-xl font-bold text-job-navy group-hover:text-slate-500 transition-colors line-clamp-1">
                                    {service.title}
                                  </h3>
                                  {service.creator?.is_premium && (
-                                   <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                                   <div className="bg-gradient-to-r from-job-gold to-job-gold text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
                                      <Crown className="h-3 w-3 mr-1" />
                                      Premium
                                    </div>
@@ -1492,7 +1448,7 @@ const handleSendMessage = async () => {
                                </div>
                                
                                <div className="flex flex-wrap items-center gap-2 md:gap-4 text-sm text-gray-600 mb-3">
-                                 <span className="font-bold text-purple-600">{service.creator.full_name}</span>
+                                 <span className="font-bold text-job-navy">{service.creator.full_name}</span>
                                  <span className="flex items-center">
                                    <MapPin className="h-4 w-4 mr-1" />
                                    {service.creator.location}
@@ -1512,7 +1468,7 @@ const handleSendMessage = async () => {
                                </p>
 
                                <div className="flex flex-wrap gap-2 mb-3">
-                                 <span className="px-3 py-1 bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-bold rounded-full">
+                                 <span className="px-3 py-1 bg-gradient-to-r from-job-navy to-slate-500 text-white text-xs font-bold rounded-full">
                                    {service.category}
                                  </span>
                                  {service.price_range && (
@@ -1523,7 +1479,7 @@ const handleSendMessage = async () => {
                                  )}
                                  
                                  {service.delivery_time && (
-                                   <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full flex items-center">
+                                   <span className="px-3 py-1 bg-slate-100 text-job-navy-dark text-xs font-bold rounded-full flex items-center">
                                      <Timer className="h-3 w-3 mr-1" />
                                      {service.delivery_time}
                                    </span>
@@ -1555,14 +1511,14 @@ const handleSendMessage = async () => {
                                      e.stopPropagation();
                                      navigate('/services/edit/' + service.id);
                                    }}
-                                   className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-4 py-2 rounded-xl font-medium flex items-center space-x-2 hover:shadow-lg transform hover:scale-105 transition-all"
+                                   className="bg-gradient-to-r from-job-navy to-slate-500 text-white px-4 py-2 rounded-xl font-medium flex items-center space-x-2 hover:shadow-lg transform hover:scale-105 transition-all"
                                  >
                                    <Edit3 className="h-4 w-4" />
                                    <span>Modifier mon service</span>
                                  </button>
                                ) : (
                                  <>
-                                   <div className="flex items-center text-purple-600 group-hover:text-pink-500 transition-colors">
+                                   <div className="flex items-center text-job-navy group-hover:text-slate-500 transition-colors">
                                      <span className="font-bold mr-2 text-sm">Voir le service</span>
                                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                    </div>
@@ -1580,14 +1536,14 @@ const handleSendMessage = async () => {
 
                {/* Pagination */}
                {totalPages > 1 && (
-                <div className="bg-white rounded-2xl shadow-xl border-2 border-purple-600 p-6 flex-shrink-0">
+                <div className="bg-white rounded-2xl shadow-xl border-2 border-job-navy p-6 flex-shrink-0">
                   {/* Desktop : Pagination complète */}
                   <div className="hidden md:flex items-center justify-center space-x-2">
                     <Button
                       variant="outline"
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="p-3 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                      className="p-3 border-2 border-job-navy text-job-navy hover:bg-slate-50"
                     >
                       <ChevronLeft className="h-4 w-4" />
                     </Button>
@@ -1601,8 +1557,8 @@ const handleSendMessage = async () => {
                           onClick={() => handlePageChange(page)}
                           className={`px-4 py-3 font-bold ${
                             page === currentPage 
-                              ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg' 
-                              : 'border-2 border-purple-600 text-purple-600 hover:bg-purple-50'
+                              ? 'bg-gradient-to-r from-job-navy to-slate-500 text-white shadow-lg' 
+                              : 'border-2 border-job-navy text-job-navy hover:bg-slate-50'
                           }`}
                         >
                           {page}
@@ -1614,7 +1570,7 @@ const handleSendMessage = async () => {
                       variant="outline"
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="p-3 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                      className="p-3 border-2 border-job-navy text-job-navy hover:bg-slate-50"
                     >
                       <ChevronRight className="h-4 w-4" />
                     </Button>
@@ -1626,14 +1582,14 @@ const handleSendMessage = async () => {
                       variant="outline"
                       onClick={() => handlePageChange(currentPage - 1)}
                       disabled={currentPage === 1}
-                      className="flex items-center space-x-2 px-4 py-3 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                      className="flex items-center space-x-2 px-4 py-3 border-2 border-job-navy text-job-navy hover:bg-slate-50"
                     >
                       <ChevronLeft className="h-4 w-4" />
                       <span className="font-bold">Précédent</span>
                     </Button>
 
-                    <div className="flex items-center space-x-2 px-4 py-2 bg-purple-50 rounded-xl">
-                      <span className="font-bold text-purple-600">{currentPage}</span>
+                    <div className="flex items-center space-x-2 px-4 py-2 bg-slate-50 rounded-xl">
+                      <span className="font-bold text-job-navy">{currentPage}</span>
                       <span className="text-gray-500">/</span>
                       <span className="text-gray-600">{totalPages}</span>
                     </div>
@@ -1642,7 +1598,7 @@ const handleSendMessage = async () => {
                       variant="outline"
                       onClick={() => handlePageChange(currentPage + 1)}
                       disabled={currentPage === totalPages}
-                      className="flex items-center space-x-2 px-4 py-3 border-2 border-purple-600 text-purple-600 hover:bg-purple-50"
+                      className="flex items-center space-x-2 px-4 py-3 border-2 border-job-navy text-job-navy hover:bg-slate-50"
                     >
                       <span className="font-bold">Suivant</span>
                       <ChevronRight className="h-4 w-4" />
@@ -1659,11 +1615,7 @@ const handleSendMessage = async () => {
            </div>
 
            {/* Colonne droite - Widgets et informations */}
-           <div style={{ 
-             width: '25%', 
-             minHeight: '600px',
-             padding: '16px'
-           }}>
+           <div className="hidden lg:block">
              <div className="sticky top-24 space-y-6">
                {/* Widget des derniers services */}
                <PremiumServicesWidget services={premiumServices.slice(0, 5)} onServiceClick={handleServiceClick} />
@@ -1671,7 +1623,7 @@ const handleSendMessage = async () => {
                {/* Widget Premium Employeur */}
                {isPremium ? (
                 // Widget pour utilisateurs Premium
-                <div className="bg-gradient-to-br from-job-purple to-job-pink rounded-2xl p-6 text-white shadow-xl">
+                <div className="bg-gradient-to-br from-job-navy to-job-navy-dark rounded-2xl p-6 text-white shadow-xl">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-bold flex items-center">
                       <BadgeCheck className="h-5 w-5 mr-2" />
@@ -1708,7 +1660,7 @@ const handleSendMessage = async () => {
                 </div>
               ) : (
                 // Widget pour utilisateurs non-Premium (existant)
-                <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
+                <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
                   {/* Contenu existant inchangé */}
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-bold flex items-center">
@@ -1737,8 +1689,8 @@ const handleSendMessage = async () => {
                {/* Widget Catégories populaires */}
                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                  <div className="flex items-center mb-4">
-                   <TrendingUp className="h-6 w-6 text-purple-600 mr-3" />
-                   <h3 className="font-bold text-purple-600">Catégories Populaires</h3>
+                   <TrendingUp className="h-6 w-6 text-job-navy mr-3" />
+                   <h3 className="font-bold text-job-navy">Catégories Populaires</h3>
                  </div>
                  <div className="space-y-3">
                    {SERVICE_CATEGORIES.slice(0, 6).map((category, index) => {
@@ -1747,17 +1699,17 @@ const handleSendMessage = async () => {
                        <button
                          key={category.name}
                          onClick={() => handleFilterChange('category', category.name)}
-                         className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-purple-50 transition-colors group"
+                         className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-slate-50 transition-colors group"
                        >
                          <div className="flex items-center">
-                           <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-purple-200 transition-colors">
-                             <IconComponent className="h-4 w-4 text-purple-600" />
+                           <div className="w-8 h-8 bg-slate-100 rounded-lg flex items-center justify-center mr-3 group-hover:bg-job-navy-light transition-colors">
+                             <IconComponent className="h-4 w-4 text-job-navy" />
                            </div>
-                           <span className="text-sm font-medium text-gray-700 group-hover:text-purple-600">
+                           <span className="text-sm font-medium text-gray-700 group-hover:text-job-navy">
                              {category.name}
                            </span>
                          </div>
-                         <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-purple-600 transition-colors" />
+                         <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-job-navy transition-colors" />
                        </button>
                      );
                    })}
@@ -1767,16 +1719,16 @@ const handleSendMessage = async () => {
                {/* Widget aide et support */}
                <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                  <div className="text-center">
-                   <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                     <MessageSquare className="h-8 w-8 text-purple-600" />
+                   <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                     <MessageSquare className="h-8 w-8 text-job-navy" />
                    </div>
-                   <h3 className="font-bold text-purple-600 mb-2">Besoin d'aide ?</h3>
+                   <h3 className="font-bold text-job-navy mb-2">Besoin d'aide ?</h3>
                    <p className="text-gray-600 text-sm mb-4">
                      Notre équipe vous accompagne dans votre recherche de services
                    </p>
 
                    <Link to="/contact">
-                   <button className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 py-3 rounded-xl font-medium transition-all">
+                   <button className="w-full border-2 border-job-navy text-job-navy hover:bg-slate-50 py-3 rounded-xl font-medium transition-all">
                         Nous contacter
                       </button>
                     </Link>
@@ -1801,248 +1753,18 @@ const handleSendMessage = async () => {
        }}
      />
 
-     {/* ANCIEN MODAL INLINE SUPPRIMÉ — remplacé par ServiceModal */}
-     {false && showServiceModal && selectedService && (
-       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
-         <div className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-slide-up">
-           
-           {/* Header du modal */}
-           <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold p-6 text-black relative overflow-hidden shrink-0">
-             <div className="absolute inset-0 bg-black/10"></div>
-             <div className="relative z-10">
-               <div className="flex items-center justify-between mb-4">
-                 <div className="flex items-center space-x-4">
-                   <div className="w-16 h-16 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
-                     {selectedService.creator?.avatar_url ? (
-                       <img 
-                         src={selectedService.creator.avatar_url} 
-                         alt={selectedService.creator.full_name}
-                         className="w-full h-full object-cover"
-                       />
-                     ) : (
-                       <div className="w-full h-full bg-white/20 flex items-center justify-center">
-                         <Package className="h-8 w-8 text-white" />
-                       </div>
-                     )}
-                   </div>
-                   
-                   <div>
-                     <h2 className="text-2xl font-bold">{selectedService.title}</h2>
-                     <p className="text-white/90 font-medium">Par {selectedService.creator.full_name}</p>
-                     <div className="flex items-center mt-1 text-sm text-white/80">
-                       <MapPin className="h-4 w-4 mr-1" />
-                       {selectedService.creator.location}
-                     </div>
-                   </div>
-                   {selectedService.creator?.is_premium && (
-                     <span className="bg-gradient-to-br from-job-purple to-job-pink text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
-                       <Crown className="h-4 w-4 mr-1" />
-                       Prestataire Premium
-                     </span>
-                   )}
-                 </div>
-                 <button
-                   onClick={closeModals}
-                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
-                 >
-                   <X className="h-6 w-6 text-white" />
-                 </button>
-               </div>
-
-               <div className="flex flex-wrap items-center gap-3">
-                 <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold">
-                   {selectedService.category}
-                 </span>
-                 {selectedService.price_range && (
-                   <span className="bg-green-400/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold flex items-center">
-                     <DollarSign className="h-4 w-4 mr-1" />
-                     {selectedService.price_range}
-                   </span>
-                 )}
-                 {selectedService.delivery_time && (
-                   <span className="bg-yellow-400/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold flex items-center">
-                     <Timer className="h-4 w-4 mr-1" />
-                     {selectedService.delivery_time}
-                   </span>
-                 )}
-                 <span className="bg-blue-400/30 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold flex items-center">
-                   <Eye className="h-4 w-4 mr-1" />
-                   {selectedService.views_count || 0} vues
-                 </span>
-               </div>
-             </div>
-           </div>
-
-           {/* Contenu scrollable */}
-           <div className="overflow-y-auto flex-1">
-             <div className="p-6">
-               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                 
-                 {/* Description principale */}
-                 <div className="lg:col-span-2 space-y-6">
-                   <div>
-                     <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                       <FileText className="h-5 w-5 mr-2 text-purple-600" />
-                       Description du service
-                     </h3>
-                     <div className="bg-gray-50 rounded-2xl p-4">
-                     <FormattedText 
-                      content={selectedService.description}
-                      className="text-gray-700"
-                    />
-                     </div>
-                   </div>
-
-                   {/* Compétences */}
-                   {selectedService.skills && selectedService.skills.length > 0 && (
-                     <div>
-                       <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                         <Award className="h-5 w-5 mr-2 text-purple-600" />
-                         Compétences
-                       </h3>
-                       <div className="flex flex-wrap gap-2">
-                         {selectedService.skills.map((skill, index) => (
-                           <span 
-                             key={index} 
-                             className="bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium border border-purple-200"
-                           >
-                             {skill}
-                           </span>
-                         ))}
-                       </div>
-                     </div>
-                   )}
-
-                   {/* Informations supplémentaires */}
-                   <div>
-                     <h3 className="text-xl font-bold text-gray-900 mb-3 flex items-center">
-                       <Sparkles className="h-5 w-5 mr-2 text-purple-600" />
-                       Détails du service
-                     </h3>
-                     <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-4 space-y-3">
-                       <div className="flex items-center justify-between">
-                         <span className="text-gray-600 font-medium">Publié le</span>
-                         <span className="font-bold text-purple-600">
-                           {new Date(selectedService.created_at).toLocaleDateString('fr-FR')}
-                         </span>
-                       </div>
-                       <div className="flex items-center justify-between">
-                         <span className="text-gray-600 font-medium">Catégorie</span>
-                         <span className="font-bold text-purple-600">{selectedService.category}</span>
-                       </div>
-                       {selectedService.delivery_time && (
-                         <div className="flex items-center justify-between">
-                           <span className="text-gray-600 font-medium">Délai de livraison</span>
-                           <span className="font-bold text-green-600 flex items-center">
-                             <Timer className="h-4 w-4 mr-1" />
-                             {selectedService.delivery_time}
-                           </span>
-                         </div>
-                       )}
-                       {selectedService.price_range && (
-                         <div className="flex items-center justify-between">
-                           <span className="text-gray-600 font-medium">Fourchette de prix</span>
-                           <span className="font-bold text-green-600 flex items-center">
-                             <DollarSign className="h-4 w-4 mr-1" />
-                             {selectedService.price_range}
-                           </span>
-                         </div>
-                       )}
-                     </div>
-                   </div>
-                 </div>
-
-                 {/* Sidebar prestataire */}
-                 <div className="space-y-6">
-                   {/* Profil du prestataire */}
-                   <div className="bg-gradient-to-br from-job-purple to-job-pink rounded-2xl border-2 border-purple-200 p-6 shadow-lg">
-                     <div className="text-center mb-4">
-                       <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-3 border-4 border-purple-200">
-                         {selectedService.creator?.avatar_url ? (
-                           <img 
-                             src={selectedService.creator.avatar_url} 
-                             alt={selectedService.creator.full_name}
-                             className="w-full h-full object-cover"
-                           />
-                         ) : (
-                           <div className="w-full h-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center">
-                             <User className="h-10 w-10 text-black" />
-                           </div>
-                         )}
-                       </div>
-                       <h4 className="font-bold text-lg text-gray-900">{selectedService.creator.full_name}</h4>
-                       <p className="text-white font-medium">{selectedService.creator.poste}</p>
-                       <div className="flex items-center justify-center mt-2 text-sm text-gray-600">
-                         <MapPin className="h-4 w-4 mr-1" />
-                         {selectedService.creator.location}
-                       </div>
-                     </div>
-
-                     {/* Bouton Contact */}
-                      {/* Bouton Contact / Premium gate */}
-                     {!selectedService.isCurrentUser && (
-                       isPremium ? (
-                         <button
-                           onClick={() => handleContactClick(selectedService)}
-                           className="mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-3 px-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 mb-4"
-                         >
-                           <MessageSquare className="h-5 w-5" />
-                           <span>Contacter le prestataire</span>
-                           <Sparkles className="h-5 w-5" />
-                         </button>
-                       ) : (
-                         <div className="mx-auto w-full">
-                           <div className="bg-white/70 text-gray-800 font-medium py-3 px-4 rounded-xl mb-3 text-center">
-                             Passez en <span className="font-bold text-job-gold">Premium</span> pour contacter ce prestataire
-                           </div>
-                           <PremiumButton variant="default" className="w-full md:w-auto">
-                             Passer au Premium
-                           </PremiumButton>
-                         </div>
-                       )
-                     )}
-
-                   </div>
-
-                   {/* Services similaires */}
-                   <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-200">
-                     <h4 className="font-bold text-purple-600 mb-4 flex items-center">
-                       <Sparkles className="h-5 w-5 mr-2" />
-                       Services similaires
-                     </h4>
-                     <div className="space-y-3">
-                       {services.filter(s => s.category === selectedService.category && s.id !== selectedService.id).slice(0, 3).map((similarService) => (
-                         <div key={similarService.id} className="bg-white rounded-lg p-3 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                           <h5 className="font-medium text-gray-900 text-sm mb-1">{similarService.title}</h5>
-                           <p className="text-xs text-gray-600">{similarService.creator.full_name}</p>
-                           <div className="flex items-center justify-between mt-2">
-                             <span className="text-xs text-purple-600 font-medium">{similarService.price_range}</span>
-                             <ArrowRight className="h-3 w-3 text-gray-400" />
-                           </div>
-                         </div>
-                       ))}
-                     </div>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     )}
-
      {/* Modal Contact */}
      {showContactModal && selectedService && (
        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fade-in">
          <div className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-slide-up">
            
            {/* Header du modal contact */}
-           <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold p-6 text-white relative overflow-hidden">
+           <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold p-6 text-white relative overflow-hidden">
              <div className="absolute inset-0 bg-black/10"></div>
              <div className="relative z-10">
                <div className="flex items-center justify-between mb-4">
                  <div className="flex items-center space-x-4">
-                   <div className="w-12 h-12 bg-gradient-to-br from-job-purple to-job-pink backdrop-blur-sm rounded-full flex items-center justify-center">
+                   <div className="w-12 h-12 bg-gradient-to-br from-job-navy to-job-navy-dark backdrop-blur-sm rounded-full flex items-center justify-center">
                      <MessageSquare className="h-6 w-6 text-white" />
                    </div>
                    <div>
@@ -2099,12 +1821,12 @@ const handleSendMessage = async () => {
                </div>
 
                {/* Conseils */}
-               <div className="none bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
-                 <h4 className="font-bold text-blue-700 mb-2 flex items-center">
+               <div className="bg-slate-50 rounded-xl p-4 border border-job-navy-light">
+                 <h4 className="font-bold text-job-navy-dark mb-2 flex items-center">
                    <Lightbulb className="h-4 w-4 mr-2" />
                    Conseils pour un bon message
                  </h4>
-                 <ul className="text-sm text-blue-600 space-y-1">
+                 <ul className="text-sm text-job-navy space-y-1">
                    <li>• Soyez précis sur vos besoins et attentes</li>
                    <li>• Mentionnez votre budget approximatif</li>
                    <li>• Indiquez vos délais souhaités</li>
@@ -2123,7 +1845,7 @@ const handleSendMessage = async () => {
                  <button
                    onClick={handleSendMessage}
                    disabled={sendMessageMutation.isLoading || !contactMessage.trim() || !contactSubject.trim()}
-                   className="flex-1 bg-gradient-to-br from-job-purple to-job-pink text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                   className="flex-1 bg-gradient-to-br from-job-navy to-job-navy-dark text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-3 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                  >
                    {sendMessageMutation.isLoading ? (
                      <>
@@ -2151,7 +1873,7 @@ const handleSendMessage = async () => {
          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full overflow-hidden animate-slide-up">
            
            {/* Header du modal partage */}
-           <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold p-6 text-white relative overflow-hidden">
+           <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold p-6 text-white relative overflow-hidden">
              <div className="absolute inset-0 bg-black/10"></div>
              <div className="relative z-10">
                <div className="flex items-center justify-between mb-4">
@@ -2177,27 +1899,27 @@ const handleSendMessage = async () => {
                    {/* Facebook */}
                    <button
                      onClick={() => shareToFacebook(selectedService)}
-                     className="flex items-center space-x-3 p-3 bg-blue-50 hover:bg-blue-100 rounded-xl transition-all group"
+                     className="flex items-center space-x-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all group"
                    >
-                     <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                     <div className="w-10 h-10 bg-job-navy rounded-full flex items-center justify-center">
                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                        </svg>
                      </div>
-                     <span className="font-medium text-blue-700 group-hover:text-blue-800">Facebook</span>
+                     <span className="font-medium text-job-navy-dark group-hover:text-job-navy-dark">Facebook</span>
                    </button>
 
                    {/* LinkedIn */}
                    <button
                      onClick={() => shareToLinkedIn(selectedService)}
-                     className="flex items-center space-x-3 p-3 bg-blue-50 hover:bg-blue-100 rounded-xl transition-all group"
+                     className="flex items-center space-x-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all group"
                    >
-                     <div className="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center">
+                     <div className="w-10 h-10 bg-job-navy-dark rounded-full flex items-center justify-center">
                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                        </svg>
                      </div>
-                     <span className="font-medium text-blue-700 group-hover:text-blue-800">LinkedIn</span>
+                     <span className="font-medium text-job-navy-dark group-hover:text-job-navy-dark">LinkedIn</span>
                    </button>
 
                    {/* WhatsApp */}
@@ -2236,27 +1958,27 @@ const handleSendMessage = async () => {
                    {/* Telegram */}
                    <button
                      onClick={() => shareToTelegram(selectedService)}
-                     className="w-full flex items-center space-x-3 p-3 bg-blue-50 hover:bg-blue-100 rounded-xl transition-all group"
+                     className="w-full flex items-center space-x-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all group"
                    >
-                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                     <div className="w-8 h-8 bg-slate-500 rounded-full flex items-center justify-center">
                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                        </svg>
                      </div>
-                     <span className="font-medium text-blue-700 group-hover:text-blue-800">Telegram</span>
+                     <span className="font-medium text-job-navy-dark group-hover:text-job-navy-dark">Telegram</span>
                    </button>
 
                    {/* Instagram */}
                    <button
                      onClick={() => shareToInstagram(selectedService)}
-                     className="w-full flex items-center space-x-3 p-3 bg-pink-50 hover:bg-pink-100 rounded-xl transition-all group"
+                     className="w-full flex items-center space-x-3 p-3 bg-slate-50 hover:bg-slate-100 rounded-xl transition-all group"
                    >
-                     <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                     <div className="w-8 h-8 bg-gradient-to-r from-slate-500 to-slate-500 rounded-full flex items-center justify-center">
                        <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                        </svg>
                      </div>
-                     <span className="font-medium text-pink-700 group-hover:text-pink-800">Instagram (Copier le lien)</span>
+                     <span className="font-medium text-job-navy-dark group-hover:text-job-navy-dark">Instagram (Copier le lien)</span>
                    </button>
 
                    {/* Copier le lien */}
@@ -2280,7 +2002,7 @@ const handleSendMessage = async () => {
                  <div className="bg-white rounded-lg p-3 border">
                    <div className="text-sm font-medium text-gray-900 mb-1">{selectedService.title}</div>
                    <div className="text-xs text-gray-600 mb-2">Par {selectedService.creator.full_name} • {selectedService.creator.location}</div>
-                   <div className="text-xs text-blue-600 break-all">{generateServiceUrl(selectedService)}</div>
+                   <div className="text-xs text-job-navy break-all">{generateServiceUrl(selectedService)}</div>
                  </div>
                </div>
              </div>
@@ -2291,20 +2013,19 @@ const handleSendMessage = async () => {
 
      {/* Styles CSS */}
      <style>{`
+       html, body {
+         overflow-x: hidden;
+         max-width: 100vw;
+       }
+
        @keyframes fadeIn {
          0% { opacity: 0; }
          100% { opacity: 1; }
        }
 
        @keyframes slideUp {
-         0% {
-           opacity: 0;
-           transform: translateY(50px) scale(0.95);
-         }
-         100% {
-           opacity: 1;
-           transform: translateY(0) scale(1);
-         }
+         0% { opacity: 0; transform: translateY(50px) scale(0.95); }
+         100% { opacity: 1; transform: translateY(0) scale(1); }
        }
 
        .animate-fade-in {
@@ -2315,14 +2036,6 @@ const handleSendMessage = async () => {
          animation: slideUp 0.4s ease-out;
        }
 
-       .job-purple { color: #8B5CF6; }
-       .job-pink { color: #EC4899; }
-       .job-blue { color: #3B82F6; }
-       .job-gold { background: linear-gradient(135deg, #F59E0B, #D97706); }
-       .job-orange { background: linear-gradient(135deg, #EA580C, #DC2626); }
-       .job-dark-gold { background: linear-gradient(135deg, #B45309, #92400E); }
-       
-       
        .line-clamp-1 {
          display: -webkit-box;
          -webkit-line-clamp: 1;
@@ -2337,289 +2050,32 @@ const handleSendMessage = async () => {
          overflow: hidden;
        }
 
-       .hover\\:scale-105:hover {
-         transform: scale(1.05);
-       }
-
-       .hover\\:scale-110:hover {
-         transform: scale(1.10);
-       }
-
-       .transition-transform {
-         transition: transform 0.3s ease;
-       }
-
-       /* Scrollbar personnalisée pour la liste des services */
-.flex-1.overflow-y-auto::-webkit-scrollbar {
-  width: 8px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-track {
-  background: #f3f4f6;
-  border-radius: 10px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-  border-radius: 10px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #7C3AED 0%, #DB2777 100%);
-}
-
-/* Desktop : Scroll fixe avec pagination sticky */
-@media (min-width: 769px) {
-  /* Container principal avec hauteur fixe */
-  div[style*="width: 70%"] {
-    display: flex !important;
-    flex-direction: column !important;
-    height: calc(100vh - 96px) !important;
-    position: sticky !important;
-    top: 96px !important;
-  }
-
-  /* Zone scrollable */
-  div[style*="width: 70%"] .flex-1.overflow-y-auto {
-    min-height: 0 !important;
-  }
-}
-
-/* Mobile : Comportement normal sans scroll fixe */
-@media (max-width: 768px) {
-  /* Désactiver le flex column fixe */
-  div[style*="width: 70%"] {
-    display: block !important;
-    height: auto !important;
-    position: relative !important;
-    top: auto !important;
-  }
-
-  /* Désactiver le scroll fixe */
-  div[style*="width: 70%"] .flex-1.overflow-y-auto {
-    overflow-y: visible !important;
-    max-height: none !important;
-  }
-
-  /* Pagination normale (pas sticky) */
-  div[style*="width: 70%"] .flex-shrink-0 {
-    position: relative !important;
-  }
-}
-/* ============================================ */
-/* MOBILE - ENLEVER TOUS LES PADDING/MARGIN */
-/* ============================================ */
-
-@media (max-width: 768px) {
-  /* Container principal - 0 padding */
-  div[style*="padding: 0 16px 32px 16px"] {
-    padding: 0 !important;
-  }
-
-  div[style*="padding: 32px 16px 24px 16px"] {
-    padding: 0 !important;
-  }
-
-  /* Containers avec maxWidth - 0 padding/margin */
-  div[style*="maxWidth"][style*="margin"] {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-  }
-
-  /* Colonne centrale - PLEINE LARGEUR */
-  div[style*="width: 70%"] {
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 10 10 !important;
-  }
-
-  /* Enlever padding de la zone scrollable */
-  div[style*="width: 70%"] .flex-1.overflow-y-auto {
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  /* Container de cartes - pleine largeur */
-  div[style*="width: 70%"] .space-y-4 {
-    width: 100% !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-
-  /* Chaque carte - 100% de largeur, pas de margin externe */
-  div[style*="width: 70%"] .space-y-4 > div {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    
-  }
-
-  /* Header stats - pleine largeur */
-  div[style*="width: 70%"] .top1 {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 16px !important;
-    border-radius: 0 !important;
-  }
-
-  /* ============================================ */
-/* MOBILE - BOUTON FERMER MODAL VISIBLE */
-/* ============================================ */
-
-@media (max-width: 768px) {
-  /* Modal - ajuster la taille */
-  .fixed.inset-0 > div {
-    max-width: 95vw !important;
-    max-height: 95vh !important;
-    margin: auto !important;
-  }
-
-  /* Header du modal - assurer que le bouton X est visible */
-  .bg-gradient-to-br.from-job-gold.via-job-orange.to-job-dark-gold,
-  .bg-gradient-to-br.from-purple-600.to-pink-500 {
-    position: relative !important;
-    padding: 16px !important;
-  }
-
-  /* Bouton fermer - toujours visible et accessible */
-  .bg-gradient-to-br button[class*="hover:bg-white/20"] {
-    position: absolute !important;
-    top: 12px !important;
-    right: 12px !important;
-    z-index: 9999 !important;
-    background: rgba(0, 0, 0, 0.3) !important;
-    padding: 8px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* Icône X - visible sur fond coloré */
-  .bg-gradient-to-br button[class*="hover:bg-white/20"] svg {
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
-  }
-
-  /* Titre du modal - laisser de l'espace pour le bouton X */
-  .bg-gradient-to-br h2 {
-    padding-right: 48px !important;
-    font-size: 1.25rem !important;
-  }
-
-  /* Container du header - flex wrap pour mobile */
-  .bg-gradient-to-br .flex.items-center.justify-between {
-    flex-wrap: wrap !important;
-    gap: 12px !important;
-  }
-
-  /* Avatar dans le modal - plus petit sur mobile */
-  .bg-gradient-to-br .w-16.h-16 {
-    width: 48px !important;
-    height: 48px !important;
-  }
-
-  .bg-gradient-to-br .w-12.h-12 {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  /* Contenu scrollable du modal */
-  .overflow-y-auto.flex-1 {
-    max-height: calc(95vh - 200px) !important;
-  }
-
-  /* Padding du contenu modal */
-  .overflow-y-auto.flex-1 .p-6 {
-    padding: 16px !important;
-  }
-
-  /* Grille modal - single column sur mobile */
-  .grid.grid-cols-1.lg\\:grid-cols-3 {
-    grid-template-columns: 1fr !important;
-    gap: 16px !important;
-  }
-}
-
-  /* Pagination - pleine largeur */
-  div[style*="width: 70%"] .bg-white.rounded-2xl.shadow-xl.border-2.border-purple-600.p-6 {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 16px !important;
-    border-radius: 0 !important;
-  }
-
-  /* Message vide - pleine largeur */
-  .text-center.py-16 {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 32px 16px !important;
-  }
-
-  /* Skeleton loader - pleine largeur */
-  .animate-pulse {
-    width: 100% !important;
-    margin: 0 !important;
-  }
-}
-       .transition-all {
-         transition: all 0.3s ease;
-       }
-
        .transform-gpu {
          transform: translateZ(0);
          will-change: transform;
        }
 
-       @media (max-width: 1024px) {
-         div[style*="width: 25%"] {
-           width: 30% !important;
-         }
-         
-         div[style*="width: 50%"] {
-           width: 40% !important;
-         }
+       .job-sidebar-scroll {
+         scrollbar-width: thin;
+         scrollbar-color: #1E3A5F #f3f4f6;
        }
 
-       @media (max-width: 768px) {
-         div[style*="display: flex"] {
-           flex-direction: column !important;
-         }
-         .none{
-       display:none;
+       .job-sidebar-scroll::-webkit-scrollbar {
+         width: 8px;
        }
-       .top1{
-       margin-top: 80px;
+
+       .job-sidebar-scroll::-webkit-scrollbar-track {
+         background: #f3f4f6;
+         border-radius: 10px;
        }
-         div[style*="width: 25%"], div[style*="width: 50%"] {
-           width: 100% !important;
-         }
 
-         .sticky {
-           position: relative !important;
-         }
+       .job-sidebar-scroll::-webkit-scrollbar-thumb {
+         background: linear-gradient(135deg, #1E3A5F 0%, #3D6491 100%);
+         border-radius: 10px;
+       }
 
-         .fixed.inset-0 {
-           padding: 1rem;
-         }
-
-         .max-w-4xl, .max-w-2xl {
-           max-width: 100% !important;
-         }
-
-         .grid.grid-cols-1.lg\\:grid-cols-3 {
-           grid-template-columns: 1fr !important;
-         }
-
-         .text-2xl {
-           font-size: 1.5rem !important;
-         }
-
-         .p-6 {
-           padding: 1rem !important;
-         }
+       .job-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+         background: linear-gradient(135deg, #122438 0%, #1E3A5F 100%);
        }
      `}</style>
    </div>

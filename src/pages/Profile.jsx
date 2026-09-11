@@ -691,13 +691,13 @@ const loadExperienceAndEducation = async () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         <Navbar />
         <div className="pt-32 pb-12">
           <div className="container-custom">
             <div className="flex items-center justify-center py-12">
               <div className="relative">
-                <div className="animate-spin rounded-full h-16 w-16 border-4 border-transparent border-t-job-purple border-r-job-pink"></div>
+                <div className="animate-spin rounded-full h-16 w-16 border-4 border-transparent border-t-job-navy border-r-job-navy-dark"></div>
                 <div className="absolute inset-0 animate-pulse rounded-full bg-gradient-elegant opacity-20"></div>
               </div>
             </div>
@@ -709,12 +709,12 @@ const loadExperienceAndEducation = async () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
         {/* Fond décoratif animé */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-job-purple/10 to-job-pink/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/2 -left-4 w-96 h-96 bg-gradient-to-br from-yellow-400/5 to-orange-400/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute -top-4 -right-4 w-72 h-72 bg-gradient-to-br from-job-navy/10 to-job-navy-dark/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/2 -left-4 w-96 h-96 bg-job-gold/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-job-navy-light/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         <Navbar />
@@ -723,7 +723,7 @@ const loadExperienceAndEducation = async () => {
           <div className="container-custom">
             {/* Header avec photo de profil - Design amélioré */}
             <div className="bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/20 overflow-hidden mb-8 relative">
-              <div className="h-48 bg-gradient-to-r from-job-purple via-job-pink to-yellow-400 relative">
+              <div className="h-48 bg-gradient-to-r from-job-navy via-job-navy-dark to-job-gold relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
                 <div className="absolute inset-0 opacity-20">
                   <div className="h-full w-full" style={{
@@ -734,10 +734,10 @@ const loadExperienceAndEducation = async () => {
               </div>
               
               <div className="relative px-8 pb-8">
-                <div className="flex flex-col lg:flex-row lg:items-end lg:space-x-8 -mt-24">
+                <div className="flex flex-col lg:flex-row lg:items-end lg:space-x-8 -mt-16 sm:-mt-20 lg:-mt-24">
                   {/* Avatar avec upload */}
                   <div className="relative group mb-6 lg:mb-0">
-                  <div className="relative" style={{ width: '160px', height: '160px' }}>
+                  <div className="relative w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40">
   <div 
     className="relative bg-gradient-elegant border-6 border-white shadow-2xl transform transition-all group-hover:scale-105 flex items-center justify-center text-white font-bold text-4xl overflow-hidden w-full h-full rounded-full"
   >
@@ -764,15 +764,7 @@ const loadExperienceAndEducation = async () => {
     </div>
   </div>
   
-  {/* DEBUG - À SUPPRIMER APRÈS TEST */}
-  {console.log('Profile verification debug:', {
-    'profile?.is_verified': profile?.is_verified,
-    'type': typeof profile?.is_verified,
-    'strict true': profile?.is_verified === true,
-    'strict false': profile?.is_verified === false
-  })}
-  
-  <VerifiedBadge 
+  <VerifiedBadge
     size="large"
     position="bottom-right"
     variant={profile?.is_premium ? 'gold' : 'blue'}
@@ -802,7 +794,7 @@ const loadExperienceAndEducation = async () => {
                         <div className="flex items-center space-x-3 flex-wrap gap-2">
                           <div className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${
                             profile?.user_type === 'employer' 
-                              ? 'bg-blue-100 text-blue-700' 
+                              ? 'bg-slate-100 text-job-navy-dark' 
                               : 'bg-green-100 text-green-700'
                           }`}>
                             {profile?.user_type === 'employer' ? (
@@ -820,14 +812,14 @@ const loadExperienceAndEducation = async () => {
                           
                           {/* Poste pour candidats */}
                           {profile?.user_type === 'candidate' && profile?.poste && (
-                            <div className="flex items-center px-4 py-2 bg-job-purple/10 text-job-purple rounded-full text-sm font-medium">
+                            <div className="flex items-center px-4 py-2 bg-job-navy/10 text-job-navy rounded-full text-sm font-medium">
                               <Briefcase className="h-4 w-4 mr-2" />
                               {profile.poste}
                             </div>
                           )}
                           
                           {profile?.company_name && (
-                            <div className="flex items-center text-job-purple font-medium">
+                            <div className="flex items-center text-job-navy font-medium">
                               <Building className="h-4 w-4 mr-1" />
                               {profile.company_name}
                             </div>
@@ -845,11 +837,11 @@ const loadExperienceAndEducation = async () => {
                         <div className="mt-4">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-sm font-medium text-gray-700">Profil complété</span>
-                            <span className="text-sm font-bold text-job-purple">{stats.profileCompleteness}%</span>
+                            <span className="text-sm font-bold text-job-navy">{stats.profileCompleteness}%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                             <div 
-                              className="h-3 bg-gradient-to-r from-job-purple to-job-pink rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
+                              className="h-3 bg-gradient-to-r from-job-navy to-job-navy-dark rounded-full transition-all duration-1000 ease-out relative overflow-hidden"
                               style={{ width: `${stats.profileCompleteness}%` }}
                             >
                               <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
@@ -881,8 +873,8 @@ const loadExperienceAndEducation = async () => {
                     <p className="text-sm font-medium text-gray-600 mb-1">Vues du profil</p>
                     <p className="text-3xl font-bold text-gray-900 animate-pulse">{stats.profileViews}</p>
                   </div>
-                  <div className="p-3 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl">
-                    <Eye className="h-6 w-6 text-blue-600" />
+                  <div className="p-3 bg-gradient-to-br from-slate-100 to-job-navy-light rounded-2xl">
+                    <Eye className="h-6 w-6 text-job-navy" />
                   </div>
                 </div>
                 <div className="mt-4 flex items-center">
@@ -911,8 +903,8 @@ const loadExperienceAndEducation = async () => {
                         <p className="text-sm font-medium text-gray-600 mb-1">Offres sauvées</p>
                         <p className="text-3xl font-bold text-gray-900">{stats.savedJobs}</p>
                       </div>
-                      <div className="p-3 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-2xl">
-                        <Star className="h-6 w-6 text-yellow-600" />
+                      <div className="p-3 bg-job-light-gold rounded-2xl">
+                        <Star className="h-6 w-6 text-job-dark-gold" />
                       </div>
                     </div>
                   </div>
@@ -925,8 +917,8 @@ const loadExperienceAndEducation = async () => {
                         <p className="text-sm font-medium text-gray-600 mb-1">Offres publiées</p>
                         <p className="text-3xl font-bold text-gray-900">{stats.jobsPosted}</p>
                       </div>
-                      <div className="p-3 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl">
-                        <Briefcase className="h-6 w-6 text-purple-600" />
+                      <div className="p-3 bg-gradient-to-br from-slate-100 to-job-navy-light rounded-2xl">
+                        <Briefcase className="h-6 w-6 text-job-navy" />
                       </div>
                     </div>
                   </div>
@@ -951,8 +943,8 @@ const loadExperienceAndEducation = async () => {
                     <p className="text-sm font-medium text-gray-600 mb-1">Score profil</p>
                     <p className="text-3xl font-bold text-gray-900">{stats.profileCompleteness}/100</p>
                   </div>
-                  <div className="p-3 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-2xl">
-                    <BarChart3 className="h-6 w-6 text-indigo-600" />
+                  <div className="p-3 bg-gradient-to-br from-slate-100 to-job-navy-light rounded-2xl">
+                    <BarChart3 className="h-6 w-6 text-job-navy" />
                   </div>
                 </div>
               </div>
@@ -977,12 +969,12 @@ const loadExperienceAndEducation = async () => {
             </div>
 
             {/* Contenu des onglets */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="lg:col-span-2">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              <div className="lg:col-span-2 space-y-8">
                 {activeTab === 'profile' && (
                   <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-8">
                     <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                      <User className="h-7 w-7 mr-3 text-job-purple" />
+                      <User className="h-7 w-7 mr-3 text-job-navy" />
                       Informations du profil
                     </h2>
 
@@ -1062,7 +1054,7 @@ const loadExperienceAndEducation = async () => {
                                    href={profile.linkedin_url} 
                                    target="_blank" 
                                    rel="noopener noreferrer"
-                                   className="font-medium text-job-purple hover:underline"
+                                   className="font-medium text-job-navy hover:underline"
                                  >
                                    Voir le profil
                                  </a>
@@ -1082,7 +1074,7 @@ const loadExperienceAndEducation = async () => {
                              profile.skills.map((skill, index) => (
                                <span
                                  key={index}
-                                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-job-purple/10 to-job-pink/10 text-job-purple rounded-full text-sm font-medium border border-job-purple/20 hover:shadow-md transition-all"
+                                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-job-navy/10 to-job-navy-dark/10 text-job-navy rounded-full text-sm font-medium border border-job-navy/20 hover:shadow-md transition-all"
                                >
                                  {skill}
                                </span>
@@ -1118,7 +1110,7 @@ const loadExperienceAndEducation = async () => {
                                      href={profile.website_url} 
                                      target="_blank" 
                                      rel="noopener noreferrer"
-                                     className="font-medium text-job-purple hover:underline"
+                                     className="font-medium text-job-navy hover:underline"
                                    >
                                      Visiter le site
                                    </a>
@@ -1164,12 +1156,12 @@ const loadExperienceAndEducation = async () => {
                {activeTab === 'security' && (
                  <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-8">
                    <h2 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-                     <Shield className="h-7 w-7 mr-3 text-job-purple" />
+                     <Shield className="h-7 w-7 mr-3 text-job-navy" />
                      Sécurité et mot de passe
                    </h2>
 
                    <div className="space-y-6">
-                     <div className="flex items-center justify-between p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                     <div className="flex items-center justify-between p-6 bg-slate-50 rounded-xl border border-job-navy-light">
                        <div>
                          <h3 className="font-semibold text-gray-900 text-lg">Mot de passe</h3>
                          <p className="text-gray-600">Dernière modification il y a plus de 30 jours</p>
@@ -1195,7 +1187,7 @@ const loadExperienceAndEducation = async () => {
                                name="currentPassword"
                                value={passwordData.currentPassword}
                                onChange={handlePasswordChange}
-                               className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all pr-12"
+                               className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all pr-12"
                              />
                              <button
                                type="button"
@@ -1217,7 +1209,7 @@ const loadExperienceAndEducation = async () => {
                                name="newPassword"
                                value={passwordData.newPassword}
                                onChange={handlePasswordChange}
-                               className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all pr-12"
+                               className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all pr-12"
                              />
                              <button
                                type="button"
@@ -1238,7 +1230,7 @@ const loadExperienceAndEducation = async () => {
                              name="confirmPassword"
                              value={passwordData.confirmPassword}
                              onChange={handlePasswordChange}
-                             className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                             className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                            />
                          </div>
 
@@ -1284,21 +1276,17 @@ const loadExperienceAndEducation = async () => {
                  </div>
                )}
 
-             
-             </div>
-
-
                 {/* Section Expérience Professionnelle pour candidats */}
 {profile?.user_type === 'candidate' && experiences.length > 0 && (
   <div>
     <h3 className="text-lg font-semibold text-gray-900 mb-3">Expérience Professionnelle</h3>
     <div className="space-y-4">
       {experiences.map((exp) => (
-        <div key={exp.$id} className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+        <div key={exp.$id} className="bg-slate-50 rounded-xl p-4 border border-job-navy-light">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <h4 className="font-semibold text-gray-900 text-lg">{exp.position}</h4>
-              <p className="text-job-purple font-medium flex items-center">
+              <p className="text-job-navy font-medium flex items-center">
                 <Building className="h-4 w-4 mr-1" />
                 {exp.company_name}
               </p>
@@ -1318,8 +1306,8 @@ const loadExperienceAndEducation = async () => {
               )}
             </div>
             <div className="ml-4">
-              <div className="p-2 bg-blue-100 rounded-lg">
-                <Briefcase className="h-5 w-5 text-blue-600" />
+              <div className="p-2 bg-slate-100 rounded-lg">
+                <Briefcase className="h-5 w-5 text-job-navy" />
               </div>
             </div>
           </div>
@@ -1339,7 +1327,7 @@ const loadExperienceAndEducation = async () => {
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <h4 className="font-semibold text-gray-900 text-lg">{edu.degree}</h4>
-              <p className="text-job-purple font-medium flex items-center">
+              <p className="text-job-navy font-medium flex items-center">
                 <Building className="h-4 w-4 mr-1" />
                 {edu.institution_name}
               </p>
@@ -1379,10 +1367,10 @@ const loadExperienceAndEducation = async () => {
     <h3 className="text-lg font-semibold text-gray-900 mb-3">Documents</h3>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {profile?.cv_url && (
-        <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl p-4 border border-purple-200">
+        <div className="bg-slate-50 rounded-xl p-4 border border-job-navy-light">
           <div className="flex items-center">
-            <div className="p-3 bg-purple-100 rounded-lg mr-4">
-              <FileText className="h-6 w-6 text-purple-600" />
+            <div className="p-3 bg-slate-100 rounded-lg mr-4">
+              <FileText className="h-6 w-6 text-job-navy" />
             </div>
             <div className="flex-1">
               <h4 className="font-semibold text-gray-900">Curriculum Vitae</h4>
@@ -1392,7 +1380,7 @@ const loadExperienceAndEducation = async () => {
               href={profile.cv_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-purple-100 hover:bg-purple-200 text-purple-600 p-2 rounded-lg transition-colors"
+              className="bg-slate-100 hover:bg-job-navy-light text-job-navy p-2 rounded-lg transition-colors"
             >
               <ExternalLink className="h-5 w-5" />
             </a>
@@ -1401,10 +1389,10 @@ const loadExperienceAndEducation = async () => {
       )}
       
       {profile?.portfolio_url && (
-        <div className="bg-gradient-to-r from-orange-50 to-yellow-50 rounded-xl p-4 border border-orange-200">
+        <div className="bg-slate-50 rounded-xl p-4 border border-job-light-gold">
           <div className="flex items-center">
-            <div className="p-3 bg-orange-100 rounded-lg mr-4">
-              <Briefcase className="h-6 w-6 text-orange-600" />
+            <div className="p-3 bg-job-light-gold rounded-lg mr-4">
+              <Briefcase className="h-6 w-6 text-job-dark-gold" />
             </div>
             <div className="flex-1">
               <h4 className="font-semibold text-gray-900">Portfolio</h4>
@@ -1414,7 +1402,7 @@ const loadExperienceAndEducation = async () => {
               href={profile.portfolio_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-orange-100 hover:bg-orange-200 text-orange-600 p-2 rounded-lg transition-colors"
+              className="bg-job-light-gold hover:bg-job-light-gold text-job-dark-gold p-2 rounded-lg transition-colors"
             >
               <ExternalLink className="h-5 w-5" />
             </a>
@@ -1424,7 +1412,9 @@ const loadExperienceAndEducation = async () => {
     </div>
   </div>
 )}
+              </div>
 
+              <div className="space-y-8">
                {/* Actions rapides */}
                <div className="bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/20 p-6">
                  <h3 className="font-bold text-gray-900 mb-4 text-lg">Actions rapides</h3>
@@ -1433,15 +1423,15 @@ const loadExperienceAndEducation = async () => {
                      <>
               
                 <Link to="/my-applications">
-                <button className="w-full text-left p-4 bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold hover:from-blue-50 hover:to-indigo-50 rounded-xl transition-all flex items-center group">
-                         <div className="p-2 bg-blue-100 rounded-lg mr-3 group-hover:bg-blue-200 transition-colors">
-                           <FileText className="h-5 w-5 text-blue-600" />
+                <button className="w-full text-left p-4 bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold hover:from-slate-50 hover:to-slate-50 rounded-xl transition-all flex items-center group">
+                         <div className="p-2 bg-slate-100 rounded-lg mr-3 group-hover:bg-job-navy-light transition-colors">
+                           <FileText className="h-5 w-5 text-job-navy" />
                          </div>
                          <span className="font-medium">Voir mes candidatures</span>
                        </button>
                        </Link>
                        <Link to="/jobs">
-                        <button className="w-full text-left mt-8 p-4 bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold hover:from-blue-50 hover:to-indigo-50 rounded-xl transition-all flex items-center group">
+                        <button className="w-full text-left mt-8 p-4 bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold hover:from-slate-50 hover:to-slate-50 rounded-xl transition-all flex items-center group">
               
                          <div className="p-2 bg-green-100 rounded-lg mr-3 group-hover:bg-green-200 transition-colors">
                            <Briefcase className="h-5 w-5 text-green-600" />
@@ -1452,9 +1442,9 @@ const loadExperienceAndEducation = async () => {
                      </>
                    ) : (
                      <>
-                       <button className="w-full text-left p-4 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 rounded-xl transition-all flex items-center group">
-                         <div className="p-2 bg-blue-100 rounded-lg mr-3 group-hover:bg-blue-200 transition-colors">
-                           <Briefcase className="h-5 w-5 text-blue-600" />
+                       <button className="w-full text-left p-4 hover:bg-gradient-to-r hover:from-slate-50 hover:to-slate-50 rounded-xl transition-all flex items-center group">
+                         <div className="p-2 bg-slate-100 rounded-lg mr-3 group-hover:bg-job-navy-light transition-colors">
+                           <Briefcase className="h-5 w-5 text-job-navy" />
                          </div>
                          <span className="font-medium">Publier une offre</span>
                        </button>
@@ -1464,9 +1454,9 @@ const loadExperienceAndEducation = async () => {
                          </div>
                          <span className="font-medium">Voir les candidatures</span>
                        </button>
-                       <button className="w-full text-left p-4 hover:bg-gradient-to-r hover:from-purple-50 hover:to-violet-50 rounded-xl transition-all flex items-center group">
-                         <div className="p-2 bg-purple-100 rounded-lg mr-3 group-hover:bg-purple-200 transition-colors">
-                           <FileText className="h-5 w-5 text-purple-600" />
+                       <button className="w-full text-left p-4 hover:bg-gradient-to-r hover:from-slate-50 hover:to-slate-50 rounded-xl transition-all flex items-center group">
+                         <div className="p-2 bg-slate-100 rounded-lg mr-3 group-hover:bg-job-navy-light transition-colors">
+                           <FileText className="h-5 w-5 text-job-navy" />
                          </div>
                          <span className="font-medium">Gérer mes offres</span>
                        </button>
@@ -1481,7 +1471,7 @@ const loadExperienceAndEducation = async () => {
                  <div className="space-y-4">
                    <div className="flex justify-between items-center">
                      <span className="text-gray-600">Type de compte</span>
-                     <span className="font-semibold capitalize bg-gradient-to-r from-job-purple to-job-pink bg-clip-text text-transparent">
+                     <span className="font-semibold capitalize bg-gradient-to-r from-job-navy to-job-navy-dark bg-clip-text text-transparent">
                        {profile?.user_type}
                      </span>
                    </div>
@@ -1490,9 +1480,9 @@ const loadExperienceAndEducation = async () => {
                      <div className="flex items-center">
                        {profile?.is_premium ? (
                          <>
-                           <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2 animate-pulse"></div>
-                           <span className="font-semibold text-yellow-600">Premium</span>
-                           <Crown className="h-4 w-4 ml-1 text-yellow-600" />
+                           <div className="w-3 h-3 bg-slate-500 rounded-full mr-2 animate-pulse"></div>
+                           <span className="font-semibold text-job-dark-gold">Premium</span>
+                           <Crown className="h-4 w-4 ml-1 text-job-dark-gold" />
                          </>
                        ) : (
                          <>
@@ -1525,9 +1515,9 @@ const loadExperienceAndEducation = async () => {
                </div>
 
                {/* Conseils personnalisés - Boutons améliorés */}
-               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-6 border border-yellow-200 shadow-xl">
+               <div className="bg-slate-50 rounded-2xl p-6 border border-job-light-gold shadow-xl">
                  <div className="text-center">
-                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+                   <div className="w-16 h-16 bg-job-gold rounded-full mx-auto mb-4 flex items-center justify-center">
                      <span className="text-2xl">💡</span>
                    </div>
                    <h3 className="font-bold text-gray-900 mb-3 text-lg">Améliorez votre profil</h3>
@@ -1544,7 +1534,7 @@ const loadExperienceAndEducation = async () => {
                         <div className="flex justify-center">
                           <Button 
                             onClick={() => setShowOptimizeModal(true)}
-                            className="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold py-3 px-6 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg whitespace-nowrap min-w-fit"
+                            className="bg-job-gold hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg whitespace-nowrap min-w-fit"
                           >
                             Expérience / Formations
                           </Button>
@@ -1555,7 +1545,7 @@ const loadExperienceAndEducation = async () => {
                           <div className="flex justify-center">
                             <Button 
                               onClick={() => setShowVerifyModal(true)}
-                              className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold py-2.5 px-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center space-x-1 text-xs w-24"
+                              className="bg-slate-500 hover:bg-job-navy text-white font-semibold py-2.5 px-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center space-x-1 text-xs w-24"
                             >
                               <Shield className="h-3 w-3" />
                               <span>Vérifier</span>
@@ -1568,7 +1558,7 @@ const loadExperienceAndEducation = async () => {
                       !profile?.is_verified && (
                         <Button 
                           onClick={() => setShowVerifyModal(true)}
-                          className="mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center space-x-2"
+                          className="mx-auto bg-slate-500 hover:bg-job-navy text-white font-semibold py-3 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg flex items-center justify-center space-x-2"
                         >
                           <Shield className="h-4 w-4" />
                           <span>Vérifier mon entreprise</span>
@@ -1577,11 +1567,12 @@ const loadExperienceAndEducation = async () => {
                     )}
                  </div>
                </div>
+              </div>
            </div>
          </div>
        </div>
 
-       
+
        {showEditModal && (
          <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
            <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col">
@@ -1610,7 +1601,7 @@ const loadExperienceAndEducation = async () => {
                      name="full_name"
                      value={formData.full_name}
                      onChange={handleInputChange}
-                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                      placeholder="Votre nom complet"
                    />
                  </div>
@@ -1624,7 +1615,7 @@ const loadExperienceAndEducation = async () => {
                      name="phone"
                      value={formData.phone}
                      onChange={handleInputChange}
-                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                      placeholder="+261 XX XX XXX XX"
                    />
                  </div>
@@ -1638,7 +1629,7 @@ const loadExperienceAndEducation = async () => {
                      name="location"
                      value={formData.location}
                      onChange={handleInputChange}
-                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                      placeholder="Antananarivo, Madagascar"
                    />
                  </div>
@@ -1654,7 +1645,7 @@ const loadExperienceAndEducation = async () => {
                          name="company_name"
                          value={formData.company_name}
                          onChange={handleInputChange}
-                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                          placeholder="Nom de votre entreprise"
                        />
                      </div>
@@ -1668,7 +1659,7 @@ const loadExperienceAndEducation = async () => {
                          name="website_url"
                          value={formData.website_url}
                          onChange={handleInputChange}
-                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                          placeholder="https://..."
                        />
                      </div>
@@ -1681,7 +1672,7 @@ const loadExperienceAndEducation = async () => {
                        </label>
                        <div className="space-y-6">
                          {formData.company_logo_url && (
-                           <div className="flex items-center space-x-6 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border-2 border-blue-200">
+                           <div className="flex items-center space-x-6 p-6 bg-slate-50 rounded-2xl border-2 border-job-navy-light">
                              <div className="relative group">
                                <img 
                                  src={formData.company_logo_url} 
@@ -1703,7 +1694,7 @@ const loadExperienceAndEducation = async () => {
                            </div>
                          )}
                          
-                         <div className="border-3 border-dashed border-gradient-to-r from-job-purple to-job-pink rounded-2xl p-8 text-center hover:border-solid hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 transition-all group cursor-pointer"
+                         <div className="border-3 border-dashed border-job-navy-light rounded-2xl p-8 text-center hover:border-solid hover:bg-slate-50 transition-all group cursor-pointer"
                               onClick={() => logoInputRef.current?.click()}>
                            <input
                              ref={logoInputRef}
@@ -1714,9 +1705,9 @@ const loadExperienceAndEducation = async () => {
                            />
                            <div className="flex flex-col items-center space-y-4">
                              {uploadingLogo ? (
-                               <div className="w-16 h-16 border-4 border-job-purple border-t-transparent rounded-full animate-spin"></div>
+                               <div className="w-16 h-16 border-4 border-job-navy border-t-transparent rounded-full animate-spin"></div>
                              ) : (
-                               <div className="w-16 h-16 bg-gradient-to-br from-job-purple to-job-pink rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                               <div className="w-16 h-16 bg-gradient-to-br from-job-navy to-job-navy-dark rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                                  <Image className="h-8 w-8 text-white" />
                                </div>
                              )}
@@ -1746,7 +1737,7 @@ const loadExperienceAndEducation = async () => {
                        name="experience_years"
                        value={formData.experience_years}
                        onChange={handleInputChange}
-                       className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                       className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                        min="0"
                        max="50"
                        placeholder="Nombre d'années"
@@ -1765,7 +1756,7 @@ const loadExperienceAndEducation = async () => {
                          name="poste"
                          value={formData.poste}
                          onChange={handleInputChange}
-                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                          placeholder="Ex: Développeur Full Stack"
                        />
                      </div>
@@ -1778,7 +1769,7 @@ const loadExperienceAndEducation = async () => {
                          name="disponibilite"
                          value={formData.disponibilite}
                          onChange={handleInputChange}
-                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                         className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                        >
                          <option value="">Sélectionner...</option>
                          <option value="Immédiate">Immédiate</option>
@@ -1797,7 +1788,7 @@ const loadExperienceAndEducation = async () => {
                      name="linkedin_url"
                      value={formData.linkedin_url}
                      onChange={handleInputChange}
-                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                     className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                      placeholder="https://linkedin.com/in/..."
                    />
                  </div>
@@ -1812,7 +1803,7 @@ const loadExperienceAndEducation = async () => {
                    value={formData.bio}
                    onChange={handleInputChange}
                    rows={4}
-                   className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                   className="w-full p-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                    placeholder={profile?.user_type === 'employer' 
                      ? "Décrivez votre entreprise, ses valeurs et sa mission..." 
                      : "Parlez de vous, vos passions, vos objectifs professionnels..."
@@ -1832,13 +1823,13 @@ const loadExperienceAndEducation = async () => {
                        value={newSkill}
                        onChange={(e) => setNewSkill(e.target.value)}
                        onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addSkill())}
-                       className="flex-1 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-purple focus:border-transparent transition-all"
+                       className="flex-1 p-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-job-navy focus:border-transparent transition-all"
                        placeholder="Ajouter une compétence..."
                      />
                      <Button
                        onClick={addSkill}
                        type="button"
-                       className="bg-job-purple hover:bg-job-purple-dark text-white px-6 py-3 rounded-xl font-semibold transition-all"
+                       className="bg-job-navy hover:bg-job-navy-dark text-white px-6 py-3 rounded-xl font-semibold transition-all"
                      >
                        Ajouter
                      </Button>
@@ -1848,12 +1839,12 @@ const loadExperienceAndEducation = async () => {
                      {formData.skills.map((skill, index) => (
                        <span
                          key={index}
-                         className="inline-flex items-center px-3 py-1 bg-job-purple/10 text-job-purple rounded-full text-sm font-medium border border-job-purple/20"
+                         className="inline-flex items-center px-3 py-1 bg-job-navy/10 text-job-navy rounded-full text-sm font-medium border border-job-navy/20"
                        >
                          {skill}
                          <button
                            onClick={() => removeSkill(skill)}
-                           className="ml-2 text-job-purple hover:text-red-500 transition-colors"
+                           className="ml-2 text-job-navy hover:text-red-500 transition-colors"
                          >
                            <X className="h-3 w-3" />
                          </button>

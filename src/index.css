@@ -7,73 +7,73 @@
 
 @layer base {
   :root {
-    --background: 43 38% 97%;
-    --foreground: 30 30% 14%;
+    --background: 210 20% 98%;
+    --foreground: 214 32% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 30 30% 14%;
+    --card-foreground: 214 32% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 30% 14%;
+    --popover-foreground: 214 32% 16%;
 
-    --primary: 43 65% 52%;
+    --primary: 214 52% 24%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 35 33% 55%;
-    --secondary-foreground: 30 30% 14%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 214 32% 16%;
 
-    --muted: 35 33% 95%;
-    --muted-foreground: 30 24% 40%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 40%;
 
     --accent: 43 65% 52%;
-    --accent-foreground: 30 30% 14%;
+    --accent-foreground: 214 32% 16%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 35 33% 90%;
-    --input: 35 33% 90%;
-    --ring: 43 65% 52%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 214 52% 40%;
 
     --radius: 0.75rem;
 
     --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 30 24% 33%;
-    --sidebar-primary: 30 30% 10%;
+    --sidebar-foreground: 215 15% 35%;
+    --sidebar-primary: 214 52% 24%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 30 33% 96%;
-    --sidebar-accent-foreground: 30 30% 10%;
-    --sidebar-border: 35 33% 91%;
-    --sidebar-ring: 43 65% 52%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 214 32% 16%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 214 52% 40%;
   }
 
   .dark {
-    --background: 25 30% 10%;
-    --foreground: 35 33% 92%;
+    --background: 214 35% 10%;
+    --foreground: 210 20% 92%;
 
-    --card: 25 30% 12%;
-    --card-foreground: 35 33% 92%;
+    --card: 214 35% 13%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 25 30% 12%;
-    --popover-foreground: 35 33% 92%;
+    --popover: 214 35% 13%;
+    --popover-foreground: 210 20% 92%;
 
     --primary: 43 65% 52%;
-    --primary-foreground: 35 33% 92%;
+    --primary-foreground: 214 35% 10%;
 
-    --secondary: 35 15% 25%;
-    --secondary-foreground: 35 33% 92%;
+    --secondary: 214 20% 22%;
+    --secondary-foreground: 210 20% 92%;
 
-    --muted: 35 15% 25%;
-    --muted-foreground: 35 15% 65%;
+    --muted: 214 20% 22%;
+    --muted-foreground: 210 15% 65%;
 
     --accent: 43 65% 52%;
-    --accent-foreground: 35 33% 92%;
+    --accent-foreground: 214 35% 10%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 35 33% 92%;
+    --destructive-foreground: 210 20% 92%;
 
-    --border: 35 15% 25%;
-    --input: 35 15% 25%;
+    --border: 214 20% 22%;
+    --input: 214 20% 22%;
     --ring: 43 65% 65%;
   }
 }
@@ -97,15 +97,15 @@
   }
   
   ::-webkit-scrollbar-track {
-    @apply bg-job-cream/50;
+    @apply bg-slate-100;
   }
-  
+
   ::-webkit-scrollbar-thumb {
-    @apply bg-job-gold/70 rounded-full;
+    @apply bg-job-navy-light/60 rounded-full;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-job-gold;
+    @apply bg-job-navy;
   }
 }
 
@@ -115,19 +115,19 @@
   }
   
   .btn-primary {
+    @apply bg-job-navy text-white hover:bg-job-navy-dark font-medium rounded-md px-5 py-2.5 transition-all shadow-button hover:shadow-none hover:translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-slate-200 font-medium rounded-md px-5 py-2.5 transition-all;
+  }
+
+  .btn-accent {
     @apply bg-job-gold text-white hover:bg-job-dark-gold font-medium rounded-md px-5 py-2.5 transition-all shadow-button hover:shadow-none hover:translate-y-0.5;
   }
-  
-  .btn-secondary {
-    @apply bg-job-brown text-white hover:bg-job-dark-brown font-medium rounded-md px-5 py-2.5 transition-all shadow-button hover:shadow-none hover:translate-y-0.5;
-  }
-  
-  .btn-accent {
-    @apply bg-job-orange text-white hover:bg-orange-600 font-medium rounded-md px-5 py-2.5 transition-all shadow-button hover:shadow-none hover:translate-y-0.5;
-  }
-  
+
   .btn-outline {
-    @apply border border-job-gold text-job-brown hover:bg-job-gold hover:text-white font-medium rounded-md px-5 py-2.5 transition-all;
+    @apply border border-job-navy text-job-navy hover:bg-job-navy hover:text-white font-medium rounded-md px-5 py-2.5 transition-all;
   }
 
   .card-hover {
@@ -135,7 +135,12 @@
   }
 
   .nav-link {
-    @apply text-job-dark font-medium hover:text-job-gold transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-job-gold after:transition-all;
+    @apply text-slate-600 font-medium hover:text-job-navy transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-job-gold after:transition-all;
+  }
+
+  /* Same underline mechanics as .nav-link, for use over a dark/transparent header (e.g. unscrolled, on the navy hero) */
+  .nav-link-inverse {
+    @apply text-white/90 font-medium hover:text-job-gold transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-job-gold after:transition-all;
   }
 
   .section-title {
@@ -143,7 +148,7 @@
   }
 
   .section-subtitle {
-    @apply text-lg sm:text-xl text-job-gray font-medium mb-4;
+    @apply text-lg sm:text-xl text-slate-500 font-medium mb-4;
   }
   
   .glass-card {
@@ -169,7 +174,7 @@
 
 /* Custom gradient backgrounds */
 .bg-gradient-elegant {
-  background: linear-gradient(135deg, #D4AF37 0%, #AA8C3E 100%);
+  background: linear-gradient(135deg, #1E3A5F 0%, #3D6491 100%);
 }
 
 .bg-gradient-gold {

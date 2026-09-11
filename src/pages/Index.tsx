@@ -306,22 +306,22 @@ const JobMadaHomepage = () => {
         keywords="job2mada, emploi madagascar, travail antananarivo, recrutement madagascar, offres emploi, cv madagascar"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
+      <div className="min-h-screen bg-slate-50">
         <Navbar />
 
         {/* Hero Section pleine largeur avec hauteur fixe */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500 pt-20 h-screen w-full">
+        <section className="relative overflow-hidden bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark pt-24 pb-12 lg:pt-20 lg:pb-0 lg:h-screen lg:min-h-[640px] w-full">
           <div className="absolute inset-0 bg-black/10"></div>
           
           {/* Animation d'étoiles magnifiques côté gauche - Hidden on mobile */}
           <div className="absolute left-0 top-0 w-1/2 h-full overflow-hidden hidden lg:block">
             {/* Étoiles scintillantes */}
             <div className="absolute top-20 left-16 w-1 h-1 bg-white rounded-full animate-twinkle opacity-80"></div>
-            <div className="absolute top-32 left-32 w-1.5 h-1.5 bg-amber-200 rounded-full animate-twinkle delay-500 opacity-70"></div>
+            <div className="absolute top-32 left-32 w-1.5 h-1.5 bg-job-light-gold rounded-full animate-twinkle delay-500 opacity-70"></div>
             <div className="absolute top-48 left-24 w-1 h-1 bg-white rounded-full animate-twinkle delay-1000 opacity-90"></div>
-            <div className="absolute top-64 left-40 w-2 h-2 bg-yellow-200 rounded-full animate-twinkle delay-1500 opacity-60"></div>
+            <div className="absolute top-64 left-40 w-2 h-2 bg-job-light-gold rounded-full animate-twinkle delay-1500 opacity-60"></div>
             <div className="absolute top-80 left-20 w-1 h-1 bg-white rounded-full animate-twinkle delay-2000 opacity-85"></div>
-            <div className="absolute top-96 left-36 w-1.5 h-1.5 bg-amber-100 rounded-full animate-twinkle delay-2500 opacity-75"></div>
+            <div className="absolute top-96 left-36 w-1.5 h-1.5 bg-job-light-gold rounded-full animate-twinkle delay-2500 opacity-75"></div>
             
             {/* Étoiles plus grandes avec croix */}
             <div className="absolute top-40 left-48 animate-sparkle">
@@ -334,30 +334,30 @@ const JobMadaHomepage = () => {
             
             <div className="absolute top-72 left-28 animate-sparkle delay-700">
               <div className="relative w-2.5 h-2.5">
-                <div className="absolute inset-0 bg-amber-200 rounded-full opacity-70"></div>
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-amber-200 transform -translate-y-1/2 opacity-50"></div>
-                <div className="absolute left-1/2 top-0 h-full w-0.5 bg-amber-200 transform -translate-x-1/2 opacity-50"></div>
+                <div className="absolute inset-0 bg-job-light-gold rounded-full opacity-70"></div>
+                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-job-light-gold transform -translate-y-1/2 opacity-50"></div>
+                <div className="absolute left-1/2 top-0 h-full w-0.5 bg-job-light-gold transform -translate-x-1/2 opacity-50"></div>
               </div>
             </div>
             
             <div className="absolute top-56 left-44 animate-sparkle delay-1400">
               <div className="relative w-2 h-2">
-                <div className="absolute inset-0 bg-yellow-100 rounded-full opacity-90"></div>
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-yellow-100 transform -translate-y-1/2 opacity-70"></div>
-                <div className="absolute left-1/2 top-0 h-full w-0.5 bg-yellow-100 transform -translate-x-1/2 opacity-70"></div>
+                <div className="absolute inset-0 bg-job-light-gold rounded-full opacity-90"></div>
+                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-job-light-gold transform -translate-y-1/2 opacity-70"></div>
+                <div className="absolute left-1/2 top-0 h-full w-0.5 bg-job-light-gold transform -translate-x-1/2 opacity-70"></div>
               </div>
             </div>
             
             {/* Particules dorées flottantes */}
-            <div className="absolute top-24 left-52 w-1 h-1 bg-gradient-to-r from-yellow-300 to-amber-300 rounded-full animate-float-up opacity-60"></div>
-            <div className="absolute top-44 left-12 w-1.5 h-1.5 bg-gradient-to-r from-orange-200 to-yellow-200 rounded-full animate-float-up delay-800 opacity-70"></div>
-            <div className="absolute top-68 left-60 w-1 h-1 bg-gradient-to-r from-amber-200 to-yellow-300 rounded-full animate-float-up delay-1600 opacity-50"></div>
-            <div className="absolute top-84 left-16 w-2 h-2 bg-gradient-to-r from-yellow-200 to-orange-200 rounded-full animate-float-up delay-2400 opacity-80"></div>
+            <div className="absolute top-24 left-52 w-1 h-1 bg-gradient-to-r from-job-gold to-job-gold rounded-full animate-float-up opacity-60"></div>
+            <div className="absolute top-44 left-12 w-1.5 h-1.5 bg-gradient-to-r from-job-light-gold to-job-light-gold rounded-full animate-float-up delay-800 opacity-70"></div>
+            <div className="absolute top-68 left-60 w-1 h-1 bg-gradient-to-r from-job-light-gold to-job-gold rounded-full animate-float-up delay-1600 opacity-50"></div>
+            <div className="absolute top-84 left-16 w-2 h-2 bg-gradient-to-r from-job-light-gold to-job-light-gold rounded-full animate-float-up delay-2400 opacity-80"></div>
             
             {/* Lueurs magiques */}
             <div className="absolute top-36 left-40 w-8 h-8 bg-white/10 rounded-full blur-md animate-pulse-glow"></div>
-            <div className="absolute top-60 left-20 w-12 h-12 bg-amber-300/15 rounded-full blur-lg animate-pulse-glow delay-1000"></div>
-            <div className="absolute top-76 left-56 w-6 h-6 bg-yellow-200/20 rounded-full blur-sm animate-pulse-glow delay-2000"></div>
+            <div className="absolute top-60 left-20 w-12 h-12 bg-job-gold/15 rounded-full blur-lg animate-pulse-glow delay-1000"></div>
+            <div className="absolute top-76 left-56 w-6 h-6 bg-job-light-gold/20 rounded-full blur-sm animate-pulse-glow delay-2000"></div>
           </div>
           
           <div className="relative w-full h-full flex flex-col lg:flex-row">
@@ -368,11 +368,11 @@ const JobMadaHomepage = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 sm:mb-8 text-center lg:text-left">
                   Trouvez le Job
                   <br />
-                  <span className="text-amber-200">de Vos Rêves</span>
+                  <span className="text-job-light-gold">de Vos Rêves</span>
                   <br />
                   à Madagascar
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-orange-100 leading-relaxed text-center lg:text-left">
+                <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-job-light-gold leading-relaxed text-center lg:text-left">
                   Job2Mada connecte les talents avec les meilleures opportunités professionnelles 
                   sur l'île, avec plus de {recentJobs.length} offres disponibles.
                 </p>
@@ -392,7 +392,7 @@ const JobMadaHomepage = () => {
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           onKeyDown={(e) => { if (e.key === 'Enter') handleSearch(); }}
-                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm sm:text-base text-gray-900 placeholder-gray-400 bg-white"
+                          className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent text-sm sm:text-base text-gray-900 placeholder-gray-400 bg-white"
                         />
                       </div>
                     </div>
@@ -404,7 +404,7 @@ const JobMadaHomepage = () => {
                         <select
                           value={selectedLocation}
                           onChange={(e) => setSelectedLocation(e.target.value)}
-                          className="w-full text-black pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent appearance-none bg-white text-sm sm:text-base"
+                          className="w-full text-black pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-slate-500 focus:border-transparent appearance-none bg-white text-sm sm:text-base"
                         >
                           <option value="">Toutes les régions</option>
                           {PROVINCES_MADAGASCAR.map(province => (
@@ -416,7 +416,7 @@ const JobMadaHomepage = () => {
                     
                     <button 
                       onClick={handleSearch}
-                      className="w-full bg-gradient-to-r from-orange-500 to-amber-500 text-white py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-amber-600 transition-all transform hover:scale-105 text-sm sm:text-base"
+                      className="w-full bg-gradient-to-r from-job-gold to-job-dark-gold text-white py-3 rounded-lg font-semibold hover:from-job-dark-gold hover:to-job-gold transition-all transform hover:scale-105 text-sm sm:text-base"
                     >
                       Rechercher des offres
                     </button>
@@ -441,16 +441,16 @@ const JobMadaHomepage = () => {
                   
                   {/* Particules magiques flottantes */}
                   <div className="absolute top-20 left-12 w-1 h-1 bg-white rounded-full animate-ping opacity-60"></div>
-                  <div className="absolute top-1/4 left-16 w-1.5 h-1.5 bg-amber-300 rounded-full animate-pulse delay-300 opacity-80"></div>
+                  <div className="absolute top-1/4 left-16 w-1.5 h-1.5 bg-job-gold rounded-full animate-pulse delay-300 opacity-80"></div>
                   <div className="absolute top-1/3 left-8 w-1 h-1 bg-white rounded-full animate-bounce delay-700 opacity-50"></div>
-                  <div className="absolute top-1/2 left-20 w-2 h-2 bg-orange-300 rounded-full animate-ping delay-1000 opacity-40"></div>
+                  <div className="absolute top-1/2 left-20 w-2 h-2 bg-job-gold rounded-full animate-ping delay-1000 opacity-40"></div>
                   <div className="absolute top-2/3 left-14 w-1 h-1 bg-white rounded-full animate-pulse delay-1500 opacity-70"></div>
-                  <div className="absolute top-3/4 left-18 w-1.5 h-1.5 bg-amber-400 rounded-full animate-bounce delay-500 opacity-60"></div>
+                  <div className="absolute top-3/4 left-18 w-1.5 h-1.5 bg-job-gold rounded-full animate-bounce delay-500 opacity-60"></div>
                 </div>
                 
                 {/* Éléments décoratifs flottants */}
-                <div className="absolute top-10 -right-6 w-12 h-12 bg-gradient-to-r from-orange-400/20 to-amber-400/20 rounded-full blur-lg animate-float"></div>
-                <div className="absolute bottom-20 -right-8 w-16 h-16 bg-gradient-to-r from-white/15 to-orange-300/15 rounded-full blur-xl animate-float delay-700"></div>
+                <div className="absolute top-10 -right-6 w-12 h-12 bg-gradient-to-r from-job-gold/20 to-job-gold/20 rounded-full blur-lg animate-float"></div>
+                <div className="absolute bottom-20 -right-8 w-16 h-16 bg-gradient-to-r from-white/15 to-job-gold/15 rounded-full blur-xl animate-float delay-700"></div>
               </div>
             </div>
           </div>
@@ -511,7 +511,7 @@ const JobMadaHomepage = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                  Offres <span className="text-orange-500">à la Une</span>
+                  Offres <span className="text-slate-500">à la Une</span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                   Découvrez les opportunités mises en avant par nos partenaires premium
@@ -536,7 +536,7 @@ const JobMadaHomepage = () => {
                         style={{ animationDelay: `${index * 0.15}s` }}
                       >
                         <Link to={`/jobs/${job.$id}`} className="block h-full">
-                          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-orange-100 hover:border-orange-300 group hover:-translate-y-2 h-full transform-gpu">
+                          <div className="bg-white rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-job-light-gold hover:border-job-gold group hover:-translate-y-2 h-full transform-gpu">
                             <div className="flex items-start space-x-3 sm:space-x-4 mb-4">
                               <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-xl flex items-center justify-center shadow-lg border border-gray-100 bg-white overflow-hidden group-hover:scale-110 transition-transform flex-shrink-0">
                                 {job.employer_logo ? (
@@ -553,14 +553,14 @@ const JobMadaHomepage = () => {
                                   />
                                 ) : null}
                                 <div 
-                                  className={`fallback-icon w-full h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
+                                  className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-dark-gold rounded-xl flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
                                 >
                                   <Building className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                                 </div>
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className="flex flex-wrap items-center gap-1 sm:gap-2 mb-1">
-                                  <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center animate-pulse">
+                                  <div className="bg-gradient-to-r from-job-gold to-job-gold text-white px-2 py-1 rounded-full text-xs font-bold flex items-center animate-pulse">
                                     <Star className="h-3 w-3 mr-1" />
                                     <span>PREMIUM</span>
                                     </div>
@@ -571,20 +571,20 @@ const JobMadaHomepage = () => {
                                     </div>
                                   )}
                                 </div>
-                                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-800 group-hover:text-orange-500 transition-colors line-clamp-1">
+                                <h3 className="text-sm sm:text-base lg:text-lg font-bold text-gray-800 group-hover:text-slate-500 transition-colors line-clamp-1">
                                   {job.title}
                                 </h3>
-                                <p className="text-orange-500 font-semibold text-xs sm:text-sm">{job.company_name}</p>
+                                <p className="text-slate-500 font-semibold text-xs sm:text-sm">{job.company_name}</p>
                               </div>
                             </div>
 
                             <div className="space-y-2 mb-4 text-xs sm:text-sm text-gray-600">
                               <div className="flex items-center">
-                                <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 mr-2 flex-shrink-0" />
+                                <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-slate-500 mr-2 flex-shrink-0" />
                                 <span className="truncate">{job.location}</span>
                               </div>
                               <div className="flex items-center">
-                                <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600 mr-2 flex-shrink-0" />
+                                <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-job-navy mr-2 flex-shrink-0" />
                                 <span className="truncate">{getTimeAgo(job.$createdAt)}</span>
                               </div>
                               <div className="flex items-center">
@@ -598,10 +598,10 @@ const JobMadaHomepage = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                              <span className="px-2 sm:px-3 py-1 bg-gradient-to-r from-orange-500 to-amber-500 text-white rounded-full text-xs font-bold">
+                              <span className="px-2 sm:px-3 py-1 bg-gradient-to-r from-job-gold to-job-dark-gold text-white rounded-full text-xs font-bold">
                                 {job.category}
                               </span>
-                              <span className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-bold">
+                              <span className="px-2 sm:px-3 py-1 bg-slate-100 text-job-navy-dark rounded-full text-xs font-bold">
                                 {job.contract_type?.toUpperCase()}
                               </span>
                               {formatSalary(job) && (
@@ -611,7 +611,7 @@ const JobMadaHomepage = () => {
                               )}
                             </div>
 
-                            <div className="flex items-center justify-center text-orange-500 group-hover:text-orange-600 transition-colors">
+                            <div className="flex items-center justify-center text-slate-500 group-hover:text-job-dark-gold transition-colors">
                               <span className="font-bold mr-1 md:mr-2 text-xs sm:text-sm">
                                 Voir les détails
                               </span>
@@ -628,13 +628,13 @@ const JobMadaHomepage = () => {
                     <>
                       <button
                         onClick={goToPrevFeatured}
-                        className="hidden sm:block absolute left-2 top-1/2 transform -translate-y-1/2 bg-orange-500/90 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-xl transition-all z-10"
+                        className="hidden sm:block absolute left-2 top-1/2 transform -translate-y-1/2 bg-slate-500/90 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-job-dark-gold hover:shadow-xl transition-all z-10"
                       >
                         <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6" />
                       </button>
                       <button
                         onClick={goToNextFeatured}
-                        className="hidden sm:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-orange-500/90 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-orange-600 hover:shadow-xl transition-all z-10"
+                        className="hidden sm:block absolute right-2 top-1/2 transform -translate-y-1/2 bg-slate-500/90 backdrop-blur-sm text-white p-2 sm:p-3 rounded-full shadow-lg hover:bg-job-dark-gold hover:shadow-xl transition-all z-10"
                       >
                         <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6" />
                       </button>
@@ -651,8 +651,8 @@ const JobMadaHomepage = () => {
                         onClick={() => setCurrentFeaturedIndex(index)}
                         className={`transition-all duration-300 ${
                           index === currentFeaturedIndex 
-                            ? 'w-6 sm:w-8 h-2 sm:h-3 bg-orange-500 rounded-full shadow-lg' 
-                            : 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300 hover:bg-orange-300 rounded-full'
+                            ? 'w-6 sm:w-8 h-2 sm:h-3 bg-slate-500 rounded-full shadow-lg' 
+                            : 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300 hover:bg-job-gold rounded-full'
                         }`}
                       />
                     ))}
@@ -664,11 +664,11 @@ const JobMadaHomepage = () => {
         )}
 
         {/* Latest Jobs Section - Responsive */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-orange-50 to-amber-50">
+        <section className="py-8 sm:py-12 lg:py-16 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                Dernières <span className="text-orange-500">Offres d'Emploi</span>
+                Dernières <span className="text-slate-500">Offres d'Emploi</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                 Découvrez les {recentJobs.length} opportunités les plus récentes
@@ -697,7 +697,7 @@ const JobMadaHomepage = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-10">
                 {jobsWithLogos.slice(0, 6).map((job) => (
                   <Link key={job.$id} to={`/jobs/${job.$id}`} className="block">
-                    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-orange-300 group hover:-translate-y-1">
+                    <div className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-job-gold group hover:-translate-y-1">
                       <div className="flex items-start space-x-3 sm:space-x-4 mb-4">
                         <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl flex items-center justify-center shadow-md border border-gray-100 bg-white overflow-hidden flex-shrink-0">
                           {job.employer_logo ? (
@@ -714,40 +714,40 @@ const JobMadaHomepage = () => {
                             />
                           ) : null}
                           <div 
-                            className={`fallback-icon w-full h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-xl flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
+                            className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-dark-gold rounded-xl flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
                           >
                             <Building className="h-4 w-4 sm:h-6 sm:w-6 text-white" />
                           </div>
                         </div>
                         <div className="flex-1 min-w-0">
-                          <h3 className="font-bold text-gray-800 group-hover:text-orange-500 transition-colors line-clamp-1 text-sm sm:text-base">
+                          <h3 className="font-bold text-gray-800 group-hover:text-slate-500 transition-colors line-clamp-1 text-sm sm:text-base">
                             {job.title}
                           </h3>
-                          <p className="text-orange-500 font-medium text-xs sm:text-sm">{job.company_name}</p>
+                          <p className="text-slate-500 font-medium text-xs sm:text-sm">{job.company_name}</p>
                         </div>
                       </div>
                       
                       <div className="space-y-2 mb-4 text-xs sm:text-sm text-gray-600">
                         <div className="flex items-center">
-                          <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-orange-500 mr-2 flex-shrink-0" />
+                          <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-slate-500 mr-2 flex-shrink-0" />
                           <span className="truncate">{job.location}</span>
                         </div>
                         <div className="flex items-center">
-                          <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-blue-600 mr-2 flex-shrink-0" />
+                          <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-job-navy mr-2 flex-shrink-0" />
                           <span className="truncate">{getTimeAgo(job.$createdAt)}</span>
                         </div>
                       </div>
 
                       <div className="flex flex-wrap gap-1 sm:gap-2 mb-4">
-                        <span className="px-2 sm:px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-xs font-medium">
+                        <span className="px-2 sm:px-3 py-1 bg-job-light-gold text-job-dark-gold rounded-full text-xs font-medium">
                           {job.category}
                         </span>
-                        <span className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
+                        <span className="px-2 sm:px-3 py-1 bg-slate-100 text-job-navy-dark rounded-full text-xs font-medium">
                           {job.contract_type}
                         </span>
                       </div>
 
-                      <div className="flex items-center text-orange-500 group-hover:text-orange-600 transition-colors">
+                      <div className="flex items-center text-slate-500 group-hover:text-job-dark-gold transition-colors">
                         <span className="font-medium mr-2 text-xs sm:text-sm">Voir l'offre</span>
                         <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -761,7 +761,7 @@ const JobMadaHomepage = () => {
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Aucune offre disponible</h3>
                 <p className="text-sm sm:text-base text-gray-600 mb-6">Soyez le premier à publier une offre d'emploi !</p>
                 <Link to="/jobs/create">
-                  <Button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white text-sm sm:text-base">
+                  <Button className="bg-gradient-to-r from-job-gold to-job-dark-gold text-white text-sm sm:text-base">
                     Publier une offre
                   </Button>
                 </Link>
@@ -770,7 +770,7 @@ const JobMadaHomepage = () => {
             
             <div className="text-center">
               <Link to="/jobs">
-                <button className="bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-amber-600 transition-all flex items-center mx-auto text-sm sm:text-base">
+                <button className="bg-gradient-to-r from-job-gold to-job-dark-gold text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:from-job-dark-gold hover:to-job-gold transition-all flex items-center mx-auto text-sm sm:text-base">
                   Voir toutes les offres d'emploi
                   <ArrowRight className="ml-2" size={16} />
                 </button>
@@ -781,11 +781,11 @@ const JobMadaHomepage = () => {
 
         {/* Services Premium Carousel Section - Responsive */}
         {premiumServicesWithCreators.length > 0 && (
-          <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-purple-50 to-pink-50">
+          <section className="py-8 sm:py-12 lg:py-16 bg-slate-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                  Services <span className="text-purple-600">Premium</span>
+                  Services <span className="text-job-navy">Premium</span>
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                   Découvrez les services proposés par nos prestataires premium
@@ -805,9 +805,9 @@ const JobMadaHomepage = () => {
                         className="transform transition-all duration-700 ease-in-out"
                         onClick={() => handleServiceClick(service)}
                       >
-                        <div className="bg-white rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-purple-100 hover:border-purple-300 group hover:-translate-y-2 h-full cursor-pointer">
+                        <div className="bg-white rounded-xl p-4 sm:p-6 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-slate-100 hover:border-job-navy-light group hover:-translate-y-2 h-full cursor-pointer">
                           <div className="text-center mb-4">
-                            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden border-4 border-purple-200">
+                            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-3 overflow-hidden border-4 border-job-navy-light">
                               {service.creator?.avatar_url ? (
                                 <img 
                                   src={service.creator.avatar_url} 
@@ -815,32 +815,32 @@ const JobMadaHomepage = () => {
                                   className="w-full h-full object-cover"
                                 />
                               ) : (
-                                <div className="w-full h-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center">
+                                <div className="w-full h-full bg-gradient-to-r from-job-navy to-slate-500 flex items-center justify-center">
                                   <Package className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                                 </div>
                               )}
                             </div>
                             <div className="flex items-center justify-center gap-2 mb-2">
-                              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                              <span className="bg-gradient-to-r from-job-gold to-job-gold text-white px-2 sm:px-3 py-1 rounded-full text-xs font-bold flex items-center">
                                 <Crown className="h-3 w-3 mr-1" />
                                 PREMIUM
                               </span>
                             </div>
                           </div>
                           
-                          <h3 className="font-bold text-sm sm:text-lg text-purple-600 mb-2 text-center group-hover:text-pink-500 transition-colors line-clamp-1">
+                          <h3 className="font-bold text-sm sm:text-lg text-job-navy mb-2 text-center group-hover:text-slate-500 transition-colors line-clamp-1">
                             {service.title}
                           </h3>
                           <p className="text-gray-600 mb-3 text-center text-xs sm:text-sm">{service.creator?.full_name}</p>
                           
                           {service.price_range && (
-                            <div className="text-center text-purple-600 font-semibold mb-4 flex items-center justify-center text-sm sm:text-base">
+                            <div className="text-center text-job-navy font-semibold mb-4 flex items-center justify-center text-sm sm:text-base">
                               <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                               {service.price_range}
                             </div>
                           )}
                           
-                          <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-lg font-medium hover:from-purple-700 hover:to-pink-600 transition-all text-sm sm:text-base">
+                          <button className="w-full bg-gradient-to-r from-job-navy to-slate-500 text-white py-2 rounded-lg font-medium hover:from-job-navy-dark hover:to-job-navy-dark transition-all text-sm sm:text-base">
                             Voir le service
                           </button>
                         </div>
@@ -858,7 +858,7 @@ const JobMadaHomepage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                Offres de <span className="text-purple-600">Services</span>
+                Offres de <span className="text-job-navy">Services</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                 Trouvez les meilleurs prestataires pour vos projets
@@ -886,18 +886,18 @@ const JobMadaHomepage = () => {
                   <div 
                     key={service.$id} 
                     onClick={() => handleServiceClick(service)}
-                    className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-300 group hover:-translate-y-1 cursor-pointer"
+                    className="bg-white rounded-xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-job-navy-light group hover:-translate-y-1 cursor-pointer"
                   >
                     <div className="text-center mb-4">
-                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                        <Package className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600" />
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-slate-100 to-slate-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Package className="h-6 w-6 sm:h-8 sm:w-8 text-job-navy" />
                       </div>
-                      <span className="bg-purple-100 text-purple-600 text-xs px-2 sm:px-3 py-1 rounded-full font-medium">
+                      <span className="bg-slate-100 text-job-navy text-xs px-2 sm:px-3 py-1 rounded-full font-medium">
                         {service.category}
                       </span>
                     </div>
                     
-                    <h3 className="font-bold text-sm sm:text-lg text-gray-800 mb-2 text-center group-hover:text-purple-600 transition-colors line-clamp-1">
+                    <h3 className="font-bold text-sm sm:text-lg text-gray-800 mb-2 text-center group-hover:text-job-navy transition-colors line-clamp-1">
                       {service.title}
                     </h3>
                     <p className="text-gray-600 mb-3 text-center text-xs sm:text-sm line-clamp-2">
@@ -905,32 +905,32 @@ const JobMadaHomepage = () => {
                     </p>
                     
                     {service.price_range && (
-                      <div className="text-center text-purple-600 font-semibold mb-4 flex items-center justify-center text-sm sm:text-base">
+                      <div className="text-center text-job-navy font-semibold mb-4 flex items-center justify-center text-sm sm:text-base">
                         <DollarSign className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         {service.price_range}
                       </div>
                     )}
 
                     {service.delivery_time && (
-                      <div className="text-center text-blue-600 font-medium mb-4 flex items-center justify-center text-xs sm:text-sm">
+                      <div className="text-center text-job-navy font-medium mb-4 flex items-center justify-center text-xs sm:text-sm">
                         <Timer className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         {service.delivery_time}
                       </div>
                     )}
                     
-                    <button className="w-full bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-lg font-medium hover:from-purple-700 hover:to-pink-600 transition-all text-sm sm:text-base">
+                    <button className="w-full bg-gradient-to-r from-job-navy to-slate-500 text-white py-2 rounded-lg font-medium hover:from-job-navy-dark hover:to-job-navy-dark transition-all text-sm sm:text-base">
                       Voir le service
                     </button>
                   </div>
                 ))}
               </div>
             ) : (
-              <div className="text-center py-8 sm:py-12 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl border border-purple-200">
-                <Package className="h-12 w-12 sm:h-16 sm:w-16 text-purple-300 mx-auto mb-4" />
+              <div className="text-center py-8 sm:py-12 bg-slate-50 rounded-2xl border border-job-navy-light">
+                <Package className="h-12 w-12 sm:h-16 sm:w-16 text-job-navy-light mx-auto mb-4" />
                 <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Aucun service disponible</h3>
                 <p className="text-sm sm:text-base text-gray-600 mb-6">Proposez vos services et développez votre activité !</p>
                 <Link to="/services/create">
-                  <Button className="bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm sm:text-base">
+                  <Button className="bg-gradient-to-r from-job-navy to-slate-500 text-white text-sm sm:text-base">
                     Proposer un service
                   </Button>
                 </Link>
@@ -939,7 +939,7 @@ const JobMadaHomepage = () => {
             
             <div className="text-center">
               <Link to="/services">
-                <button className="bg-white text-purple-600 border-2 border-purple-600 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all flex items-center mx-auto text-sm sm:text-base">
+                <button className="bg-white text-job-navy border-2 border-job-navy px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-job-navy hover:text-white transition-all flex items-center mx-auto text-sm sm:text-base">
                   Explorer tous les services
                   <ArrowRight className="ml-2" size={16} />
                 </button>
@@ -949,17 +949,17 @@ const JobMadaHomepage = () => {
         </section>
 
         {/* Why Choose Job2ada - Responsive */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-orange-50 to-amber-50">
+        <section className="py-8 sm:py-12 lg:py-16 bg-slate-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                Pourquoi choisir <span className="text-orange-500">Job2Mada</span> ?
+                Pourquoi choisir <span className="text-slate-500">Job2Mada</span> ?
               </h2>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="text-center group">
-                <div className="bg-gradient-to-r from-orange-400 to-amber-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-gradient-to-r from-job-gold to-slate-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <TrendingUp className="text-white" size={20} />
                 </div>
                 <h3 className="font-bold text-base sm:text-lg mb-2">Croissance Rapide</h3>
@@ -967,7 +967,7 @@ const JobMadaHomepage = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-gradient-to-r from-orange-400 to-amber-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-gradient-to-r from-job-gold to-slate-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Shield className="text-white" size={20} />
                 </div>
                 <h3 className="font-bold text-base sm:text-lg mb-2">Sécurisé & Fiable</h3>
@@ -975,7 +975,7 @@ const JobMadaHomepage = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-gradient-to-r from-orange-400 to-amber-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-gradient-to-r from-job-gold to-slate-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Zap className="text-white" size={20} />
                 </div>
                 <h3 className="font-bold text-base sm:text-lg mb-2">Matching Rapide</h3>
@@ -983,7 +983,7 @@ const JobMadaHomepage = () => {
               </div>
               
               <div className="text-center group">
-                <div className="bg-gradient-to-r from-orange-400 to-amber-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="bg-gradient-to-r from-job-gold to-slate-500 w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                   <Globe className="text-white" size={20} />
                 </div>
                 <h3 className="font-bold text-base sm:text-lg mb-2">Couverture Nationale</h3>
@@ -994,25 +994,25 @@ const JobMadaHomepage = () => {
         </section>
 
         {/* Call to Action - Responsive */}
-        <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-orange-400 via-orange-500 to-amber-500">
+        <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <div className="text-white mb-6 sm:mb-8">
               <Award size={36} className="mx-auto mb-4 sm:hidden" />
               <Award size={48} className="mx-auto mb-4 hidden sm:block" />
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">Prêt à transformer votre carrière ?</h2>
-              <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-orange-100">
+              <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-job-light-gold">
                 Rejoignez des milliers de professionnels qui ont trouvé leur emploi idéal sur Job2Mada
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/register">
-                <button className="w-full sm:w-auto bg-white text-orange-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-orange-50 transition-all transform hover:scale-105 text-sm sm:text-base">
+                <button className="w-full sm:w-auto bg-white text-slate-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-slate-50 transition-all transform hover:scale-105 text-sm sm:text-base">
                   Créer mon profil candidat
                 </button>
               </Link>
               <Link to="/jobs/create">
-                <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all text-sm sm:text-base">
+                <button className="w-full sm:w-auto border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-500 transition-all text-sm sm:text-base">
                   Publier une offre d'emploi
                 </button>
               </Link>
@@ -1029,7 +1029,7 @@ const JobMadaHomepage = () => {
             <div className="bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-4xl w-full max-h-[95vh] sm:max-h-[90vh] flex flex-col overflow-hidden animate-slide-up">
               
               {/* Header du modal */}
-              <div className="bg-gradient-to-br from-purple-600 via-pink-500 to-indigo-600 p-4 sm:p-6 text-white relative overflow-hidden shrink-0">
+              <div className="bg-gradient-to-br from-job-navy via-job-navy-light to-job-navy-dark p-4 sm:p-6 text-white relative overflow-hidden shrink-0">
                 <div className="absolute inset-0 bg-black/10"></div>
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
@@ -1066,7 +1066,7 @@ const JobMadaHomepage = () => {
                       </span>
                     )}
                     {selectedService.delivery_time && (
-                      <span className="bg-blue-400/30 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold flex items-center">
+                      <span className="bg-job-navy-light/30 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold flex items-center">
                         <Timer className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
                         {selectedService.delivery_time}
                       </span>
@@ -1084,7 +1084,7 @@ const JobMadaHomepage = () => {
                     <div className="lg:col-span-2 space-y-6">
                       <div>
                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center">
-                          <Package className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-purple-600" />
+                          <Package className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-job-navy" />
                           Description du service
                         </h3>
                         <div className="bg-gray-50 rounded-2xl p-3 sm:p-4">
@@ -1097,19 +1097,19 @@ const JobMadaHomepage = () => {
                       {/* Détails du service */}
                       <div>
                         <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 flex items-center">
-                          <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-purple-600" />
+                          <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2 text-job-navy" />
                           Détails du service
                         </h3>
-                        <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-3 sm:p-4 space-y-3">
+                        <div className="bg-slate-50 rounded-2xl p-3 sm:p-4 space-y-3">
                           <div className="flex items-center justify-between">
                             <span className="text-gray-600 font-medium text-sm sm:text-base">Publié le</span>
-                            <span className="font-bold text-purple-600 text-sm sm:text-base">
+                            <span className="font-bold text-job-navy text-sm sm:text-base">
                               {new Date(selectedService.$createdAt).toLocaleDateString('fr-FR')}
                             </span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-gray-600 font-medium text-sm sm:text-base">Catégorie</span>
-                            <span className="font-bold text-purple-600 text-sm sm:text-base">{selectedService.category}</span>
+                            <span className="font-bold text-job-navy text-sm sm:text-base">{selectedService.category}</span>
                           </div>
                           {selectedService.delivery_time && (
                             <div className="flex items-center justify-between">
@@ -1136,40 +1136,40 @@ const JobMadaHomepage = () => {
                     {/* Sidebar actions */}
                     <div className="space-y-6">
                       {/* Actions principales */}
-                      <div className="bg-gradient-to-br from-purple-600 to-pink-500 rounded-2xl p-4 sm:p-6 text-white text-center">
+                      <div className="bg-gradient-to-br from-job-navy to-slate-500 rounded-2xl p-4 sm:p-6 text-white text-center">
                         <Package className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-4" />
                         <h4 className="font-bold text-base sm:text-lg mb-4">Intéressé par ce service ?</h4>
                         
                         <Link to="/services" className="block">
-                          <button className="w-full bg-white text-purple-600 font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:bg-gray-100 transition-all mb-3 text-sm sm:text-base">
+                          <button className="w-full bg-white text-job-navy font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:bg-gray-100 transition-all mb-3 text-sm sm:text-base">
                             Voir tous les services
                           </button>
                         </Link>
                         
                         <Link to="/services/create" className="block">
-                          <button className="w-full bg-purple-800 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:bg-purple-900 transition-all text-sm sm:text-base">
+                          <button className="w-full bg-job-navy-dark text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-xl hover:bg-job-navy transition-all text-sm sm:text-base">
                             Proposer mon service
                           </button>
                         </Link>
                       </div>
 
                       {/* Informations supplémentaires */}
-                      <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-4 sm:p-6 border border-purple-200">
-                        <h4 className="font-bold text-purple-600 mb-4 flex items-center text-sm sm:text-base">
+                      <div className="bg-slate-50 rounded-2xl p-4 sm:p-6 border border-job-navy-light">
+                        <h4 className="font-bold text-job-navy mb-4 flex items-center text-sm sm:text-base">
                           <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                           À savoir
                         </h4>
                         <ul className="space-y-2 text-xs sm:text-sm text-gray-600">
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-600 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-job-navy rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
                             <span>Tous nos prestataires sont vérifiés</span>
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-600 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-job-navy rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
                             <span>Communication directe possible</span>
                           </li>
                           <li className="flex items-start">
-                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-600 rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
+                            <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-job-navy rounded-full mt-2 mr-2 sm:mr-3 flex-shrink-0"></div>
                             <span>Support client disponible</span>
                           </li>
                         </ul>
@@ -1328,151 +1328,6 @@ const JobMadaHomepage = () => {
             }
             50% {
               opacity: .5;
-            }
-          }
-
-          /* Responsive Design complet */
-          @media (max-width: 640px) {
-            .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-3 {
-              grid-template-columns: 1fr !important;
-              gap: 1rem !important;
-            }
-
-            .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4 {
-              grid-template-columns: 1fr !important;
-              gap: 1.5rem !important;
-            }
-
-            .text-3xl.sm\\:text-4xl.lg\\:text-5xl.xl\\:text-6xl {
-              font-size: 1.875rem !important;
-              line-height: 2.25rem !important;
-            }
-
-            .text-2xl.sm\\:text-3xl.lg\\:text-4xl {
-              font-size: 1.5rem !important;
-              line-height: 2rem !important;
-            }
-
-            .py-8.sm\\:py-12.lg\\:py-16 {
-              padding-top: 2rem !important;
-              padding-bottom: 2rem !important;
-            }
-
-            .px-4.sm\\:px-6.lg\\:px-8 {
-              padding-left: 1rem !important;
-              padding-right: 1rem !important;
-            }
-
-            .p-4.sm\\:p-6 {
-              padding: 1rem !important;
-            }
-
-            .space-y-6 > * + * {
-              margin-top: 1rem !important;
-            }
-
-            .gap-4.sm\\:gap-6 {
-              gap: 1rem !important;
-            }
-
-            .mb-8.sm\\:mb-12 {
-              margin-bottom: 2rem !important;
-            }
-
-            .h-screen {
-              height: 100vh !important;
-              min-height: 600px !important;
-            }
-
-            .fixed.inset-0 {
-              padding: 0.5rem !important;
-            }
-
-            .max-w-4xl {
-              max-width: 100% !important;
-            }
-
-            .grid.grid-cols-1.lg\\:grid-cols-3 {
-              grid-template-columns: 1fr !important;
-            }
-
-            .flex.flex-col.sm\\:flex-row {
-              flex-direction: column !important;
-              gap: 1rem !important;
-            }
-
-            .w-full.sm\\:w-auto {
-              width: 100% !important;
-            }
-
-            .transform.hover\\:scale-105:hover {
-              transform: none !important;
-            }
-
-            .group:hover .transform-gpu {
-              transform: none !important;
-            }
-          }
-
-          @media (max-width: 768px) {
-            .hidden.lg\\:block {
-              display: none !important;
-            }
-
-            .grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-3 {
-              grid-template-columns: 1fr !important;
-            }
-
-            .flex.flex-col.lg\\:flex-row {
-              flex-direction: column !important;
-            }
-
-            .w-full.lg\\:w-1\\/2 {
-              width: 100% !important;
-              margin-top: 100px;
-            }
-
-            .text-center.lg\\:text-left {
-              text-align: center !important;
-            }
-
-            .hidden.sm\\:block {
-              display: none !important;
-            }
-
-            .sm\\:hidden {
-              display: block !important;
-            }
-
-            .absolute.left-2.top-1\\/2,
-            .absolute.right-2.top-1\\/2 {
-              display: none !important;
-            }
-          }
-
-          @media (min-width: 640px) and (max-width: 1024px) {
-            .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-3 {
-              grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-
-            .grid.grid-cols-1.sm\\:grid-cols-2.lg\\:grid-cols-4 {
-              grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            }
-          }
-
-          /* Amélioration des boutons responsive */
-          @media (max-width: 640px) {
-            button:focus {
-              outline: 2px solid #8B5CF6;
-              outline-offset: 2px;
-            }
-
-            .rounded-2xl.sm\\:rounded-3xl {
-              border-radius: 1rem !important;
-            }
-
-            .max-h-\\[95vh\\].sm\\:max-h-\\[90vh\\] {
-              max-height: 95vh !important;
             }
           }
 

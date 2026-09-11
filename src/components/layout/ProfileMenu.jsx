@@ -16,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
-const ProfileMenu = ({ user, profile }) => {
+const ProfileMenu = ({ user, profile, inverse = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const navigate = useNavigate();
@@ -140,7 +140,7 @@ const ProfileMenu = ({ user, profile }) => {
           
           {/* Badge Premium sur l'avatar */}
           {profile?.is_premium && (
-            <div className="absolute -top-1 -right-1 h-5 w-5 bg-gradient-to-r from-yellow-400 to-orange-500 border-2 border-white rounded-full flex items-center justify-center">
+            <div className="absolute -top-1 -right-1 h-5 w-5 bg-gradient-to-r from-job-gold to-job-dark-gold border-2 border-white rounded-full flex items-center justify-center">
               <Crown className="h-3 w-3 text-white" />
             </div>
           )}
@@ -150,28 +150,28 @@ const ProfileMenu = ({ user, profile }) => {
         
         <div className="hidden md:block text-left">
           <div className="flex items-center space-x-2">
-            <p className="text-sm font-medium text-gray-900">
+            <p className={`text-sm font-medium ${inverse ? 'text-white' : 'text-gray-900'}`}>
               {displayName}
             </p>
             {/* Badge Premium dans le nom */}
             {profile?.is_premium && (
-              <div className="flex items-center bg-gradient-to-br from-job-purple to-job-pink text-white px-2 py-0.5 rounded-full text-xs font-bold">
+              <div className="flex items-center bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold text-white px-2 py-0.5 rounded-full text-xs font-bold">
                 <Crown className="h-3 w-3 mr-1" />
                 VIP
               </div>
             )}
           </div>
-          <p className="text-xs text-job-green">
+          <p className={`text-xs ${inverse ? 'text-white/70' : 'text-slate-500'}`}>
             {profile?.user_type === 'employer' ? 'Employeur' : 'Candidat'}
           </p>
         </div>
-        
-        <ChevronDown className={`h-4 w-4 text-gray-600 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+
+        <ChevronDown className={`h-4 w-4 transition-transform ${inverse ? 'text-white/80' : 'text-gray-600'} ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 z-50 animate-slide-in">
+        <div className="absolute right-0 top-full mt-2 w-72 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 z-50 animate-slide-in">
           {/* User Info Header */}
           <div className="px-4 py-3 border-b border-gray-100">
             <div className="flex items-center space-x-3">
@@ -190,7 +190,7 @@ const ProfileMenu = ({ user, profile }) => {
                 
                 {/* Badge Premium sur l'avatar du dropdown */}
                 {profile?.is_premium && (
-                  <div className="absolute -top-1 -right-1 h-6 w-6 bg-gradient-to-r from-yellow-400 to-orange-500 border-2 border-white rounded-full flex items-center justify-center">
+                  <div className="absolute -top-1 -right-1 h-6 w-6 bg-gradient-to-r from-job-gold to-job-dark-gold border-2 border-white rounded-full flex items-center justify-center">
                     <Crown className="h-3 w-3 text-white" />
                   </div>
                 )}
@@ -213,7 +213,7 @@ const ProfileMenu = ({ user, profile }) => {
                   {userEmail}
                 </p>
                 {profile?.company_name && (
-                  <p className="text-xs text-job-purple font-medium">
+                  <p className="text-xs text-job-navy font-medium">
                     {profile.company_name}
                   </p>
                 )}
@@ -229,13 +229,13 @@ const ProfileMenu = ({ user, profile }) => {
                 <button
                   key={index}
                   onClick={() => handleNavigation(item.href)}
-                  className="w-full flex items-center px-4 py-3 text-left text-gray-700 hover:bg-gray-50 hover:text-job-purple transition-colors group"
+                  className="w-full flex items-center px-4 py-3 text-left text-gray-700 hover:bg-gray-50 hover:text-job-navy transition-colors group"
                 >
-                  <item.icon className="h-5 w-5 mr-3 text-gray-400 group-hover:text-job-purple" />
+                  <item.icon className="h-5 w-5 mr-3 text-gray-400 group-hover:text-job-navy" />
                   <span className="font-medium">{item.label}</span>
                   {/* Badge nouveau pour "Mes Services" */}
                   {item.label === 'Mes Services' && (
-                    <span className="ml-auto bg-orange-500 text-white text-xs px-2 py-1 rounded-full font-bold">
+                    <span className="ml-auto bg-job-gold text-white text-xs px-2 py-1 rounded-full font-bold">
                       NOUVEAU
                     </span>
                   )}

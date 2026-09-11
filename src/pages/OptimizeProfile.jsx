@@ -436,7 +436,7 @@ const deletePortfolio = async () => {
  return (
    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
      {/* Modal principal avec dimensions corrigées */}
-     <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl h-[85vh] max-h-[800px] flex flex-col overflow-hidden">
+     <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
        {/* Header fixe */}
        <div className="bg-gradient-elegant p-4 text-white flex-shrink-0">
          <div className="flex items-center justify-between">
@@ -476,7 +476,7 @@ const deletePortfolio = async () => {
              onClick={() => setActiveTab(tab.id)}
              className={`flex-1 flex items-center justify-center space-x-2 py-3 px-4 font-medium transition-all text-sm ${
                activeTab === tab.id
-                 ? 'border-b-2 border-job-purple text-job-purple bg-purple-50'
+                 ? 'border-b-2 border-job-navy text-job-navy bg-slate-50'
                  : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
              }`}
            >
@@ -508,7 +508,7 @@ const deletePortfolio = async () => {
                      });
                    }}
                    placeholder="Nom de l'entreprise *"
-                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                    required
                  />
                  <input
@@ -523,7 +523,7 @@ const deletePortfolio = async () => {
                      });
                    }}
                    placeholder="Poste occupé *"
-                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                    required
                  />
                  <input
@@ -534,7 +534,7 @@ const deletePortfolio = async () => {
                      ...newExperience,
                      start_date: e.target.value
                    })}
-                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="date"
@@ -544,7 +544,7 @@ const deletePortfolio = async () => {
                      ...newExperience,
                      end_date: e.target.value
                    })}
-                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="w-full p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                    disabled={newExperience.is_current}
                  />
                  <input
@@ -552,7 +552,7 @@ const deletePortfolio = async () => {
                    placeholder="Localisation"
                    value={newExperience.location}
                    onChange={(e) => setNewExperience({...newExperience, location: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <div className="flex items-center">
                    <label className="flex items-center space-x-2">
@@ -564,7 +564,7 @@ const deletePortfolio = async () => {
                          is_current: e.target.checked,
                          end_date: e.target.checked ? '' : newExperience.end_date
                        })}
-                       className="rounded border-gray-300 text-job-purple focus:ring-job-purple"
+                       className="rounded border-gray-300 text-job-navy focus:ring-job-navy"
                      />
                      <span className="text-xs">Poste actuel</span>
                    </label>
@@ -578,13 +578,13 @@ const deletePortfolio = async () => {
                    description: e.target.value
                  })}
                  placeholder="Description du poste"
-                 className="w-full mt-3 p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                 className="w-full mt-3 p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  rows="2"
                />
                <Button
                  onClick={addExperience}
                  disabled={loading}
-                 className="mt-3 bg-job-purple hover:bg-job-purple-dark text-white px-4 py-2 rounded-lg disabled:opacity-50 text-sm"
+                 className="mt-3 bg-job-navy hover:bg-job-navy-dark text-white px-4 py-2 rounded-lg disabled:opacity-50 text-sm"
                >
                  {loading ? (
                    <div className="animate-spin rounded-full h-3 w-3 border-2 border-white border-t-transparent mr-2"></div>
@@ -602,7 +602,7 @@ const deletePortfolio = async () => {
                  {experiences.length > 0 && (
                    <Button
                      onClick={() => setShowExperiencesModal(true)}
-                     className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-lg text-xs"
+                     className="bg-slate-500 hover:bg-job-navy text-white px-3 py-1 rounded-lg text-xs"
                    >
                      Voir toutes ({experiences.length})
                    </Button>
@@ -621,7 +621,7 @@ const deletePortfolio = async () => {
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
                           <h5 className="font-semibold text-gray-900 text-sm">{exp.position}</h5>
-                          <p className="text-job-purple font-medium text-sm">{exp.company}</p>
+                          <p className="text-job-navy font-medium text-sm">{exp.company}</p>
                           <p className="text-xs text-gray-600 flex items-center mt-1">
                             <Calendar className="h-3 w-3 mr-1" />
                             {formatDate(exp.start_date)} - 
@@ -652,7 +652,7 @@ const deletePortfolio = async () => {
                      <div className="text-center py-3 border-2 border-dashed border-gray-300 rounded-lg">
                        <Button
                          onClick={() => setShowExperiencesModal(true)}
-                         className="bg-job-purple hover:bg-job-purple-dark text-white px-4 py-2 rounded-lg text-xs"
+                         className="bg-job-navy hover:bg-job-navy-dark text-white px-4 py-2 rounded-lg text-xs"
                        >
                          Voir toutes mes expériences ({experiences.length})
                        </Button>
@@ -677,35 +677,35 @@ const deletePortfolio = async () => {
                    placeholder="Nom de l'établissement *"
                    value={newEducation.institution}
                    onChange={(e) => setNewEducation({...newEducation, institution: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="text"
                    placeholder="Diplôme obtenu *"
                    value={newEducation.degree}
                    onChange={(e) => setNewEducation({...newEducation, degree: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="text"
                    placeholder="Domaine d'étude"
                    value={newEducation.field_of_study}
                    onChange={(e) => setNewEducation({...newEducation, field_of_study: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="text"
                    placeholder="Localisation"
                    value={newEducation.location}
                    onChange={(e) => setNewEducation({...newEducation, location: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="date"
                    placeholder="Date de début *"
                    value={newEducation.start_date}
                    onChange={(e) => setNewEducation({...newEducation, start_date: e.target.value})}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                  />
                  <input
                    type="date"
@@ -713,7 +713,7 @@ const deletePortfolio = async () => {
                    value={newEducation.end_date}
                    onChange={(e) => setNewEducation({...newEducation, end_date: e.target.value})}
                    disabled={newEducation.is_current}
-                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple disabled:bg-gray-100"
+                   className="p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy disabled:bg-gray-100"
                  />
                </div>
                <div className="mt-3">
@@ -726,7 +726,7 @@ const deletePortfolio = async () => {
                        is_current: e.target.checked,
                        end_date: e.target.checked ? '' : newEducation.end_date
                      })}
-                     className="rounded border-gray-300 text-job-purple focus:ring-job-purple"
+                     className="rounded border-gray-300 text-job-navy focus:ring-job-navy"
                    />
                    <span className="text-xs">Formation en cours</span>
                  </label>
@@ -736,12 +736,12 @@ const deletePortfolio = async () => {
                  value={newEducation.description}
                  onChange={(e) => setNewEducation({...newEducation, description: e.target.value})}
                  rows={2}
-                 className="w-full mt-3 p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-purple"
+                 className="w-full mt-3 p-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-job-navy"
                />
                <Button
                  onClick={addEducation}
                  disabled={loading}
-                 className="mt-3 bg-job-purple hover:bg-job-purple-dark text-white px-4 py-2 rounded-lg disabled:opacity-50 text-sm"
+                 className="mt-3 bg-job-navy hover:bg-job-navy-dark text-white px-4 py-2 rounded-lg disabled:opacity-50 text-sm"
                >
                  {loading ? (
                    <div className="animate-spin rounded-full h-3 w-3 border-2 border-white border-t-transparent mr-2"></div>
@@ -778,7 +778,7 @@ const deletePortfolio = async () => {
                       <div className="flex justify-between items-start">
                         <div className="flex-1">
                           <h5 className="font-semibold text-gray-900 text-sm">{edu.degree}</h5>
-                          <p className="text-job-purple font-medium text-sm">{edu.institution}</p>
+                          <p className="text-job-navy font-medium text-sm">{edu.institution}</p>
                           {edu.field_of_study && (
                             <p className="text-xs text-gray-600">{edu.field_of_study}</p>
                           )}
@@ -812,7 +812,7 @@ const deletePortfolio = async () => {
                      <div className="text-center py-3 border-2 border-dashed border-gray-300 rounded-lg">
                        <Button
                          onClick={() => setShowEducationsModal(true)}
-                         className="bg-job-purple hover:bg-job-purple-dark text-white px-4 py-2 rounded-lg text-xs"
+                         className="bg-job-navy hover:bg-job-navy-dark text-white px-4 py-2 rounded-lg text-xs"
                        >
                          Voir toutes mes formations ({educations.length})
                        </Button>
@@ -829,8 +829,8 @@ const deletePortfolio = async () => {
              <h3 className="text-lg font-bold text-gray-900">Documents & Portfolio</h3>
              
              {/* Upload CV */}
-             <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
-               <h4 className="font-semibold mb-3 flex items-center text-blue-700 text-sm">
+             <div className="bg-gradient-to-r from-slate-50 to-slate-50 rounded-xl p-4 border border-job-navy-light">
+               <h4 className="font-semibold mb-3 flex items-center text-job-navy-dark text-sm">
                  <FileText className="h-4 w-4 mr-2" />
                  Curriculum Vitae (CV)
                </h4>
@@ -856,7 +856,7 @@ const deletePortfolio = async () => {
                        href={profile.cv_url}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="text-blue-600 hover:text-blue-800 hover:underline font-medium text-sm"
+                       className="text-job-navy hover:text-job-navy-dark hover:underline font-medium text-sm"
                      >
                        Voir le CV actuel
                      </a>
@@ -877,8 +877,8 @@ const deletePortfolio = async () => {
              </div>
 
              {/* Upload Portfolio */}
-             <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-200">
-               <h4 className="font-semibold mb-3 flex items-center text-purple-700 text-sm">
+             <div className="bg-gradient-to-r from-slate-50 to-slate-50 rounded-xl p-4 border border-job-navy-light">
+               <h4 className="font-semibold mb-3 flex items-center text-job-navy-dark text-sm">
                  <Briefcase className="h-4 w-4 mr-2" />
                  Portfolio
                </h4>
@@ -893,7 +893,7 @@ const deletePortfolio = async () => {
                  <Button
                    onClick={() => portfolioInputRef.current?.click()}
                    disabled={loading}
-                   className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-all shadow-lg font-medium disabled:opacity-50 text-sm"
+                   className="bg-gradient-to-r from-slate-500 to-slate-500 hover:from-job-dark-gold hover:to-job-dark-gold text-white px-4 py-2 rounded-lg flex items-center space-x-2 transition-all shadow-lg font-medium disabled:opacity-50 text-sm"
                  >
                    <Upload className="h-3 w-3" />
                    <span>{profile?.portfolio_url ? 'Remplacer le portfolio' : 'Choisir un fichier Portfolio'}</span>
@@ -904,7 +904,7 @@ const deletePortfolio = async () => {
                        href={profile.portfolio_url}
                        target="_blank"
                        rel="noopener noreferrer"
-                       className="text-purple-600 hover:text-purple-800 hover:underline font-medium text-sm"
+                       className="text-job-navy hover:text-job-navy-dark hover:underline font-medium text-sm"
                      >
                        Voir le portfolio actuel
                      </a>
@@ -932,8 +932,8 @@ const deletePortfolio = async () => {
                    <div className="bg-white border border-gray-200 rounded-lg p-3">
                      <div className="flex items-center justify-between">
                        <div className="flex items-center">
-                         <div className="p-2 bg-blue-100 rounded-lg mr-2">
-                           <FileText className="h-4 w-4 text-blue-600" />
+                         <div className="p-2 bg-slate-100 rounded-lg mr-2">
+                           <FileText className="h-4 w-4 text-job-navy" />
                          </div>
                          <div>
                            <p className="font-medium text-gray-900 text-sm">CV</p>
@@ -945,7 +945,7 @@ const deletePortfolio = async () => {
                            href={profile.cv_url}
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="text-blue-600 hover:text-blue-800 p-1 hover:bg-blue-50 rounded-lg transition-colors"
+                           className="text-job-navy hover:text-job-navy-dark p-1 hover:bg-slate-50 rounded-lg transition-colors"
                            title="Voir le CV"
                          >
                            <FileText className="h-4 w-4" />
@@ -967,8 +967,8 @@ const deletePortfolio = async () => {
                    <div className="bg-white border border-gray-200 rounded-lg p-3">
                      <div className="flex items-center justify-between">
                        <div className="flex items-center">
-                         <div className="p-2 bg-purple-100 rounded-lg mr-2">
-                           <Briefcase className="h-4 w-4 text-purple-600" />
+                         <div className="p-2 bg-slate-100 rounded-lg mr-2">
+                           <Briefcase className="h-4 w-4 text-job-navy" />
                          </div>
                          <div>
                            <p className="font-medium text-gray-900 text-sm">Portfolio</p>
@@ -980,7 +980,7 @@ const deletePortfolio = async () => {
                            href={profile.portfolio_url}
                            target="_blank"
                            rel="noopener noreferrer"
-                           className="text-purple-600 hover:text-purple-800 p-1 hover:bg-purple-50 rounded-lg transition-colors"
+                           className="text-job-navy hover:text-job-navy-dark p-1 hover:bg-slate-50 rounded-lg transition-colors"
                            title="Voir le portfolio"
                          >
                            <Briefcase className="h-4 w-4" />
@@ -1033,9 +1033,9 @@ const deletePortfolio = async () => {
      {/* Modal pour voir toutes les expériences */}
      {showExperiencesModal && (
        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-[60]">
-         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-[80vh]">
+         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
            {/* Header fixe */}
-           <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-4 text-white rounded-t-2xl flex-shrink-0">
+           <div className="bg-gradient-to-r from-job-navy to-job-navy-dark p-4 text-white rounded-t-2xl flex-shrink-0">
              <div className="flex items-center justify-between">
                <h3 className="text-lg font-bold flex items-center">
                  <Briefcase className="h-5 w-5 mr-2" />
@@ -1051,14 +1051,14 @@ const deletePortfolio = async () => {
            </div>
            
            {/* Zone scrollable */}
-           <div className="p-4 overflow-y-auto" style={{ height: 'calc(80vh - 120px)' }}>
+           <div className="p-4 overflow-y-auto flex-1">
              <div className="space-y-3">
                {experiences.map((exp) => (
-                 <div key={exp.$id} className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 hover:shadow-lg transition-all">
+                 <div key={exp.$id} className="bg-gradient-to-r from-slate-50 to-slate-50 border border-job-navy-light rounded-xl p-4 hover:shadow-lg transition-all">
                    <div className="flex justify-between items-start">
                      <div className="flex-1">
                        <h4 className="text-lg font-bold text-gray-900">{exp.position}</h4>
-                       <p className="text-blue-600 font-semibold flex items-center">
+                       <p className="text-job-navy font-semibold flex items-center">
                          <Building className="h-4 w-4 mr-1" />
                          {exp.company}
                        </p>
@@ -1106,7 +1106,7 @@ const deletePortfolio = async () => {
      {/* Modal pour voir toutes les formations */}
      {showEducationsModal && (
        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-[60]">
-         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl h-[80vh]">
+         <div className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden">
            {/* Header fixe */}
            <div className="bg-gradient-to-r from-green-600 to-green-700 p-4 text-white rounded-t-2xl flex-shrink-0">
              <div className="flex items-center justify-between">
@@ -1124,7 +1124,7 @@ const deletePortfolio = async () => {
            </div>
            
            {/* Zone scrollable */}
-           <div className="p-4 overflow-y-auto" style={{ height: 'calc(80vh - 120px)' }}>
+           <div className="p-4 overflow-y-auto flex-1">
              <div className="space-y-3">
                {educations.map((edu) => (
                  <div key={edu.$id} className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-4 hover:shadow-lg transition-all">

@@ -21,12 +21,12 @@ const MiniJobsCarousel = ({ jobs, currentIndex, goToPrev, goToNext }) => {
   };
 
   return (
-    <div className="border-t border-gray-200/50 bg-gradient-to-r from-job-gold via-job-orange to-job-dark-gold">
+    <div className="border-t border-white/10 bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark">
       <div className="max-w-[1500px] mx-auto px-2 md:px-4 py-2 md:py-3">
         <div className="flex items-center justify-between gap-2">
           {/* Titre - CACHÉ SUR MOBILE */}
           <div className="hidden md:flex items-center space-x-2 flex-shrink-0">
-            <Star className="h-5 w-5 text-white" />
+            <Star className="h-5 w-5 text-job-gold" />
             <h3 className="text-base font-bold text-white whitespace-nowrap">Offres à la Une</h3>
           </div>
 
@@ -72,7 +72,7 @@ const MiniJobsCarousel = ({ jobs, currentIndex, goToPrev, goToNext }) => {
                         
                         {/* Info */}
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-bold text-job-brown truncate group-hover:text-job-gold transition-colors">
+                          <p className="text-sm font-bold text-job-navy truncate group-hover:text-job-gold transition-colors">
                             {job.title}
                           </p>
                           <p className="text-xs text-gray-600 truncate font-medium">
@@ -117,7 +117,7 @@ const MiniJobsCarousel = ({ jobs, currentIndex, goToPrev, goToNext }) => {
                       
                       {/* Info mobile */}
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-bold text-job-brown truncate leading-tight">
+                        <p className="text-xs font-bold text-job-navy truncate leading-tight">
                           {getVisibleJobs()[0].title}
                         </p>
                         <p className="text-xs text-gray-600 truncate font-medium mt-0.5">
@@ -177,12 +177,12 @@ const MiniServicesCarousel = ({ services, currentIndex, goToPrev, goToNext, onSe
   };
 
   return (
-    <div className="border-t border-gray-200/50 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600">
+    <div className="border-t border-white/10 bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark">
       <div className="max-w-[1500px] mx-auto px-2 md:px-4 py-2 md:py-3">
         <div className="flex items-center justify-between gap-2">
           {/* Titre - CACHÉ SUR MOBILE */}
           <div className="hidden md:flex items-center space-x-2 flex-shrink-0">
-            <Crown className="h-5 w-5 text-white" />
+            <Crown className="h-5 w-5 text-job-gold" />
             <h3 className="text-base font-bold text-white whitespace-nowrap">Services Premium</h3>
           </div>
 
@@ -214,21 +214,21 @@ const MiniServicesCarousel = ({ services, currentIndex, goToPrev, goToNext, onSe
                         className="flex items-center space-x-3 bg-white hover:bg-gray-50 rounded-xl p-3 shadow-lg hover:shadow-xl transition-all flex-1 max-w-[320px] group cursor-pointer"
                       >
                         {/* Avatar */}
-                        <div className="h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-gray-100 bg-white overflow-hidden group-hover:border-purple-600 transition-colors">
+                        <div className="h-12 w-12 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-gray-100 bg-white overflow-hidden group-hover:border-job-gold transition-colors">
                           {service.creator?.avatar_url ? (
-                            <img 
-                              src={service.creator.avatar_url} 
+                            <img
+                              src={service.creator.avatar_url}
                               alt={service.creator.full_name}
                               className="w-full h-full object-cover"
                             />
                           ) : (
-                            <Package className="h-6 w-6 text-purple-600" />
+                            <Package className="h-6 w-6 text-job-navy" />
                           )}
                         </div>
-                        
+
                         {/* Info */}
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-bold text-purple-600 truncate group-hover:text-pink-500 transition-colors">
+                          <p className="text-sm font-bold text-job-navy truncate group-hover:text-job-gold transition-colors">
                             {service.title}
                           </p>
                           <p className="text-xs text-gray-600 truncate font-medium">
@@ -267,13 +267,13 @@ const MiniServicesCarousel = ({ services, currentIndex, goToPrev, goToNext, onSe
                             className="w-full h-full object-cover"
                           />
                         ) : (
-                          <Package className="h-6 w-6 text-purple-600" />
+                          <Package className="h-6 w-6 text-job-navy" />
                         )}
                       </div>
-                      
+
                       {/* Info mobile */}
                       <div className="flex-1 min-w-0">
-                        <p className="text-xs font-bold text-purple-600 truncate leading-tight">
+                        <p className="text-xs font-bold text-job-navy truncate leading-tight">
                           {getVisibleServices()[0]?.title}
                         </p>
                         <p className="text-xs text-gray-600 truncate font-medium mt-0.5">
@@ -385,21 +385,20 @@ export const Navbar = ({
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 group">
           <div className="relative">
-            <img 
-              src="/logo.png" 
-              alt="Job-Mada Logo" 
-              className="h-12 w-auto object-contain transform transition-transform group-hover:scale-105"
-              style={{ maxWidth: '300px', height: '100px' }}
+            <img
+              src="/logo.png"
+              alt="Job-Mada Logo"
+              className="h-10 sm:h-12 w-auto max-w-[160px] sm:max-w-[220px] object-contain transform transition-transform group-hover:scale-105"
             />
           </div>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-          <Link to="/" className="nav-link whitespace-nowrap">Accueil</Link>
-          <Link to="/jobs" className="nav-link whitespace-nowrap">Offres d'emploi</Link>
-          <Link to="/services" className="nav-link whitespace-nowrap">Offre de Services</Link>
-          <Link to="/JobSeekers" className="nav-link whitespace-nowrap">Profils</Link>
+          <Link to="/" className={`${scrolled ? 'nav-link' : 'nav-link-inverse'} whitespace-nowrap`}>Accueil</Link>
+          <Link to="/jobs" className={`${scrolled ? 'nav-link' : 'nav-link-inverse'} whitespace-nowrap`}>Offres d'emploi</Link>
+          <Link to="/services" className={`${scrolled ? 'nav-link' : 'nav-link-inverse'} whitespace-nowrap`}>Offre de Services</Link>
+          <Link to="/JobSeekers" className={`${scrolled ? 'nav-link' : 'nav-link-inverse'} whitespace-nowrap`}>Profils</Link>
 
           {/* Icône Messages Premium */}
           {hasMessagingAccess && (
@@ -409,12 +408,12 @@ export const Navbar = ({
               title="Messagerie Premium"
             >
               <div className="relative transform transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-white/20 hover:border-white/40 relative overflow-hidden">
+                <div className="w-12 h-12 bg-gradient-to-br from-job-navy via-job-navy-light to-job-navy-dark rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center border-2 border-white/20 hover:border-white/40 relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent rounded-2xl"></div>
                   <svg width="20" height="16" viewBox="0 0 24 18" fill="none" className="relative z-10 drop-shadow-sm">
                     <path d="M2 4C2 2.89543 2.89543 2 4 2H20C21.1046 2 22 2.89543 22 4V14C22 15.1046 21.1046 16 20 16H4C2.89543 16 2 15.1046 2 14V4Z" fill="white" stroke="white" strokeWidth="1"/>
-                    <path d="M2 4L12 10L22 4" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M2 4L11 9.5C11.6 9.8 12.4 9.8 13 9.5L22 4" stroke="#1E40AF" strokeWidth="1" strokeLinecap="round"/>
+                    <path d="M2 4L12 10L22 4" stroke="#3D6491" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 4L11 9.5C11.6 9.8 12.4 9.8 13 9.5L22 4" stroke="#122438" strokeWidth="1" strokeLinecap="round"/>
                   </svg>
                 </div>
                 {unreadCount > 0 && (
@@ -425,7 +424,7 @@ export const Navbar = ({
                     <div className="absolute inset-0 bg-red-400 rounded-full animate-ping opacity-30"></div>
                   </div>
                 )}
-                <div className="absolute inset-0 rounded-2xl bg-blue-400/20 scale-0 group-hover:scale-110 transition-transform duration-300"></div>
+                <div className="absolute inset-0 rounded-2xl bg-job-gold/20 scale-0 group-hover:scale-110 transition-transform duration-300"></div>
               </div>
             </Link>
           )}
@@ -433,15 +432,15 @@ export const Navbar = ({
         
         {/* Version tablette */}
         <div className="hidden md:flex lg:hidden items-center space-x-4">
-          <Link to="/jobs" className="nav-link">Emplois</Link>
-          <Link to="/services" className="nav-link">Services</Link>
+          <Link to="/jobs" className={scrolled ? 'nav-link' : 'nav-link-inverse'}>Emplois</Link>
+          <Link to="/services" className={scrolled ? 'nav-link' : 'nav-link-inverse'}>Services</Link>
           
           {hasMessagingAccess && (
             <Link to="/messages" className="relative group" title="Messages">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center border border-white/20">
+              <div className="w-10 h-10 bg-gradient-to-br from-job-navy to-job-navy-dark rounded-xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center border border-white/20">
                 <svg width="18" height="14" viewBox="0 0 24 18" fill="none">
                   <path d="M2 4C2 2.89543 2.89543 2 4 2H20C21.1046 2 22 2.89543 22 4V14C22 15.1046 21.1046 16 20 16H4C2.89543 16 2 15.1046 2 14V4Z" fill="white" />
-                  <path d="M2 4L12 10L22 4" stroke="#3B82F6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 4L12 10L22 4" stroke="#3D6491" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 {unreadCount > 0 && (
                   <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full font-bold min-w-[18px] text-center leading-none shadow-md">
@@ -458,7 +457,7 @@ export const Navbar = ({
           {loading ? (
             <div className="h-10 w-32 bg-gray-200 rounded-lg animate-pulse"></div>
           ) : isAuthenticated && user ? (
-            <ProfileMenu user={user} profile={profile} />
+            <ProfileMenu user={user} profile={profile} inverse={!scrolled} />
           ) : (
             <>
               <Link to="/login">
@@ -479,7 +478,12 @@ export const Navbar = ({
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-job-dark hover:text-job-purple focus:outline-none">
+          <button
+            onClick={toggleMenu}
+            className={`focus:outline-none transition-colors ${
+              scrolled ? 'text-job-navy hover:text-job-gold' : 'text-white hover:text-job-gold'
+            }`}
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
@@ -557,7 +561,7 @@ export const Navbar = ({
                           {profile?.user_type === 'employer' ? 'Employeur' : 'Candidat'}
                         </span>
                         {isPremium && (
-                          <span className="bg-yellow-500 text-white px-2 py-0.5 rounded-full font-bold">Premium</span>
+                          <span className="bg-job-gold text-white px-2 py-0.5 rounded-full font-bold">Premium</span>
                         )}
                       </div>
                     </div>

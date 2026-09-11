@@ -3,10 +3,10 @@ import type { Config } from "tailwindcss";
 export default {
 	darkMode: ["class"],
 	content: [
-		"./pages/**/*.{ts,tsx}",
-		"./components/**/*.{ts,tsx}",
-		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./pages/**/*.{ts,tsx,js,jsx}",
+		"./components/**/*.{ts,tsx,js,jsx}",
+		"./app/**/*.{ts,tsx,js,jsx}",
+		"./src/**/*.{ts,tsx,js,jsx}",
 	],
 	prefix: "",
 	theme: {
@@ -72,12 +72,16 @@ export default {
 				'job-cream': '#FFF8E1',
 				'job-green': '#2ECC71',
 				'job-orange': '#F39C12',
-				'job-light': '#FFFAF0',
-				'job-dark': '#3C280D',
+				'job-light': '#F8FAFC',
+				'job-dark': '#16243A',
 				'job-gray': '#95A5A6',
 				'job-purple': '#8B5CF6',
 				'job-pink': '#EC4899',
-				'job-blue': '#3B82F6',	
+				'job-blue': '#3B82F6',
+				// Job-Mada primary brand color (trust / professionalism)
+				'job-navy': '#1E3A5F',
+				'job-navy-light': '#3D6491',
+				'job-navy-dark': '#122438',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -137,13 +141,15 @@ export default {
 				heading: ['Poppins', 'sans-serif']
 			},
 			boxShadow: {
-				'elegant': '0 10px 30px -5px rgba(139, 69, 19, 0.1), 0 4px 11px -5px rgba(139, 69, 19, 0.05)',
-				'card-hover': '0 14px 28px rgba(139, 69, 19, 0.1), 0 10px 10px rgba(139, 69, 19, 0.05)',
+				'elegant': '0 10px 30px -5px rgba(30, 58, 95, 0.12), 0 4px 11px -5px rgba(30, 58, 95, 0.06)',
+				'card-hover': '0 14px 28px rgba(30, 58, 95, 0.12), 0 10px 10px rgba(30, 58, 95, 0.06)',
 				'button': '0 4px 14px 0 rgba(212, 175, 55, 0.4)',
 			},
 			// UN SEUL backgroundImage ici
 			backgroundImage: {
-				'gradient-elegant': 'linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%)',
+				'gradient-elegant': 'linear-gradient(135deg, #1E3A5F 0%, #3D6491 100%)',
+				'gradient-primary': 'linear-gradient(135deg, #1E3A5F 0%, #122438 100%)',
+				'gradient-accent': 'linear-gradient(135deg, #F7E7CE 0%, #D4AF37 100%)',
 				'gradient-gold': 'linear-gradient(135deg, #F7E7CE 0%, #D4AF37 100%)',
 				'gradient-brown': 'linear-gradient(135deg, #8B4513 0%, #5D2906 100%)',
 				'gradient-green': 'linear-gradient(135deg, #10b981 0%, #2ECC71 100%)',

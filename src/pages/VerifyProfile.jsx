@@ -399,7 +399,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
 
   const getStatusIcon = (status) => {
     switch (status) {
-      case 'pending': return <Clock className="h-5 w-5 text-yellow-500" />;
+      case 'pending': return <Clock className="h-5 w-5 text-slate-500" />;
       case 'approved': return <CheckCircle className="h-5 w-5 text-green-500" />;
       case 'rejected': return <AlertCircle className="h-5 w-5 text-red-500" />;
       default: return <FileText className="h-5 w-5 text-gray-400" />;
@@ -417,7 +417,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'pending': return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+      case 'pending': return 'text-job-dark-gold bg-slate-50 border-job-light-gold';
       case 'approved': return 'text-green-600 bg-green-50 border-green-200';
       case 'rejected': return 'text-red-600 bg-red-50 border-red-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
@@ -440,13 +440,13 @@ const VerifyProfile = ({ isOpen, onClose }) => {
         >
           
           {/* Header */}
-          <div className="bg-gradient-to-br from-job-purple to-job-pink p-4 text-white rounded-t-2xl flex-shrink-0">
+          <div className="bg-gradient-to-br from-job-navy to-job-navy-dark p-4 text-white rounded-t-2xl flex-shrink-0">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Shield className="h-6 w-6" />
                 <div>
                   <h2 className="text-lg font-bold">Vérification de profil</h2>
-                  <p className="text-xs text-blue-100">
+                  <p className="text-xs text-slate-100">
                     {profile?.user_type === 'employer' ? 'Vérifiez votre entreprise' : 'Vérifiez votre identité'}
                   </p>
                 </div>
@@ -462,7 +462,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
             <div className={`mx-4 mt-2 p-4 rounded-xl border-2 flex-shrink-0 ${
               notification.type === 'success' 
                 ? 'bg-gradient-to-r from-green-50 to-emerald-50 border-green-200' 
-                : 'bg-gradient-to-r from-red-50 to-pink-50 border-red-200'
+                : 'bg-gradient-to-r from-red-50 to-slate-50 border-red-200'
             }`}>
               <div className="text-center">
                 {notification.type === 'success' && loading && (
@@ -506,9 +506,9 @@ const VerifyProfile = ({ isOpen, onClose }) => {
               {/* Status */}
               <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
                 {profile?.user_type === 'employer' ? (
-                  <Building className="h-6 w-6 text-blue-600" />
+                  <Building className="h-6 w-6 text-job-navy" />
                 ) : (
-                  <User className="h-6 w-6 text-blue-600" />
+                  <User className="h-6 w-6 text-job-navy" />
                 )}
                 <div>
                   <h3 className="font-medium text-gray-900 text-sm">Statut de vérification</h3>
@@ -522,12 +522,12 @@ const VerifyProfile = ({ isOpen, onClose }) => {
               </div>
 
               {/* Info */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+              <div className="bg-slate-50 border border-job-navy-light rounded-lg p-3">
                 <div className="flex items-start space-x-2">
-                  <Shield className="h-4 w-4 text-blue-600 mt-0.5" />
+                  <Shield className="h-4 w-4 text-job-navy mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-900 text-sm">Pourquoi vérifier ?</h4>
-                    <ul className="text-xs text-blue-800 mt-1 space-y-1">
+                    <h4 className="font-semibold text-job-navy-dark text-sm">Pourquoi vérifier ?</h4>
+                    <ul className="text-xs text-job-navy-dark mt-1 space-y-1">
                       {profile?.user_type === 'employer' ? (
                         <>
                           <li>• Augmentez la confiance des candidats</li>
@@ -554,10 +554,10 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                     </h4>
                     
                     {profile?.verification_status === 'pending' ? (
-                      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-center">
-                        <Clock className="h-8 w-8 text-yellow-500 mx-auto mb-2" />
-                        <h5 className="font-semibold text-yellow-900 mb-1 text-sm">Vérification en cours</h5>
-                        <p className="text-xs text-yellow-800">
+                      <div className="bg-slate-50 border border-job-light-gold rounded-lg p-4 text-center">
+                        <Clock className="h-8 w-8 text-slate-500 mx-auto mb-2" />
+                        <h5 className="font-semibold text-job-dark-gold mb-1 text-sm">Vérification en cours</h5>
+                        <p className="text-xs text-job-dark-gold">
                           Vos documents sont en cours d'examen.
                         </p>
                       </div>
@@ -602,36 +602,36 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                   </div>
 
                   {/* Selfie - VERSION COMPACTE */}
-                  <div className="border-2 border-purple-200 rounded-xl p-4 bg-gradient-to-br from-purple-50 to-pink-50">
+                  <div className="border-2 border-job-navy-light rounded-xl p-4 bg-gradient-to-br from-slate-50 to-slate-50">
                     <h4 className="font-semibold text-gray-900 mb-3 flex items-center text-sm">
-                      <Camera className="h-4 w-4 mr-2 text-purple-600" />
+                      <Camera className="h-4 w-4 mr-2 text-job-navy" />
                       Vérification de votre visage *
                     </h4>
                     
                     {profile?.verification_status === 'pending' ? (
-                      <div className="bg-yellow-50 border-2 border-yellow-200 rounded-lg p-3 text-center">
-                        <Clock className="h-6 w-6 text-yellow-500 mx-auto mb-1" />
-                        <p className="text-xs text-yellow-800">Photo en cours de vérification</p>
+                      <div className="bg-slate-50 border-2 border-job-light-gold rounded-lg p-3 text-center">
+                        <Clock className="h-6 w-6 text-slate-500 mx-auto mb-1" />
+                        <p className="text-xs text-job-dark-gold">Photo en cours de vérification</p>
                       </div>
                     ) : !selfieFile ? (
                       <div>
                         {/* Instructions compactes */}
-                        <div className="bg-white border border-purple-300 rounded-lg p-3 mb-3">
-                          <p className="font-bold text-purple-900 mb-2 text-xs">
+                        <div className="bg-white border border-job-navy-light rounded-lg p-3 mb-3">
+                          <p className="font-bold text-job-navy-dark mb-2 text-xs">
                             📸 DEUX choix :
                           </p>
                           
                           <div className="space-y-2 text-xs">
                             <div className="flex items-start space-x-2">
-                              <span className="bg-purple-600 text-white rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0 font-bold" style={{ fontSize: '10px' }}>1</span>
-                              <span className="text-purple-900">Selfie webcam/caméra</span>
+                              <span className="bg-job-navy text-white rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0 font-bold" style={{ fontSize: '10px' }}>1</span>
+                              <span className="text-job-navy-dark">Selfie webcam/caméra</span>
                             </div>
                             
                             <div className="text-center text-gray-500 text-xs">OU</div>
                             
                             <div className="flex items-start space-x-2">
-                              <span className="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0 font-bold" style={{ fontSize: '10px' }}>2</span>
-                              <span className="text-blue-900">Upload photo avec CIN</span>
+                              <span className="bg-job-navy text-white rounded-full w-4 h-4 flex items-center justify-center flex-shrink-0 font-bold" style={{ fontSize: '10px' }}>2</span>
+                              <span className="text-job-navy-dark">Upload photo avec CIN</span>
                             </div>
                           </div>
                         </div>
@@ -666,8 +666,8 @@ const VerifyProfile = ({ isOpen, onClose }) => {
 
                         {/* Instructions + Erreurs */}
                         <details className="mb-3">
-                          <summary className="cursor-pointer text-xs font-semibold text-blue-900 mb-2">📷 Comment faire ? (cliquer)</summary>
-                          <ol className="space-y-1 text-xs text-blue-900 pl-4">
+                          <summary className="cursor-pointer text-xs font-semibold text-job-navy-dark mb-2">📷 Comment faire ? (cliquer)</summary>
+                          <ol className="space-y-1 text-xs text-job-navy-dark pl-4">
                             <li>1. Tenez votre CIN près du visage</li>
                             <li>2. Visage + CIN bien visibles</li>
                             <li>3. Bon éclairage, pas de reflets</li>
@@ -688,7 +688,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                               setShowSelfieModal(true);
                               setTimeout(() => startCamera(), 100);
                             }}
-                            className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-xs font-semibold"
+                            className="flex-1 bg-gradient-to-r from-job-navy to-job-navy hover:from-job-navy-dark hover:to-job-navy-dark text-white px-4 py-2 rounded-lg text-xs font-semibold"
                           >
                             <Camera className="h-4 w-4 mr-1" />
                             Selfie
@@ -718,7 +718,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                           />
                           <Button
                             onClick={() => fileInputRefs.current['selfie_upload']?.click()}
-                            className="flex-1 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg text-xs font-semibold"
+                            className="flex-1 bg-gradient-to-r from-job-navy to-job-navy hover:from-job-navy-dark hover:to-job-navy-dark text-white px-4 py-2 rounded-lg text-xs font-semibold"
                           >
                             <Upload className="h-4 w-4 mr-1" />
                             Upload
@@ -742,7 +742,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                               setShowSelfieModal(true);
                               setTimeout(() => startCamera(), 100);
                             }}
-                            className="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded text-xs"
+                            className="bg-job-navy hover:bg-job-navy-dark text-white px-3 py-1 rounded text-xs"
                           >
                             Reprendre
                           </Button>
@@ -752,7 +752,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                               setSelfieFile(null);
                               fileInputRefs.current['selfie_upload']?.click();
                             }}
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs"
+                            className="bg-job-navy hover:bg-job-navy-dark text-white px-3 py-1 rounded text-xs"
                           >
                             Changer
                           </Button>
@@ -803,7 +803,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                                   <Button
                                     onClick={() => fileInputRefs.current[`${docType.type}-${index}`]?.click()}
                                     disabled={loading}
-                                    className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs"
+                                    className="bg-slate-500 hover:bg-job-navy text-white px-3 py-1 rounded text-xs"
                                   >
                                     <Upload className="h-3 w-3 mr-1" />
                                     Envoyer
@@ -816,7 +816,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                               )}
                               
                               {profile?.verification_status === 'pending' && !existingDoc && (
-                                <span className="text-yellow-600 text-xs">En attente</span>
+                                <span className="text-job-dark-gold text-xs">En attente</span>
                               )}
                             </div>
                           </div>
@@ -826,12 +826,12 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                   </div>
                   
                   {/* Message info pour employeurs */}
-                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mt-3">
+                  <div className="bg-slate-50 border border-job-light-gold rounded-lg p-3 mt-3">
                     <div className="flex items-start space-x-2">
-                      <AlertCircle className="h-4 w-4 text-orange-600 mt-0.5" />
+                      <AlertCircle className="h-4 w-4 text-job-dark-gold mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-orange-900 text-sm">Documents obligatoires *</h4>
-                        <p className="text-orange-800 text-xs mt-1">
+                        <h4 className="font-semibold text-job-dark-gold text-sm">Documents obligatoires *</h4>
+                        <p className="text-job-dark-gold text-xs mt-1">
                           NIF et STAT sont obligatoires. RCS fortement recommandé.
                         </p>
                       </div>
@@ -883,7 +883,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                   <Button
                     onClick={submitVerification}
                     disabled={loading}
-                    className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg text-sm"
+                    className="bg-gradient-to-r from-job-navy to-job-navy hover:from-job-navy-dark hover:to-job-navy-dark text-white px-4 py-2 rounded-lg text-sm"
                   >
                     {loading ? (
                       <div className="animate-spin rounded-full h-3 w-3 border-2 border-white border-t-transparent mr-1" />
@@ -907,7 +907,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                   >
                     <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col relative">
                       {/* Header selfie */}
-                      <div className="bg-orange-600 p-4 text-white rounded-t-2xl flex-shrink-0">
+                      <div className="bg-job-dark-gold p-4 text-white rounded-t-2xl flex-shrink-0">
                         <div className="flex items-center justify-between">
                           <h3 className="font-bold">Selfie de vérification</h3>
                           <button 
@@ -925,8 +925,8 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                         {/* Chargement de la caméra */}
                         {!showCamera && !capturedPhoto && (
                           <div className="text-center">
-                            <div className="w-24 h-24 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                              <div className="animate-spin rounded-full h-8 w-8 border-3 border-purple-300 border-t-purple-600"></div>
+                            <div className="w-24 h-24 bg-gradient-to-br from-slate-100 to-slate-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                              <div className="animate-spin rounded-full h-8 w-8 border-3 border-job-navy-light border-t-job-navy"></div>
                             </div>
                             <h4 className="font-semibold text-gray-900 mb-2">Démarrage de la caméra...</h4>
                             <p className="text-gray-600 mb-4 text-sm">
@@ -954,7 +954,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
             autoPlay
             playsInline
             muted
-            className="w-full max-w-sm rounded-lg shadow-lg border-2 border-purple-300"
+            className="w-full max-w-sm rounded-lg shadow-lg border-2 border-job-navy-light"
             style={{ 
               transform: 'scaleX(-1)',
               maxHeight: '300px',
@@ -1004,7 +1004,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                   }, 100);
                 }
               }}
-              className="!bg-orange-500 !text-white hover:!bg-orange-600 px-4 py-2 rounded text-xl font-medium"
+              className="!bg-slate-500 !text-white hover:!bg-job-dark-gold px-4 py-2 rounded text-xl font-medium"
             >
               Afficher la caméra
             </Button>
@@ -1066,7 +1066,7 @@ const VerifyProfile = ({ isOpen, onClose }) => {
                               </Button>
                               <Button 
                                 onClick={retakeSelfie} 
-                                className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg"
+                                className="bg-slate-500 hover:bg-job-dark-gold text-white px-4 py-2 rounded-lg"
                               >
                                 <Camera className="h-4 w-4 mr-1" />
                                 Reprendre

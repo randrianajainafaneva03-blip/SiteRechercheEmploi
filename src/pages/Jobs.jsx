@@ -177,7 +177,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
   return (
     <>
     <div 
-        className={`bg-gradient-to-r from-job-gold via-job-orange to-job-dark-gold rounded-3xl p-4 md:p-8 relative overflow-hidden shadow-2xl mt-8 transition-all duration-500 ${
+        className={`bg-gradient-to-r from-job-gold via-job-gold to-job-dark-gold rounded-3xl p-4 md:p-8 relative overflow-hidden shadow-2xl mt-8 transition-all duration-500 ${
           isScrolled ? 'opacity-0 pointer-events-none h-0' : 'opacity-100'
         }`}
       >
@@ -225,7 +225,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
                           />
                         ) : null}
                         <div 
-                          className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-orange rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
+                          className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-gold rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
                         >
                           <Building className="h-4 w-4 md:h-8 md:w-8 text-white" />
                         </div>
@@ -233,7 +233,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
                       
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-1 mb-1">
-                          <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-2 py-1 rounded-full text-xs md:text-sm font-bold flex items-center">
+                          <div className="bg-gradient-to-r from-job-gold to-job-gold text-white px-2 py-1 rounded-full text-xs md:text-sm font-bold flex items-center">
                             <Star className="h-3 w-3 mr-1" />
                             <span>UNE</span>
                           </div>
@@ -244,7 +244,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
                             </div>
                           )}
                         </div>
-                        <h3 className="text-sm md:text-lg font-bold text-job-brown group-hover:text-job-gold transition-colors line-clamp-1 leading-tight">
+                        <h3 className="text-sm md:text-lg font-bold text-job-navy group-hover:text-job-gold transition-colors line-clamp-1 leading-tight">
                           {job.title}
                         </h3>
                         <p className="text-job-gold font-bold text-xs md:text-sm leading-tight line-clamp-1">{job.company_name}</p>
@@ -257,7 +257,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
                         <span className="font-medium truncate">{job.location}</span>
                       </div>
                       <div className="flex items-center">
-                        <Clock className="h-3 w-3 md:h-4 md:w-4 text-blue-600 mr-1 flex-shrink-0" />
+                        <Clock className="h-3 w-3 md:h-4 md:w-4 text-job-navy mr-1 flex-shrink-0" />
                         <span className="truncate">{getTimeAgo(job.created_at)}</span>
                       </div>
                       <div className="flex items-center">
@@ -274,7 +274,7 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
                       <span className="px-2 md:px-3 py-1 bg-gradient-to-r from-job-gold to-job-dark-gold text-white rounded-full text-xs md:text-sm font-bold">
                         {job.category}
                       </span>
-                      <span className="px-2 md:px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs md:text-sm font-bold">
+                      <span className="px-2 md:px-3 py-1 bg-slate-100 text-job-navy-dark rounded-full text-xs md:text-sm font-bold">
                         {job.contract_type?.toUpperCase()}
                       </span>
                     </div>
@@ -295,13 +295,13 @@ const FeaturedJobsCarousel = ({ jobs, isScrolled }) => {
             <>
               <button
                 onClick={goToPrev}
-                className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-job-purple to-job-pink backdrop-blur-sm text-white p-2 md:p-4 rounded-full hover:bg-white/30 transition-all shadow-lg z-10"
+                className="absolute left-0 md:left-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-job-navy to-job-navy-dark backdrop-blur-sm text-white p-2 md:p-4 rounded-full hover:bg-white/30 transition-all shadow-lg z-10"
               >
                 <ChevronLeft className="h-3 w-3 md:h-6 md:w-6" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-job-purple to-job-pink backdrop-blur-sm text-white p-2 md:p-4 rounded-full hover:bg-white/30 transition-all shadow-lg z-10"
+                className="absolute right-0 md:right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-br from-job-navy to-job-navy-dark backdrop-blur-sm text-white p-2 md:p-4 rounded-full hover:bg-white/30 transition-all shadow-lg z-10"
               >
                 <ChevronRight className="h-3 w-3 md:h-6 md:w-6" />
               </button>
@@ -498,14 +498,14 @@ const RecentJobsWidget = ({ jobs }) => {
                         />
                       ) : null}
                       <div 
-                        className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-orange rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
+                        className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-gold rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
                       >
                         <Building className="h-6 w-6 text-white" />
                       </div>
                     </div>
                     
                     <div className="flex-1">
-                      <h4 className="font-bold text-job-brown text-sm line-clamp-1 hover:text-job-gold transition-colors">
+                      <h4 className="font-bold text-job-navy text-sm line-clamp-1 hover:text-job-gold transition-colors">
                         {job.title}
                       </h4>
                       <p className="text-gray-600 text-xs font-medium">{job.company_name}</p>
@@ -520,8 +520,8 @@ const RecentJobsWidget = ({ jobs }) => {
                       <span className="font-medium">{job.location}</span>
                     </div>
                     <div className="flex items-center">
-                      <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                        <Briefcase className="h-3 w-3 text-blue-600" />
+                      <div className="w-5 h-5 bg-slate-100 rounded-full flex items-center justify-center mr-2">
+                        <Briefcase className="h-3 w-3 text-job-navy" />
                       </div>
                       <span>{job.category}</span>
                     </div>
@@ -545,13 +545,13 @@ const RecentJobsWidget = ({ jobs }) => {
           <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             <button
               onClick={goToPrev}
-              className="p-2 bg-gradient-to-br from-job-purple to-job-pink hover:bg-white rounded-full shadow-lg transition-all"
+              className="p-2 bg-gradient-to-br from-job-navy to-job-navy-dark hover:bg-white rounded-full shadow-lg transition-all"
             >
               <ChevronUp className="h-3 w-3 text-white" />
             </button>
             <button
               onClick={goToNext}
-              className="p-2 bg-gradient-to-br from-job-purple to-job-pink hover:bg-white rounded-full shadow-lg transition-all"
+              className="p-2 bg-gradient-to-br from-job-navy to-job-navy-dark hover:bg-white rounded-full shadow-lg transition-all"
             >
               <ChevronDown className="h-3 w-3 text-white" />
             </button>
@@ -576,8 +576,6 @@ const Jobs = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showSidebars, setShowSidebars] = useState(false);
-  
   const jobsPerPage = 100;
   const jobsListRef = useRef(null);
   const [filterInputs, setFilterInputs] = useState({
@@ -852,15 +850,9 @@ const Jobs = () => {
  
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 400) {
-        setShowSidebars(true);
-        setIsScrolled(true);
-      } else {
-        setShowSidebars(false);
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 400);
     };
-  
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -1076,26 +1068,14 @@ const Jobs = () => {
   }
  
   return (
-    <div style={{ 
-      minHeight: '100vh', 
-      backgroundColor: '#fffaf0',
-      textAlign: 'left', 
-      maxWidth: 'none',
-      width: '100%',
-      margin: 0,
-      padding: 0
-    }}>
+    <div className="min-h-screen w-full bg-slate-50 text-left">
       <Navbar featuredJobs={featuredJobs} showMiniCarousel={isScrolled} />
-      
+
       {/* Header avec recherche */}
-      <section style={{
-        paddingTop: '120px',
-        paddingBottom: '32px',
-        background: 'linear-gradient(135deg, #D4AF37 0%, #F39C12 50%, #AA8C3E 100%)',
-        color: 'white',
-        width: '100%',
-        textAlign: 'left'
-      }}>
+      <section
+        className="w-full text-left text-white pt-28 sm:pt-32 pb-8"
+        style={{ background: 'linear-gradient(135deg, #1E3A5F 0%, #3D6491 50%, #122438 100%)' }}
+      >
         <div style={{ 
           maxWidth: '1600px',  
           margin: '0 auto', 
@@ -1164,7 +1144,7 @@ const Jobs = () => {
             {/* Filtres avancés */}
             {showAdvancedFilters && (
               <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border-2 border-job-gold">
-                <h3 className="text-lg font-bold text-job-brown mb-4 flex items-center">
+                <h3 className="text-lg font-bold text-job-navy mb-4 flex items-center">
                   <Filter className="h-5 w-5 mr-2 text-job-gold" />
                   Filtres avancés
                 </h3>
@@ -1270,63 +1250,26 @@ const Jobs = () => {
       </section>
  
       {/* Carrousel des offres à la une */}
-      <div style={{ 
-        width: '100%', 
-        padding: '32px 8px 24px 24px', 
-        textAlign: 'left'
-      }}>
-        <div style={{ 
-          maxWidth: '100%',
-          margin: '0 auto',
-          width: '100%'
-        }}>
+      <div className="w-full px-4 sm:px-6 lg:px-12 py-6 sm:py-8 text-left">
+        <div className="max-w-[1600px] mx-auto w-full">
           <FeaturedJobsCarousel jobs={featuredJobs} isScrolled={isScrolled} />
         </div>
       </div>
  
       {/* Contenu principal - 3 colonnes */}
-      <div style={{ 
-        width: '100%', 
-        padding: '0 8px 32px 8px',
-        margin: 0,
-        textAlign: 'left'
-      }}>
-        <div style={{ 
-          maxWidth: '100%', 
-          margin: '0px 0px',
-          paddingLeft:'50px',
-          paddingRight:'50px',
-          width: '100%'
-        }}>
- 
- <div className="three-columns-container" style={{  
-  display: 'flex', 
-  gap: '24px', 
-  width: '100%',
-  position: 'relative'
-}}>
-            
+      <div className="w-full px-4 sm:px-6 lg:px-12 pb-8">
+        <div className="max-w-[1600px] mx-auto w-full">
+
+          <div className="lg:grid lg:grid-cols-[260px_minmax(0,1fr)_260px] lg:gap-6 lg:items-start">
+
             {/* ✅ COLONNE GAUCHE MODIFIÉE : Ajout recherche */}
-            <div className="sidebar-left" style={{ 
-  width: '20%', 
-  position: 'fixed',
-  left: '50px',
-  top: '250px',
-  height: 'calc(100vh - 140px)',
-  overflowY: 'auto',
-  padding: '8px',
-  paddingBottom: '150px',  // ← AJOUTE ÇA
-  opacity: showSidebars ? 1 : 0,
-  visibility: showSidebars ? 'visible' : 'hidden',
-  transition: 'opacity 0.3s ease, visibility 0.3s ease',
-  zIndex: 0
-}}>
-  <div className="space-y-6">  {/* ← Enlève "sticky top-24" */}
+            <div className="hidden lg:block lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pb-10 job-sidebar-scroll">
+  <div className="space-y-6">
                 
                 {/* 🔍 NOUVEAU : Barre de recherche rapide */}
                 <div className="bg-gradient-to-br from-white to-job-cream rounded-2xl p-5 shadow-2xl border-2 border-job-gold">
                     <div className="flex items-center justify-between mb-4 p-2">
-                      <h3 className="font-bold text-job-brown text-lg flex items-center">
+                      <h3 className="font-bold text-job-navy text-lg flex items-center">
                         <Search className="h-5 w-5 mr-2 text-job-gold" />
                         Recherche
                       </h3>
@@ -1518,7 +1461,7 @@ const Jobs = () => {
                     {(filters.search || filters.dateFilter || filters.monthYear || filters.customDateFrom) && (
                     <div className="mt-4 bg-job-gold/10 border-2 border-job-gold rounded-xl p-3">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-bold text-job-brown">Filtres actifs :</span>
+                        <span className="text-xs font-bold text-job-navy">Filtres actifs :</span>
                         <Sparkles className="h-4 w-4 text-job-gold" />
                       </div>
                       {filters.search && (
@@ -1551,7 +1494,7 @@ const Jobs = () => {
                   </div>
  
                 {/* Widget Premium Employeur (INCHANGÉ) */}
-                <div className="bg-gradient-to-br from-job-purple to-job-pink rounded-3xl p-6 text-white shadow-2xl transform hover:scale-105 transition-transform">
+                <div className="bg-gradient-to-br from-job-navy to-job-navy-dark rounded-3xl p-6 text-white shadow-2xl transform hover:scale-105 transition-transform">
                   <div className="flex items-center justify-between mb-4">
                     <Crown className="h-12 w-12 text-white" />
                     <span className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-bold">
@@ -1586,7 +1529,7 @@ const Jobs = () => {
                   </ul>
                   <button 
                     onClick={handleCreateJob}
-                    className="w-full bg-white text-job-purple hover:bg-gray-100 font-bold py-3 shadow-lg rounded-xl transition-all"
+                    className="w-full bg-white text-job-navy hover:bg-gray-100 font-bold py-3 shadow-lg rounded-xl transition-all"
                   >
                     Publier une offre
                   </button>
@@ -1595,7 +1538,7 @@ const Jobs = () => {
                 {/* Filtres rapides (INCHANGÉ) */}
                 <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="font-bold text-job-brown flex items-center">
+                    <h3 className="font-bold text-job-navy flex items-center">
                       <Filter className="h-5 w-5 mr-2 text-job-gold" />
                       Filtres rapides
                     </h3>
@@ -1666,7 +1609,7 @@ const Jobs = () => {
                 <div className="boxconseil bg-white rounded-2xl p-6 shadow-xl border border-gray-100">
                   <div className="flex items-center mb-4">
                     <Sparkles className="h-6 w-6 text-job-gold mr-3" />
-                    <h3 className="font-bold text-job-brown">Conseils Recherche</h3>
+                    <h3 className="font-bold text-job-navy">Conseils Recherche</h3>
                   </div>
                   <ul className="space-y-3 text-sm text-gray-600">
                     <li className="flex items-start">
@@ -1691,17 +1634,12 @@ const Jobs = () => {
             </div>
  
             {/* Colonne centrale - Liste des offres */}
-            <div className="jobs-center-column" style={{  
-  width: '54%', 
-  marginLeft: 'calc(20% + 24px)',  // ← Espace pour sidebar gauche
-  marginRight: 'calc(20% + 24px)',  // ← Espace pour sidebar droite
-  padding: '0'
-}}>
+            <div className="min-w-0">
               {/* Header avec stats */}
               <div ref={jobsListRef} className="filtresm bg-white rounded-xl shadow-lg border border-job-gold mb-16 p-4 flex-shrink-0">
   <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
     <div>
-      <h2 className="text-2xl font-bold text-job-brown mb-2">
+      <h2 className="text-2xl font-bold text-job-navy mb-2">
         {loading ? '⏳ Chargement...' : `📋 ${jobs.length} offres affichées`}
       </h2>
       <p className="text-gray-600">
@@ -1728,7 +1666,7 @@ const Jobs = () => {
           setJobs([]);
           setHasMore(true);
         }}
-        className="bg-gradient-to-r from-red-500 to-orange-500 text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
+        className="bg-gradient-to-r from-red-500 to-slate-500 text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
       >
         <X className="h-5 w-5" />
         <span>Réinitialiser</span>
@@ -1738,7 +1676,7 @@ const Jobs = () => {
       {isEmployer && (
         <Button
           onClick={handleCreateJob}
-          className="bg-gradient-to-br from-job-purple to-job-pink text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
+          className="bg-gradient-to-br from-job-navy to-job-navy-dark text-white flex items-center space-x-2 px-6 py-3 shadow-lg hover:shadow-xl transition-all font-bold"
         >
           <Plus className="h-5 w-5" />
           <span>Publier une offre</span>
@@ -1813,7 +1751,7 @@ const Jobs = () => {
                               />
                             ) : null}
                             <div 
-                              className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-orange rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
+                              className={`fallback-icon w-full h-full bg-gradient-to-r from-job-gold to-job-gold rounded-lg flex items-center justify-center ${job.employer_logo ? 'hidden' : 'flex'}`}
                             >
                               <Building className="h-8 w-8 text-white" />
                             </div>
@@ -1823,11 +1761,11 @@ const Jobs = () => {
                             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                               <div className="flex-1">
                                 <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-2">
-                                  <h3 className="text-lg md:text-xl font-bold text-job-brown group-hover:text-job-gold transition-colors line-clamp-1">
+                                  <h3 className="text-lg md:text-xl font-bold text-job-navy group-hover:text-job-gold transition-colors line-clamp-1">
                                     {job.title}
                                   </h3>
                                   {job.is_featured && (
-                                    <div className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                                    <div className="bg-gradient-to-r from-job-gold to-job-gold text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
                                       <Star className="h-3 w-3 mr-1" />
                                       Pro
                                     </div>
@@ -1864,19 +1802,19 @@ const Jobs = () => {
                                   <span className="px-3 py-1 bg-gradient-to-r from-job-gold to-job-dark-gold text-white text-xs font-bold rounded-full">
                                     {job.category}
                                   </span>
-                                  <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">
+                                  <span className="px-3 py-1 bg-slate-100 text-job-navy-dark text-xs font-bold rounded-full">
                                     {contractTypes.find(t => t.value === job.contract_type)?.label || job.contract_type}
                                   </span>
                                   <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">
                                     {experienceLevels.find(l => l.value === job.experience_level)?.label || job.experience_level}
                                   </span>
                                   {formatSalary(job) && (
-                                    <span className="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full">
+                                    <span className="px-3 py-1 bg-slate-100 text-job-navy-dark text-xs font-bold rounded-full">
                                       {formatSalary(job)}
                                     </span>
                                   )}
                                   {job.remote_work && (
-                                    <span className="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs font-bold rounded-full">
+                                    <span className="px-3 py-1 bg-slate-100 text-job-navy-dark text-xs font-bold rounded-full">
                                       🏠 Remote
                                     </span>
                                   )}
@@ -1885,7 +1823,7 @@ const Jobs = () => {
  
                               <div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-start mt-4 md:mt-0 md:space-y-3 md:ml-6">
                                 {job.application_deadline && (
-                                  <div className="text-xs text-orange-600 flex items-center bg-orange-50 px-3 py-1 rounded-full">
+                                  <div className="text-xs text-job-dark-gold flex items-center bg-slate-50 px-3 py-1 rounded-full">
                                     <Calendar className="h-3 w-3 mr-1" />
                                     <span className="hidden md:inline">Date limite: </span>
                                     {new Date(job.application_deadline).toLocaleDateString('fr-FR')}
@@ -1929,7 +1867,7 @@ const Jobs = () => {
                     {!hasMore && jobs.length > 0 && (
                       <div className="text-center py-8 bg-gradient-to-r from-job-cream to-white rounded-2xl border-2 border-job-gold/20">
                         <CheckCircle className="h-12 w-12 text-job-gold mx-auto mb-3" />
-                        <p className="text-job-brown font-bold text-lg mb-2">
+                        <p className="text-job-navy font-bold text-lg mb-2">
                           🎉 Vous avez vu toutes les offres disponibles
                         </p>
                         <p className="text-gray-600 text-sm">
@@ -1943,25 +1881,12 @@ const Jobs = () => {
             </div>
  
             {/* Colonne droite - Widgets (INCHANGÉE) */}
-            <div className="sidebar-right" style={{  
-  width: '20%', 
-  position: 'fixed',
-  right: '50px',
-  top: '250px',
-  height: 'calc(100vh - 140px)',
-  paddingBottom: '150px',
-  overflowY: 'auto',
-  padding: '8px',
-  opacity: showSidebars ? 1 : 0,
-  visibility: showSidebars ? 'visible' : 'hidden',
-  transition: 'opacity 0.3s ease, visibility 0.3s ease',
-  zIndex: 0
-}}>
+            <div className="hidden lg:block lg:sticky lg:top-24 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:pb-10 job-sidebar-scroll">
   <div className="space-y-6"> 
                 <RecentJobsWidget jobs={recentJobs} />
  
                 {isPremium ? (
-                  <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
+                  <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-bold flex items-center">
                         <Crown className="h-5 w-5 mr-2" />
@@ -2000,7 +1925,7 @@ const Jobs = () => {
                     </button>
                   </div>
                 ) : (
-                  <div className="bg-gradient-to-br from-job-gold via-job-orange to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
+                  <div className="bg-gradient-to-br from-job-gold via-job-gold to-job-dark-gold rounded-2xl p-6 text-white shadow-xl">
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="font-bold flex items-center">
                         <Crown className="h-5 w-5 mr-2" />
@@ -2037,7 +1962,7 @@ const Jobs = () => {
                   </div>
                 )}
  
-                <div className="bg-gradient-to-br from-job-blue via-indigo-500 to-job-purple rounded-2xl p-6 text-white shadow-xl">
+                <div className="bg-gradient-to-br from-job-navy via-job-navy to-job-navy rounded-2xl p-6 text-white shadow-xl">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-bold flex items-center">
                       <Activity className="h-5 w-5 mr-2" />
@@ -2072,7 +1997,7 @@ const Jobs = () => {
                     <div className="w-16 h-16 bg-job-cream rounded-full flex items-center justify-center mx-auto mb-4">
                       <MessageSquare className="h-8 w-8 text-job-gold" />
                     </div>
-                    <h3 className="font-bold text-job-brown mb-2">Besoin d'aide ?</h3>
+                    <h3 className="font-bold text-job-navy mb-2">Besoin d'aide ?</h3>
                     <p className="text-gray-600 text-sm mb-4">
                       Notre Support est là pour vous accompagner
                     </p>
@@ -2092,36 +2017,16 @@ const Jobs = () => {
 
       {/* Styles CSS */}
       <style>{`
-        .job-gold { color: #D4AF37; }
-        .job-dark-gold { color: #B8860B; }
-        .job-light-gold { background-color: #FDF6E3; }
-        .job-cream { background-color: #FEF9E7; }
-        .job-brown { color: #8B4513; }
-        .job-blue { color: #3B82F6; }
-        .job-purple { color: #8B5CF6; }
-        .job-pink { color: #EC4899; }
-        .job-orange { color: #F97316; }
+        html, body {
+          overflow-x: hidden;
+          max-width: 100vw;
+        }
 
         .line-clamp-1 {
           display: -webkit-box;
           -webkit-line-clamp: 1;
           -webkit-box-orient: vertical;
           overflow: hidden;
-        }
-
-        @keyframes slideIn {
-          0% {
-            opacity: 0;
-            transform: translateX(30px) scale(0.95);
-          }
-          100% {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-          }
-        }
-
-        .animate-slide-in {
-          animation: slideIn 0.6s ease-out forwards;
         }
 
         .line-clamp-2 {
@@ -2131,25 +2036,6 @@ const Jobs = () => {
           overflow: hidden;
         }
 
-        /* Scrollbar personnalisée pour la liste des jobs */
-.flex-1.overflow-y-auto::-webkit-scrollbar {
-  width: 8px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-track {
-  background: #f3f4f6;
-  border-radius: 10px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #D4AF37 0%, #F39C12 100%);
-  border-radius: 10px;
-}
-
-.flex-1.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
-}
-
         .line-clamp-3 {
           display: -webkit-box;
           -webkit-line-clamp: 3;
@@ -2157,809 +2043,55 @@ const Jobs = () => {
           overflow: hidden;
         }
 
-        .hover\\:scale-105:hover {
-          transform: scale(1.05);
+        .shadow-3xl {
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
-        .hover\\:scale-110:hover {
-          transform: scale(1.10);
+        @keyframes slideIn {
+          0% { opacity: 0; transform: translateX(30px) scale(0.95); }
+          100% { opacity: 1; transform: translateX(0) scale(1); }
         }
 
-        .transition-transform {
-          transition: transform 0.3s ease;
+        .animate-slide-in {
+          animation: slideIn 0.6s ease-out forwards;
         }
 
-        .transition-all {
-          transition: all 0.3s ease;
+        .job-sidebar-scroll {
+          scrollbar-width: thin;
+          scrollbar-color: #D4AF37 #f3f4f6;
         }
 
-        @media (max-width: 1024px) {
-          div[style*="width: 25%"] {
-            width: 30% !important;
-          }
-          
-          div[style*="width: 50%"] {
-            width: 40% !important;
-          }
+        .job-sidebar-scroll::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        .job-sidebar-scroll::-webkit-scrollbar-track {
+          background: #f3f4f6;
+          border-radius: 10px;
+        }
+
+        .job-sidebar-scroll::-webkit-scrollbar-thumb {
+          background: linear-gradient(135deg, #D4AF37 0%, #F39C12 100%);
+          border-radius: 10px;
+        }
+
+        .job-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
         }
 
         @media (max-width: 768px) {
           .mobile-card:nth-child(2),
           .mobile-card:nth-child(3) {
-            display: none !important; 
+            display: none !important;
           }
-            .backdrop-blur-sm{
-            display: none;}
-          
-            .boxconseil{
-            display:none;}
 
-            .filtresm{
-            margin-top: 90px;}
           .mobile-card:first-child {
             width: 100% !important;
             min-width: 100% !important;
             max-width: 100% !important;
           }
-          
-          div[style*="gap-4 md:gap-8"] {
-            gap: 0 !important;
-          }
-          div[style*="display: flex"] {
-            flex-direction: column !important;
-          }
-          
-          div[style*="width: 25%"], div[style*="width: 50%"] {
-            width: 100% !important;
-          }
-
-          .sticky {
-            position: relative !important;
-          }
-
-          .grid-cols-3 {
-            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-          }
-
-          .p-8 {
-            padding: 1.5rem !important;
-          }
-
-          .px-6 {
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-          }
-
-          .text-3xl {
-            font-size: 1.5rem !important;
-            line-height: 2rem !important;
-          }
-
-          .text-2xl {
-            font-size: 1.25rem !important;
-            line-height: 1.75rem !important;
-          }
-
-          .text-xl {
-            font-size: 1.125rem !important;
-            line-height: 1.75rem !important;
-          }
-
-          .flex-col.md\\:flex-row {
-            flex-direction: column !important;
-          }
-
-          .min-w-\\[200px\\] {
-            min-width: auto !important;
-          }
-
-          div[style*="padding: 0 60px"] {
-            padding: 0 1rem !important;
-          }
-
-          .grid-cols-1.md\\:grid-cols-3.lg\\:grid-cols-5 {
-            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-          }
-
-          .md\\:grid-cols-3 {
-            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-          }
-
-          .space-x-6 {
-            flex-direction: column !important;
-            gap: 1rem !important;
-          }
-
-          .flex.items-start.space-x-6 {
-            flex-direction: column !important;
-            gap: 1rem !important;
-          }
-
-          .h-16.w-16 {
-            height: 3rem !important;
-            width: 3rem !important;
-          }
-
-          .absolute.left-4,
-          .absolute.right-4 {
-            display: none !important;
-          }
-        }
-
-        
-        @media (max-width: 480px) {
-          .text-5xl {
-            font-size: 2rem !important;
-            line-height: 2.5rem !important;
-          }
-
-          .text-4xl {
-            font-size: 1.75rem !important;
-            line-height: 2.25rem !important;
-          }
-
-          .p-6 {
-            padding: 1rem !important;
-          }
-
-          .space-y-6 > * + * {
-            margin-top: 1rem !important;
-          }
-
-          .gap-6 {
-            gap: 1rem !important;
-          }
-
-          .flex.items-center.justify-center.space-x-2 {
-            flex-wrap: wrap !important;
-            gap: 0.5rem !important;
-          }
-
-          .px-4.py-3 {
-            padding: 0.5rem 0.75rem !important;
-          }
-        }
-
-        .shadow-3xl {
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
       `}</style>
-      <style>{`
-  .job-gold { color: #D4AF37; }
-  .job-dark-gold { color: #B8860B; }
-  .job-light-gold { background-color: #FDF6E3; }
-  .job-cream { background-color: #FEF9E7; }
-  .job-brown { color: #8B4513; }
-  .job-blue { color: #3B82F6; }
-  .job-purple { color: #8B5CF6; }
-  .job-pink { color: #EC4899; }
-  .job-orange { color: #F97316; }
-
-  /* Empêcher le scroll horizontal sur toute la page */
-  body, html {
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-  }
-
-  .line-clamp-1 {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-2 {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateX(30px) scale(0.95);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1);
-    }
-  }
-
-  .animate-slide-in {
-    animation: slideIn 0.6s ease-out forwards;
-  }
-
-  .hover\\:scale-105:hover {
-    transform: scale(1.05);
-  }
-
-  .hover\\:scale-110:hover {
-    transform: scale(1.10);
-  }
-
-  .transition-transform {
-    transition: transform 0.3s ease;
-  }
-
-  .transition-all {
-    transition: all 0.3s ease;
-  }
-
-  .shadow-3xl {
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
-
-  /* ============================================ */
-  /* RESPONSIVE MOBILE - DESIGN UNIFORME ET ÉPURÉ */
-  /* ============================================ */
-  
-  @media (max-width: 768px) {
-    
-    /* ⚠️ NE PAS TOUCHER AU NAVBAR ET AUX CARROUSELS */
-    /* Exclure header, nav, et les mini carrousels */
-    
-    /* Empêcher le scroll horizontal UNIQUEMENT sur le contenu principal */
-    main, .main-content, section:not(header):not(nav) {
-      max-width: 100vw !important;
-      overflow-x: hidden !important;
-    }
-
-    /* Container principal - PAS DE MARGES - width 100% */
-    div[style*="padding: 32px 8px"]:not(header *):not(nav *) {
-      padding: 16px 0 !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-    }
-    /* ============================================ */
-/* SCROLL ET PAGINATION - DESKTOP VS MOBILE */
-/* ============================================ */
-
-/* Desktop : Scroll fixe avec pagination sticky */
-@media (min-width: 769px) {
-  /* Container principal avec hauteur fixe */
-  div[style*="width: 54%"] {
-    display: flex !important;
-    flex-direction: column !important;
-    height: calc(100vh - 96px) !important;
-    position: sticky !important;
-    top: 96px !important;
-  }
-
-  /* Zone scrollable */
-  div[style*="width: 54%"] .flex-1.overflow-y-auto {
-    min-height: 0 !important;
-  }
-
-  /* Scrollbar personnalisée */
-  .flex-1.overflow-y-auto::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  .flex-1.overflow-y-auto::-webkit-scrollbar-track {
-    background: #f3f4f6;
-    border-radius: 10px;
-  }
-
-  .flex-1.overflow-y-auto::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #D4AF37 0%, #F39C12 100%);
-    border-radius: 10px;
-  }
-
-  .flex-1.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
-  }
-}
-
-/* Mobile : Comportement normal sans scroll fixe */
-@media (max-width: 768px) {
-  /* Désactiver le flex column fixe */
-  div[style*="width: 54%"] {
-    display: block !important;
-    height: auto !important;
-    position: relative !important;
-    top: auto !important;
-  }
-
-  /* Désactiver le scroll fixe */
-  div[style*="width: 54%"] .flex-1.overflow-y-auto {
-    overflow-y: visible !important;
-    max-height: none !important;
-  }
-
-  /* Pagination normale (pas sticky) */
-  div[style*="width: 54%"] .flex-shrink-0 {
-    position: relative !important;
-  }
-}
-    div[style*="padding: 0 8px 32px"]:not(header *):not(nav *) {
-      padding: 0 0 24px 0 !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-    }
-    
-    div[style*="margin: 40px 40px"]:not(header *):not(nav *) {
-      margin: 0 !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-    }
-
-    /* Tous les conteneurs avec maxWidth - SAUF navbar */
-    div[style*="maxWidth"]:not(header *):not(nav *):not([class*="mini"]) {
-      max-width: 100vw !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Header recherche - Marges 5% - width 100% */
-    section[style*="paddingTop: 120px"] {
-      padding-top: 100px !important;
-      padding-bottom: 24px !important;
-      padding-left: 5% !important;
-      padding-right: 5% !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-    }
-
-    /* ============================================ */
-    /* SIDEBARS MOBILE - MASQUER SAUF WIDGET PREMIUM */
-    /* ============================================ */
-    
-    /* Sidebar gauche - MASQUER COMPLÈTEMENT */
-    div[style*="width: 20%"]:first-child:not(header *):not(nav *) {
-      display: none !important;
-    }
-
-    /* Sidebar droite - AFFICHER UNIQUEMENT LE WIDGET PREMIUM */
-    div[style*="width: 20%"]:last-child:not(header *):not(nav *) {
-      display: block !important;
-      width: 100% !important;
-      position: static !important;
-      padding: 0 5% !important;
-      margin-top: 24px !important;
-    }
-
-   
-
-    /* Widget Premium - Afficher en pleine largeur */
-    div[style*="width: 20%"]:last-child .bg-gradient-to-br {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    /* Colonne centrale = 100% sur mobile */
-    div[style*="width: 54%"]:not(header *):not(nav *) {
-      width: 100% !important;
-      padding: 0  !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Container flex -> colonne - PAS dans le navbar */
-    div[style*="display: flex"][style*="gap: 24px"]:not(header *):not(nav *) {
-      display: block !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-    }
-
-    /* ============================================ */
-    /* STICKY - GARDER POUR NAVBAR, DÉSACTIVER POUR SIDEBARS */
-    /* ============================================ */
-    
-    /* GARDER le sticky du navbar */
-    header.sticky,
-    nav.sticky,
-    header .sticky {
-      position: sticky !important;
-      top: 0 !important;
-      z-index: 9999 !important;
-    }
-
-    /* Désactiver sticky UNIQUEMENT pour les sidebars (top-24) */
-    .sticky.top-24:not(header *):not(nav *) {
-      position: relative !important;
-      top: auto !important;
-    }
-
-    /* ============================================ */
-    /* CARROUSEL MOBILE - 1 SEULE CARTE - WIDTH 100% */
-    /* ============================================ */
-    
-    /* UNIQUEMENT le grand carrousel, PAS le mini */
-    .mobile-card:not(header *):not(nav *) {
-      width: 100% !important;
-      min-width: 100% !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    .mobile-card:nth-child(2):not(header *):not(nav *),
-    .mobile-card:nth-child(3):not(header *):not(nav *) {
-      display: none !important;
-    }
-
-    /* Container carrousel - width 100% - PAS le mini navbar */
-    div[style*="padding: 4 md:p-8"]:not(header *):not(nav *) {
-      padding: 16px 5% !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-      overflow: hidden !important;
-    }
-
-    /* Flèches carrousel mobile - PAS celles du navbar */
-    button[class*="absolute left-0"]:not(header *):not(nav *),
-    button[class*="absolute right-0"]:not(header *):not(nav *) {
-      padding: 8px !important;
-    }
-
-    button[class*="absolute left-0"]:not(header *):not(nav *) {
-      left: 4px !important;
-    }
-
-    button[class*="absolute right-0"]:not(header *):not(nav *) {
-      right: 4px !important;
-    }
-
-    /* ============================================ */
-    /* BARRE DE RECHERCHE MOBILE - WIDTH 100% */
-    /* ============================================ */
-    
-    .flex.flex-col.md\\:flex-row:not(header *):not(nav *) {
-      flex-direction: column !important;
-      width: 100% !important;
-    }
-
-    .min-w-\\[200px\\]:not(header *):not(nav *) {
-      min-width: 100% !important;
-      width: 100% !important;
-    }
-
-    input[type="text"]:not(header *):not(nav *),
-    select:not(header *):not(nav *) {
-      font-size: 16px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Bouton filtres avancés */
-    button[class*="whitespace-nowrap"]:not(header *):not(nav *) {
-      width: 100% !important;
-      justify-content: center !important;
-      box-sizing: border-box !important;
-    }
-
-    /* ============================================ */
-    /* FILTRES AVANCÉS MOBILE - WIDTH 100% */
-    /* ============================================ */
-    
-    .grid.grid-cols-1.md\\:grid-cols-3.lg\\:grid-cols-5:not(header *):not(nav *) {
-      grid-template-columns: 1fr !important;
-      gap: 12px !important;
-      width: 100% !important;
-    }
-
-    /* ============================================ */
-    /* CARTES D'OFFRES MOBILE - WIDTH 100% */
-    /* ============================================ */
-    
-    /* Carte d'offre - PAS les cartes du navbar */
-    .bg-white.rounded-2xl.p-6:not(header *):not(nav *) {
-      padding: 16px !important;
-      margin-bottom: 12px !important;
-      width: 100% !important;
-      max-width: 100vw !important;
-      box-sizing: border-box !important;
-    }
-
-    /* Logo entreprise dans carte */
-    .h-16.w-16.rounded-xl:not(header *):not(nav *) {
-      height: 48px !important;
-      width: 48px !important;
-    }
-
-    /* Contenu carte -> colonne sur mobile */
-    .flex.items-start.flex-col.md\\:flex-row:not(header *):not(nav *) {
-      flex-direction: column !important;
-      width: 100% !important;
-    }
-
-    /* Espace entre logo et contenu */
-    .md\\:space-x-6:not(header *):not(nav *) {
-      margin-left: 0 !important;
-    }
-
-    /* Titre offre */
-    .text-lg.md\\:text-xl:not(header *):not(nav *) {
-      font-size: 18px !important;
-      line-height: 1.4 !important;
-    }
-
-    /* Infos secondaires */
-    .flex.flex-wrap.items-center.gap-2.md\\:gap-4:not(header *):not(nav *) {
-      gap: 8px !important;
-      font-size: 13px !important;
-    }
-
-    /* Description offre */
-    .text-gray-600.text-sm.mb-4.line-clamp-2:not(header *):not(nav *) {
-      font-size: 14px !important;
-      line-height: 1.5 !important;
-    }
-
-    /* Tags/badges */
-    .flex.flex-wrap.gap-2:not(header *):not(nav *) {
-      gap: 6px !important;
-      width: 100% !important;
-    }
-
-    .px-3.py-1:not(header *):not(nav *) {
-      padding: 6px 10px !important;
-      font-size: 11px !important;
-    }
-
-    /* Actions à droite -> bas sur mobile */
-    .flex.flex-row.md\\:flex-col:not(header *):not(nav *) {
-      flex-direction: row !important;
-      width: 100% !important;
-      justify-content: space-between !important;
-      margin-top: 12px !important;
-      padding-top: 12px !important;
-      border-top: 1px solid #f3f4f6 !important;
-    }
-
-    /* ============================================ */
-    /* HEADER STATS ET BOUTON PUBLIER */
-    /* ============================================ */
-    
-    .bg-white.rounded-2xl.shadow-xl.border-2.border-job-gold.p-6:not(header *):not(nav *) {
-      padding: 16px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    .text-2xl.font-bold:not(header *):not(nav *) {
-      font-size: 20px !important;
-    }
-
-    .sm\\:mt-0:not(header *):not(nav *) {
-      margin-top: 12px !important;
-    }
-
-    /* ============================================ */
-    /* PAGINATION MOBILE - WIDTH 100% */
-    /* ============================================ */
-    
-    .flex.items-center.justify-center.space-x-2:not(header *):not(nav *) {
-      flex-wrap: wrap !important;
-      gap: 6px !important;
-      width: 100% !important;
-      box-sizing: border-box !important;
-    }
-
-    .px-4.py-3:not(header *):not(nav *) {
-      padding: 8px 12px !important;
-      font-size: 14px !important;
-    }
-
-    /* Masquer certains numéros de page sur très petit écran */
-    @media (max-width: 380px) {
-      .flex.items-center.justify-center.space-x-2:not(header *):not(nav *) button:nth-child(n+5):nth-last-child(n+4) {
-        display: none !important;
-      }
-    }
-
-    /* ============================================ */
-    /* TEXTES ET ESPACEMENTS GÉNÉRAUX */
-    /* ============================================ */
-    
-    .text-3xl:not(header *):not(nav *) {
-      font-size: 24px !important;
-      line-height: 1.3 !important;
-    }
-
-    .text-xl:not(header *):not(nav *) {
-      font-size: 18px !important;
-      line-height: 1.4 !important;
-    }
-
-    .mb-8:not(header *):not(nav *) {
-      margin-bottom: 16px !important;
-    }
-
-    .mb-6:not(header *):not(nav *) {
-      margin-bottom: 12px !important;
-    }
-
-    .p-8:not(header *):not(nav *) {
-      padding: 16px !important;
-    }
-
-    .px-6:not(header *):not(nav *) {
-      padding-left: 16px !important;
-      padding-right: 16px !important;
-    }
-
-    .space-y-6 > *:not(header *):not(nav *) + * {
-      margin-top: 12px !important;
-    }
-
-    /* ============================================ */
-    /* ÉLÉMENTS CACHÉS SUR MOBILE */
-    /* ============================================ */
-    
-    .boxconseil {
-      display: none !important;
-    }
-
-    .filtresm {
-      margin-top: 0 !important;
-    }
-
-    /* ============================================ */
-    /* MESSAGE VIDE / ERREUR - WIDTH 100% */
-    /* ============================================ */
-    
-    .py-16:not(header *):not(nav *) {
-      padding-top: 32px !important;
-      padding-bottom: 32px !important;
-    }
-
-    .h-20.w-20:not(header *):not(nav *) {
-      height: 48px !important;
-      width: 48px !important;
-    }
-
-    .max-w-md:not(header *):not(nav *) {
-      max-width: 100% !important;
-      width: 100% !important;
-    }
-
-    /* ============================================ */
-    /* BOUTONS MOBILE - WIDTH 100% */
-    /* ============================================ */
-    
-    .flex.gap-4.justify-center:not(header *):not(nav *) {
-      flex-direction: column !important;
-      gap: 12px !important;
-      width: 100% !important;
-    }
-
-    button:not(header *):not(nav *):not(.btn-primary),
-    .btn-primary:not(header *):not(nav *) {
-      padding: 12px 16px !important;
-      font-size: 15px !important;
-      box-sizing: border-box !important;
-    }
-
-    /* ============================================ */
-    /* FIX POUR IMAGES ET ÉLÉMENTS QUI DÉBORDENT */
-    /* ============================================ */
-    
-    img:not(header *):not(nav *) {
-      max-width: 100% !important;
-      height: auto !important;
-    }
-
-    .rounded-2xl:not(header *):not(nav *),
-    .rounded-xl:not(header *):not(nav *) {
-      overflow: hidden !important;
-    }
-  }
-
-  /* ============================================ */
-  /* TRÈS PETIT MOBILE (< 380px) */
-  /* ============================================ */
-  
-  @media (max-width: 380px) {
-    .text-3xl:not(header *):not(nav *) {
-      font-size: 20px !important;
-    }
-
-    .text-2xl:not(header *):not(nav *) {
-      font-size: 18px !important;
-    }
-
-    .text-xl:not(header *):not(nav *) {
-      font-size: 16px !important;
-    }
-
-    .p-6:not(header *):not(nav *) {
-      padding: 12px !important;
-    }
-
-    .px-6.py-4:not(header *):not(nav *) {
-      padding: 10px 12px !important;
-    }
-
-    input[type="text"]:not(header *):not(nav *),
-    select:not(header *):not(nav *) {
-      padding: 12px !important;
-    }
-  }
-
-  @media (min-width: 769px) {
-  /* Container principal avec hauteur fixe */
-  div[style*="width: 54%"] > div.sticky {
-    position: sticky !important;
-    top: 96px !important;
-    max-height: calc(100vh - 120px) !important;
-    overflow-y: auto !important;
-    scrollbar-width: thin;
-    scrollbar-color: #D4AF37 #f3f4f6;
-  }
-
-  /* Style personnalisé de la scrollbar */
-  div[style*="width: 54%"] > div.sticky::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  div[style*="width: 54%"] > div.sticky::-webkit-scrollbar-track {
-    background: #f3f4f6;
-    border-radius: 10px;
-  }
-
-  div[style*="width: 54%"] > div.sticky::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #D4AF37 0%, #F39C12 100%);
-    border-radius: 10px;
-  }
-
-  div[style*="width: 54%"] > div.sticky::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #B8860B 0%, #D4AF37 100%);
-  }
-
-  /* Header sticky dans la zone scrollable */
-  .filtresm.sticky {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 10 !important;
-    background: white !important;
-  }
-}
-
-/* Responsive Mobile */
-    @media (max-width: 768px) {
-      /* Masquer les sidebars sur mobile */
-      .sidebar-left,
-      .sidebar-right {
-        display: none !important;
-      }
-      
-      /* Colonne centrale = 100% width sur mobile */
-      .jobs-center-column {
-        width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 0 16px !important;
-      }
-      
-      /* Container 3 colonnes en block sur mobile */
-      .three-columns-container {
-        display: block !important;
-      }
-    }
-
-/* Sur mobile, comportement normal */
-@media (max-width: 768px) {
-  div[style*="width: 54%"] > div.sticky {
-    position: relative !important;
-    max-height: none !important;
-    overflow-y: visible !important;
-  }
-}
-`}</style>
     </div>
   );
 };
