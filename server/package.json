@@ -1,0 +1,27 @@
+{
+  "name": "job2mada-stripe-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Job2Mada Stripe Payment Server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["stripe", "payment", "job2mada"],
+  "author": "Dat-corp Digital Limited",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "stripe": "^14.10.0",
+    "node-appwrite": "^11.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

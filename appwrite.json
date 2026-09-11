@@ -1,0 +1,20 @@
+{
+    "projectId": "job2mada",
+    "projectName": "Job2Mada",
+    "functions": [
+        {
+            "$id": "linkedin-publish",
+            "name": "linkedin-publish",
+            "runtime": "node-16.0",
+            "execute": [],
+            "events": [
+                "databases.job2mada-db.collections.jobs.documents.*.update"
+            ],
+            "logging": true,
+            "timeout": 30,
+            "entrypoint": "src/main.js",
+            "commands": "npm install",
+            "path": "functions/linkedin-publish"
+        }
+    ]
+}

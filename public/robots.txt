@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /profile/
+Disallow: /my-*
+Disallow: /auth/
+Disallow: /messages/
+
+Sitemap: https://job2mada.com/sitemap.xml
+Sitemap: https://job2mada.com/sitemap-main.xml
+Sitemap: https://job2mada.com/sitemap-jobs.xml
+Sitemap: https://job2mada.com/sitemap-services.xml

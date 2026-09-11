@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm run generate-sitemap && npm run build",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

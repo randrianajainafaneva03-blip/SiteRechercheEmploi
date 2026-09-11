@@ -1,0 +1,589 @@
+{
+  "title_candidates": [
+    {
+      "tag": "h2",
+      "text": "Rechercher des offres d'emploi et de recrutement à Madagascar",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "text": "BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "text": "Dernier jour pour postuler",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "text": "Les services gratuits sur portaljob",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "text": "Offres d'emploi par secteur",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h2",
+      "text": "Accès rapide",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "CONTROLEUR DE GESTION -réf:CDG1225",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "RESPONSABLE COMMERCIALE",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "STAGIAIRE CHARGE D'ACCUEIL-réf:STGCAC2025",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Tresorier-réf:TRes",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Gérante de boutique",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Auditeur Junior-réf:AUDJR-TRN-12/2025",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "INTEGRATEUR WORDPRESS-réf:IWRXG1125",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "ASSISTANT (E) COMMERCIALE-réf:ASS - COM",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "ATTACHE (E) COMMERCIAL",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Spécialiste Acquisition SEA/SEO",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "GESTIONNAIRE DEPOT",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Un Stagiaire Assistant en Gestion",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Un Stagiaire Assistant E-commerce",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Un Stagiaire Graphiste",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Un Stagiaire Community Manager",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Des responsables de rayon-réf:RESP RAYON",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "CONTROLEUR DE GESTION -réf:CDG1225",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "RESPONSABLE COMMERCIALE",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "STAGIAIRE CHARGE D'ACCUEIL-réf:STGCAC2025",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Tresorier-réf:TRes",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Gérante de boutique",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Auditeur Junior-réf:AUDJR-TRN-12/2025",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "INTEGRATEUR WORDPRESS-réf:IWRXG1125",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "ASSISTANT (E) COMMERCIALE-réf:ASS - COM",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "ATTACHE (E) COMMERCIAL",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Spécialiste Acquisition SEA/SEO",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "GESTIONNAIRE DEPOT",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "Un Stagiaire Assistant en Gestion",
+      "class": "",
+      "id": ""
+    },
+    {
+      "tag": "h3",
+      "text": "rapide, simple et efficace",
+      "class": "",
+      "id": ""
+    }
+  ],
+  "company_candidates": [],
+  "location_candidates": [
+    {
+      "text": "",
+      "class": "clear_on validate[minSize[3]]",
+      "id": "search_ville"
+    }
+  ],
+  "description_candidates": [
+    {
+      "text": "Rechercher des offres d'emploi et de recrutement à Madagascar\n\n\n\n\n\n\n\n\n\n\n rechercher\n\n\n\nType de contrat\nCDD\nCDI\nFonction publique\nFree-lance\nIntérim\nSt",
+      "class": "contenu",
+      "id": "",
+      "tag": "DIV"
+    },
+    {
+      "text": "l'offre\nmon profil\npostuler\n\n\n\nBUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO \n\n10/12/2025 | \n                                    INGENOSYA | \n    ",
+      "class": "contenu",
+      "id": "",
+      "tag": "DIV"
+    },
+    {
+      "text": "l'offre\nmon profil\npostuler\n\n\n\nBUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO \n\n10/12/2025 | \n                                    INGENOSYA | \n    ",
+      "class": "contenu_tab",
+      "id": "",
+      "tag": "SECTION"
+    },
+    {
+      "text": "Offres d'emploi par secteur\n\nAgronomie / Agriculture\nBiologie / chimie / Sciences\nCommercial / Vente\nConfection / Artisan\nConseiller client / Call cen",
+      "class": "contenu",
+      "id": "",
+      "tag": "DIV"
+    },
+    {
+      "text": "10/12/2025 | \n                                    INGENOSYA | \n                                \n                Contrat CDI | \n                \n      ",
+      "class": "item_detail",
+      "id": "",
+      "tag": "DIV"
+    },
+    {
+      "text": "Les Avantages :\n-\tUne rémunération attractive \n-\tUne ambiance conviviale (ping-pong, jeux de société, Zumba …) \n-\tUn environnement de travail agréable",
+      "class": "item_detail",
+      "id": "",
+      "tag": "DIV"
+    },
+    {
+      "text": "-\tAnalyse et compréhension des besoins métiers\n-\tCadrage fonctionnel du projet\n-\tParamétrage fonctionnel d’Odoo\n-\tAccompagnement et formation des util",
+      "class": "item_detail",
+      "id": "",
+      "tag": "SECTION"
+    },
+    {
+      "text": "-\tAyant au moins 3 ans d’expérience professionnelle\n-\tMaîtrise fonctionnelle approfondie d’Odoo\n-\tConnaissance solide de l’ORM et de l’architecture Od",
+      "class": "item_detail",
+      "id": "",
+      "tag": "DIV"
+    }
+  ],
+  "all_classes": [
+    "recherche_mobile",
+    "menu_mobile",
+    "menu",
+    "menu_ul",
+    "parent",
+    "logo",
+    "fils",
+    "vertical-hr",
+    "menu_titre",
+    "underline",
+    "normal",
+    "tous",
+    "secter_parent",
+    "secter_list",
+    "connect",
+    "menu_special",
+    "candidat",
+    "connexion",
+    "recruteur",
+    "cta_inscription",
+    "mobile_menu",
+    "circle",
+    "r_search",
+    "publier",
+    "fb_reset",
+    "recherche_page_interieur",
+    "contenu",
+    "recherche_avance_home",
+    "advance_form",
+    "inline-form1",
+    "clear_on",
+    "validate[minSize[3]]",
+    "add_in_query",
+    "btn",
+    "btn_s",
+    "inline-form2",
+    "has_value",
+    "btn_m",
+    "all_mobile",
+    "fa",
+    "fa-eye",
+    "seeall",
+    "breadcrumb",
+    "emploi",
+    "col2_max_min",
+    "max",
+    "contenu_tab",
+    "menu_tab",
+    "offre",
+    "active",
+    "profil",
+    "postuler",
+    "all_tab",
+    "item_tab",
+    "item_detail",
+    "offers-date",
+    "bout_suivre",
+    "link",
+    "fa-rss",
+    "notice",
+    "help",
+    "fa-question",
+    "bout_bar",
+    "fa-envelope-o",
+    "fa-floppy-o",
+    "fa-check",
+    "a2a_kit",
+    "a2a_kit_size_16",
+    "a2a_default_style",
+    "a2a_button_facebook",
+    "a2a_svg",
+    "a2a_s__default",
+    "a2a_s_facebook",
+    "a2a_label",
+    "a2a_button_twitter",
+    "a2a_s_twitter",
+    "a2a_button_linkedin",
+    "a2a_s_linkedin",
+    "a2a_dd",
+    "a2a_s_a2a",
+    "a2a_localize",
+    "clr",
+    "warning",
+    "min",
+    "droite",
+    "fb-page",
+    "fb_iframe_widget",
+    "fa-clock-o",
+    "last_postule",
+    "slick-initialized",
+    "slick-slider",
+    "slick-vertical",
+    "slick-list",
+    "draggable",
+    "slick-track",
+    "item_last_day",
+    "slick-slide",
+    "slick-cloned",
+    "post_last_day",
+    "date_last_day",
+    "slick-current",
+    "slick-active",
+    "last_postule_nav",
+    "last_prev",
+    "slick-arrow",
+    "fa-arrow-circle-down",
+    "last_next",
+    "fa-arrow-circle-up",
+    "pub",
+    "services",
+    "inner",
+    "recruiter",
+    "pad",
+    "former",
+    "profile",
+    "rapide",
+    "talend",
+    "info",
+    "back-to-top",
+    "fa-angle-up",
+    "foot1",
+    "offresecteur",
+    "see-more-footer",
+    "accesrapide",
+    "footer2",
+    "cls-content",
+    "jBox-Confirm-footer",
+    "jBox-Confirm-button",
+    "jBox-Confirm-button-submit",
+    "ui-dialog",
+    "ui-widget",
+    "ui-widget-content",
+    "ui-corner-all",
+    "ui-resizable",
+    "ui-dialog-titlebar",
+    "ui-widget-header",
+    "ui-helper-clearfix",
+    "ui-dialog-title",
+    "ui-dialog-titlebar-close",
+    "ui-icon",
+    "ui-icon-closethick",
+    "ui-dialog-content",
+    "ui-resizable-handle",
+    "ui-resizable-n",
+    "ui-resizable-e",
+    "ui-resizable-s",
+    "ui-resizable-w",
+    "ui-resizable-se",
+    "ui-icon-gripsmall-diagonal-se",
+    "ui-icon-grip-diagonal-se",
+    "ui-resizable-sw",
+    "ui-resizable-ne",
+    "ui-resizable-nw",
+    "a2a_overlay",
+    "a2a_modal",
+    "a2a_hide",
+    "a2a_modal_body",
+    "a2a_menu",
+    "a2a_s_link",
+    "a2a_logo_color",
+    "a2a_thanks",
+    "a2a_full",
+    "a2a_full_header",
+    "a2a_menu_find_container",
+    "a2a_s_find",
+    "a2a_menu_find",
+    "a2a_full_services",
+    "a2a_full_footer",
+    "a2a_mini",
+    "a2a_mini_services",
+    "a2a_cols_container",
+    "a2a_col1",
+    "a2a_clear",
+    "a2apage_wide",
+    "a2a_wide",
+    "a2a_more",
+    "widget-visible"
+  ],
+  "all_ids": [
+    "facebook-jssdk",
+    "googleidentityservice_button_styles",
+    "googleidentityservice",
+    "r_search",
+    "login_link_candidat",
+    "login_link_rec",
+    "forgetId",
+    "otherDialog",
+    "inactifDialog",
+    "fb-root",
+    "research_title",
+    "frmSearchAdv",
+    "search_keywords",
+    "search_ville",
+    "link-search",
+    "search_contrat",
+    "search_secteur",
+    "search_niveau",
+    "search_exp",
+    "a0",
+    "a1",
+    "a2",
+    "tab0",
+    "link-suivre",
+    "notice-suivi",
+    "link-save-annonce",
+    "notice-save-annonce",
+    "tab1",
+    "tab2",
+    "loginDialog",
+    "dialogId",
+    "dlgId",
+    "ui-id-1",
+    "loadingMask",
+    "addtoany",
+    "a2a_overlay",
+    "a2a_modal",
+    "a2a_copy_link",
+    "a2a_copy_link_icon",
+    "a2a_copy_link_text",
+    "a2a_copy_link_copied",
+    "a2a_thanks",
+    "a2apage_full",
+    "a2apage_find_container",
+    "a2apage_find_icon",
+    "a2apage_find",
+    "a2apage_full_services",
+    "a2apage_dropdown",
+    "a2apage_mini_services",
+    "a2apage_cols_container",
+    "a2apage_col1",
+    "a2apage_2_col1",
+    "a2apage_show_more_less",
+    "a2a_sm_ifr",
+    "iambpkfclk7o1765440377655",
+    "njv9umamstuo1765440377850",
+    "ymfr8dul64dc1765440377907",
+    "rlabtnp5anus1765440377854",
+    "stnucfio4if81765440377859",
+    "chat-bubble"
+  ],
+  "item_tab_active_content": {
+    "html": "\n<h2>BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO&nbsp;</h2>\n<div class=\"item_detail\">\n<span class=\"offers-date\">10/12/2025</span>&nbsp;|&nbsp;\n                                    INGENOSYA&nbsp;|&nbsp;\n                                \n                Contrat CDI&nbsp;|&nbsp;\n                \n                                \n                                   ANTANANARIVO&nbsp;\n<div>\n<img src=\"https://www.portaljob-madagascar.com/application/resources/upload/logo/80x60/Logo_IGY.png\">&nbsp;\n",
+    "text": "BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO \n\n10/12/2025 | \n                                    INGENOSYA | \n                                \n                Contrat CDI | \n                \n                                \n                                   ANTANANARIVO \n\n \n\n\n\n\n\n Suivre ce rec",
+    "children": [
+      {
+        "tag": "H2",
+        "class": "",
+        "text": "BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO"
+      },
+      {
+        "tag": "DIV",
+        "class": "item_detail",
+        "text": "10/12/2025 | \n                                    INGENOSYA | \n                                \n    "
+      },
+      {
+        "tag": "DIV",
+        "class": "bout_suivre",
+        "text": "Suivre ce recruteur\n Recruteur suivi"
+      },
+      {
+        "tag": "DIV",
+        "class": "item_detail",
+        "text": "Les Avantages :\n-\tUne rémunération attractive \n-\tUne ambiance conviviale (ping-pong, jeux de société"
+      },
+      {
+        "tag": "SECTION",
+        "class": "item_detail",
+        "text": "-\tAnalyse et compréhension des besoins métiers\n-\tCadrage fonctionnel du projet\n-\tParamétrage fonctio"
+      },
+      {
+        "tag": "DIV",
+        "class": "item_detail",
+        "text": "-\tAyant au moins 3 ans d’expérience professionnelle\n-\tMaîtrise fonctionnelle approfondie d’Odoo\n-\tCo"
+      },
+      {
+        "tag": "DIV",
+        "class": "item_detail",
+        "text": "Référence\n                \n                REF-494/PJ"
+      },
+      {
+        "tag": "DIV",
+        "class": "bout_bar",
+        "text": "Contacter le recruteur\n Sauvegarder cette annonce\n Annonce sauvegardée\n Postuler"
+      }
+    ]
+  },
+  "full_structure": {
+    "body_classes": "",
+    "main_container": "non trouvé",
+    "nav_tabs": [
+      {
+        "class": "contenu_tab",
+        "text": "l'offre\nmon profil\npostuler\n\n\n\nBUSINESS ANALYST OD"
+      },
+      {
+        "class": "menu_tab",
+        "text": "l'offre\nmon profil\npostuler"
+      },
+      {
+        "class": "all_tab",
+        "text": "BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO "
+      },
+      {
+        "class": "item_tab active",
+        "text": "BUSINESS ANALYST ODOO - REF-494/PJ - ANTANANARIVO "
+      },
+      {
+        "class": "item_tab",
+        "text": ""
+      },
+      {
+        "class": "item_tab",
+        "text": ""
+      }
+    ]
+  }
+}
