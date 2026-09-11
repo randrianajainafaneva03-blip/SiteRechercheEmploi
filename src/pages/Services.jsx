@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ServiceModal from '@/components/ServiceModal';
 import FormattedText from '@/components/ui/FormattedText';
@@ -455,7 +455,12 @@ const Services = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+  const servicesResultsRef = useRef(null);
+
+  const handleSearchClick = () => {
+    servicesResultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const servicesPerPage = 30;
   
@@ -1060,6 +1065,7 @@ const handleSendMessage = async () => {
                    placeholder="Rechercher un service, une compétence..."
                    value={filters.search}
                    onChange={(e) => handleFilterChange('search', e.target.value)}
+                   onKeyDown={(e) => { if (e.key === 'Enter') handleSearchClick(); }}
                    className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-slate-500 text-gray-900 font-medium"
                  />
                </div>
@@ -1075,7 +1081,14 @@ const handleSendMessage = async () => {
                    ))}
                  </select>
                </div>
-               <Button 
+               <Button
+                 onClick={handleSearchClick}
+                 className="px-6 py-4 rounded-xl bg-gradient-to-r from-job-gold to-job-dark-gold text-white font-bold whitespace-nowrap flex items-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+               >
+                 <Search className="h-5 w-5" />
+                 <span>Rechercher</span>
+               </Button>
+               <Button
                  onClick={() => setShowAdvancedFilters(!showAdvancedFilters)}
                  className={`px-6 py-4 rounded-xl flex items-center space-x-2 transition-all font-bold border-2 whitespace-nowrap ${
                    showAdvancedFilters 
@@ -1329,7 +1342,7 @@ const handleSendMessage = async () => {
            </div>
 
            {/* Colonne centrale - Liste des services */}
-            <div className="min-w-0 bg-transparent lg:flex lg:flex-col lg:h-[calc(100vh-6rem)] lg:sticky lg:top-24">
+            <div ref={servicesResultsRef} className="min-w-0 bg-transparent lg:flex lg:flex-col lg:h-[calc(100vh-6rem)] lg:sticky lg:top-24 scroll-mt-24">
               {/* Header avec stats - STICKY TOP */}
               <div className="top1 bg-white rounded-2xl shadow-xl border-2 border-job-navy p-6 flex-shrink-0">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">

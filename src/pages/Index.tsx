@@ -310,11 +310,11 @@ const JobMadaHomepage = () => {
         <Navbar />
 
         {/* Hero Section pleine largeur avec hauteur fixe */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark pt-24 pb-12 lg:pt-20 lg:pb-0 lg:h-screen lg:min-h-[640px] w-full">
+        <section className="relative overflow-hidden bg-gradient-to-r from-job-navy via-job-navy-light to-job-navy-dark pt-24 pb-12 md:min-h-[600px] lg:pt-24 lg:pb-12 lg:min-h-screen w-full flex flex-col">
           <div className="absolute inset-0 bg-black/10"></div>
           
           {/* Animation d'étoiles magnifiques côté gauche - Hidden on mobile */}
-          <div className="absolute left-0 top-0 w-1/2 h-full overflow-hidden hidden lg:block">
+          <div className="absolute left-0 top-0 w-1/2 h-full overflow-hidden hidden md:block">
             {/* Étoiles scintillantes */}
             <div className="absolute top-20 left-16 w-1 h-1 bg-white rounded-full animate-twinkle opacity-80"></div>
             <div className="absolute top-32 left-32 w-1.5 h-1.5 bg-job-light-gold rounded-full animate-twinkle delay-500 opacity-70"></div>
@@ -360,26 +360,26 @@ const JobMadaHomepage = () => {
             <div className="absolute top-76 left-56 w-6 h-6 bg-job-light-gold/20 rounded-full blur-sm animate-pulse-glow delay-2000"></div>
           </div>
           
-          <div className="relative w-full h-full flex flex-col lg:flex-row">
-            
+          <div className="relative w-full flex-1 flex flex-col md:flex-row">
+
             {/* Côté gauche - Titre + Formulaire - Responsive */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center px-4 sm:px-8 lg:px-16 relative z-10">
+            <div className="w-full md:w-1/2 flex items-center justify-center px-4 sm:px-8 lg:px-16 relative z-10">
               <div className="text-white max-w-2xl w-full">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 sm:mb-8 text-center lg:text-left">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 sm:mb-8 text-center md:text-left">
                   Trouvez le Job
                   <br />
                   <span className="text-job-light-gold">de Vos Rêves</span>
                   <br />
                   à Madagascar
                 </h1>
-                <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-job-light-gold leading-relaxed text-center lg:text-left">
+                <p className="text-base sm:text-lg lg:text-xl mb-6 sm:mb-8 text-job-light-gold leading-relaxed text-center md:text-left">
                   Job2Mada connecte les talents avec les meilleures opportunités professionnelles 
                   sur l'île, avec plus de {recentJobs.length} offres disponibles.
                 </p>
                 
                 {/* Formulaire de recherche intégré - Responsive */}
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/20">
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 text-center lg:text-left">Recherche rapide</h3>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 text-center md:text-left">Recherche rapide</h3>
                   
                   <div className="space-y-4">
                     <div>
@@ -426,7 +426,7 @@ const JobMadaHomepage = () => {
             </div>
             
             {/* Côté droit - Image pleine largeur - Hidden on mobile */}
-            <div className="hidden lg:block w-1/2 relative h-full">
+            <div className="hidden md:block w-1/2 relative self-stretch">
               <div className="relative h-full w-full">
                 <div 
                   className="h-full w-full relative overflow-hidden group"
