@@ -11,7 +11,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "import": "tsx src/scripts/importPortailJob.ts",
-    "fix-jobs": "tsx src/scripts/fixImportedJobs.ts"
+    "fix-jobs": "tsx src/scripts/fixImportedJobs.ts",
+    "appwrite:setup": "node scripts/appwrite/setup.mjs",
+    "appwrite:seed": "node scripts/appwrite/seed.mjs"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Plus, X, Image, Loader2, Link, ChevronDown, ChevronUp } from 'lucide-react';
-import { storage, BUCKETS, ID } from '@/lib/appwrite';
+import { storage, BUCKETS, ID, getFileUrl } from '@/lib/appwrite';
 
 // portfolio = [{image_url, description, link}, ...]  (max 5)
 const PortfolioEditor = ({ portfolio = [], onChange }) => {
@@ -41,7 +41,7 @@ const PortfolioEditor = ({ portfolio = [], onChange }) => {
       setUploadProgress(`Upload ${i + 1}/${toUpload.length} — ${file.name}`);
       try {
         const uploaded = await storage.createFile(BUCKETS.IMAGES, ID.unique(), file);
-        const url = `https://appwrite.dat-articles.com/v1/storage/buckets/${BUCKETS.IMAGES}/files/${uploaded.$id}/view?project=job2mada`;
+        const url = getFileUrl(BUCKETS.IMAGES, uploaded.$id);
         newItems.push({ image_url: url, description: '', link: '' });
       } catch (err) {
         console.error('Erreur upload:', err);

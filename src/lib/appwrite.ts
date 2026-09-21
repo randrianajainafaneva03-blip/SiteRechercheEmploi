@@ -1,23 +1,69 @@
 import { Client, Account, Databases, Storage, Query, ID, Permission, Role, OAuthProvider } from 'appwrite';
 
 
-// Configuration Appwrite
+// Configuration Appwrite (surchargeable via .env : VITE_APPWRITE_ENDPOINT / VITE_APPWRITE_PROJECT_ID)
+const APPWRITE_ENDPOINT = import.meta.env.VITE_APPWRITE_ENDPOINT || 'https://appwrite.dat-articles.com/v1';
+const APPWRITE_PROJECT_ID = import.meta.env.VITE_APPWRITE_PROJECT_ID || 'job2mada';
 const client = new Client();
 
 client
-  .setEndpoint('https://appwrite.dat-articles.com/v1')
-  .setProject('job2mada')
+  .setEndpoint(APPWRITE_ENDPOINT)
+  .setProject(APPWRITE_PROJECT_ID)
   .setLocale('fr'); // Sans ça, Appwrite envoie les emails (vérification, recovery) en anglais par défaut
 
   
 export { Query } from 'appwrite';
 export const account = new Account(client);
 export const databases = new Databases(client);
-export const storage = new Storage(client);
+// Buckets "logiques" (images / documents / verification-docs).
+// Si VITE_APPWRITE_SINGLE_BUCKET est défini (plan Appwrite limité à 1 bucket), tous les fichiers vont dans ce
+// bucket physique et les permissions sont appliquées fichier par fichier selon le bucket logique :
+//  - images            : lecture publique
+//  - documents         : lecture réservée aux utilisateurs connectés (CV, pièces jointes)
+//  - verification-docs : lecture réservée au propriétaire
+const SINGLE_BUCKET: string | undefined = import.meta.env.VITE_APPWRITE_SINGLE_BUCKET;
+const rawStorage = new Storage(client);
+const BUCKET_ARG_METHODS = ['getFile', 'updateFile', 'deleteFile', 'getFileView', 'getFilePreview', 'getFileDownload'];
+
+export const storage: Storage = !SINGLE_BUCKET ? rawStorage : new Proxy(rawStorage, {
+  get(target, prop, receiver) {
+    const original = Reflect.get(target, prop, receiver);
+    if (typeof original !== 'function') return original;
+
+    if (prop === 'createFile') {
+      return async (...args: any[]) => {
+        const params = typeof args[0] === 'object' && args[0] !== null && !('size' in args[0])
+          ? { ...args[0] }
+          : { bucketId: args[0], fileId: args[1], file: args[2], permissions: args[3], onProgress: args[4] };
+        const logical = params.bucketId;
+        if (!params.permissions) {
+          let ownerId: string | null = null;
+          try { ownerId = (await account.get()).$id; } catch { /* non connecté */ }
+          const owner = ownerId
+            ? [Permission.read(Role.user(ownerId)), Permission.update(Role.user(ownerId)), Permission.delete(Role.user(ownerId))]
+            : [];
+          if (logical === 'images') params.permissions = [Permission.read(Role.any()), ...owner.slice(1)];
+          else if (logical === 'documents') params.permissions = [Permission.read(Role.users()), ...owner.slice(1)];
+          else params.permissions = owner;
+        }
+        params.bucketId = SINGLE_BUCKET;
+        return original.call(target, params);
+      };
+    }
+
+    if (typeof prop === 'string' && BUCKET_ARG_METHODS.includes(prop)) {
+      return (...args: any[]) => {
+        if (typeof args[0] === 'object' && args[0] !== null) return original.call(target, { ...args[0], bucketId: SINGLE_BUCKET });
+        return original.call(target, SINGLE_BUCKET, ...args.slice(1));
+      };
+    }
+    return original.bind(target);
+  },
+});
 export { ID } from 'appwrite';
 
 // IDs des collections et buckets (à remplacer par vos vrais IDs)
-export const DATABASE_ID = 'job2mada-db';
+export const DATABASE_ID = import.meta.env.VITE_APPWRITE_DATABASE_ID || 'job2mada-db';
 export const COLLECTIONS = {
   PROFILES: 'profiles',
   JOBS: 'jobs',
@@ -42,7 +88,7 @@ export const BUCKETS = {
 
 // ✅ CORRECTION: Fonction pour générer des URLs correctes
 export const getFileUrl = (bucketId: string, fileId: string) => {
-  return `https://appwrite.dat-articles.com/v1/storage/buckets/${bucketId}/files/${fileId}/view?project=job2mada`;
+  return `${APPWRITE_ENDPOINT}/storage/buckets/${SINGLE_BUCKET || bucketId}/files/${fileId}/view?project=${APPWRITE_PROJECT_ID}`;
 };
 
 // Interface pour les erreurs étendues

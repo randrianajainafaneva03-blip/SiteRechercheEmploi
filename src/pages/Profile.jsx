@@ -48,7 +48,8 @@ import {
   DATABASE_ID, 
   COLLECTIONS,
   BUCKETS,
-  Query 
+  getFileUrl,
+  Query
 } from '@/lib/appwrite';
 import OptimizeProfile from './OptimizeProfile';
 import VerifyProfile from './VerifyProfile';
@@ -585,7 +586,7 @@ const loadExperienceAndEducation = async () => {
       console.log('Fichier uploadé:', uploadedFile);
   
       // ✅ CORRECTION: Utiliser let au lieu de const
-      let publicUrl = `https://appwrite.dat-articles.com/v1/storage/buckets/${BUCKETS.IMAGES}/files/${uploadedFile.$id}/view?project=job2mada`;
+      let publicUrl = getFileUrl(BUCKETS.IMAGES, uploadedFile.$id);
       
       console.log('URL publique générée:', publicUrl);
   
